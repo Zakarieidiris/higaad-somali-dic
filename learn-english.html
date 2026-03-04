@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    try {
+      var s = JSON.parse(localStorage.getItem('higaad_settings') || '{}');
+      if (s.theme)    document.documentElement.setAttribute('data-theme',    s.theme);
+      if (s.fontsize) document.documentElement.setAttribute('data-fontsize', s.fontsize);
+      if (s.compact)  document.documentElement.setAttribute('data-compact',  'true');
+    } catch(e) {}
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn English — Higaad</title>
+  <link rel="icon" href="images/Logo and favicon/hingaad icon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    #lessonDetail { display:none; max-width:760px; margin:0 auto; padding:24px 40px 80px; }
+    #lessonDetail.open { display:block; animation:fadeUp .2s ease; }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+    .lp-bar { height:4px; background:var(--border); border-radius:4px; overflow:hidden; margin-bottom:32px; }
+    .lp-fill { height:100%; background:#4a5aaf; border-radius:4px; transition:width .4s; }
+    .lp-nav { display:flex; gap:12px; flex-wrap:wrap; margin-top:32px; padding-top:24px; border-top:1px solid var(--border); }
+    .back-btn { display:inline-flex; align-items:center; gap:6px; font-size:.78rem; font-weight:600; color:var(--mid); background:none; border:none; cursor:pointer; font-family:var(--sans); padding:0; margin-bottom:24px; transition:color .15s; }
+    .back-btn:hover { color:var(--black); }
+    .vocab-so { color:#4a5aaf; font-weight:600; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img src="images/Higaad logo.png" alt="Higaad" class="logo-img logo-light">
+    <img src="images/black logo.png"  alt="Higaad" class="logo-img logo-dark">
+  </a>
+  <div class="nav-links">
+    <a class="nav-link" href="index.html"      data-i18n="nav_home">Home</a>
+    <a class="nav-link" href="tech.html"       data-i18n="nav_tech">Tech Stack</a>
+    <a class="nav-link" href="medical.html"    data-i18n="nav_medical">Medical Terminology</a>
+    <a class="nav-link" href="az.html"         data-i18n="nav_az">A–Z</a>
+    <a class="nav-link" href="flashcards.html" data-i18n="nav_flashcards">Flashcards</a>
+    <div class="nav-dropdown" id="learnDropdown">
+      <button class="nav-dropdown-toggle active" id="learnDropdownBtn">Learn <span class="dd-arrow">&#9660;</span></button>
+      <div class="nav-dropdown-menu">
+        <div class="nav-dd-header"><span class="nav-dd-header-title">Learning Paths</span></div>
+        <div class="nav-dd-cols">
+          <div class="nav-dd-col">
+            <div class="nav-dd-col-label">🇸🇴 Baranee Soomaali</div>
+            <a class="nav-dd-item" href="learn-somali.html">
+              <div class="nav-dd-item-icon so">🇸🇴</div>
+              <div class="nav-dd-item-text"><strong>Learn Somali</strong><span>For English speakers</span></div>
+            </a>
+          </div>
+          <div class="nav-dd-col">
+            <div class="nav-dd-col-label">🇬🇧 Baranee Ingiriisi</div>
+            <a class="nav-dd-item" href="learn-english.html">
+              <div class="nav-dd-item-icon en">🇬🇧</div>
+              <div class="nav-dd-item-text"><strong>Learn English</strong><span>For Somali speakers</span></div>
+            </a>
+          </div>
+        </div>
+        <div class="nav-dd-footer">
+          <span class="nav-dd-footer-text">8 casharro · Bilaash</span>
+          <a class="nav-dd-footer-link" href="flashcards.html">Flashcards →</a>
+        </div>
+      </div>
+    </div>
+    <a class="nav-link"        href="about.html">About</a>
+    <div class="nav-kbd"><kbd>Ctrl</kbd><kbd>E</kbd></div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero learn-hero" id="pageHero" style="padding-top: 148px; min-height: auto; padding-bottom: 56px;">
+  <div class="hero-eyebrow"><span class="hero-eyebrow-dot"></span>Baranee Ingiriisi</div>
+  <h1 class="hero-title">Learn <em>English</em></h1>
+  <p class="hero-subtitle">Casharro fudud oo kuu xeelidheer — luqadda Ingiriisiga ku baranee si fudud.</p>
+</section>
+
+<main>
+  <!-- GRID VIEW -->
+  <div id="gridView">
+    <div style="max-width:860px;margin:0 auto 28px;padding:0 40px">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+        <span style="font-size:.72rem;font-weight:600;color:var(--muted);letter-spacing:.1em;text-transform:uppercase">Horumarka</span>
+        <span style="font-size:.72rem;color:var(--muted)" id="progressLabel">0 / 8</span>
+      </div>
+      <div style="height:6px;background:var(--border);border-radius:6px;overflow:hidden">
+        <div id="progressBar" style="height:100%;background:#4a5aaf;border-radius:6px;width:0%;transition:width .5s"></div>
+      </div>
+    </div>
+    <section style="max-width:860px;margin:0 auto;padding:0 40px 80px">
+      <div class="lesson-grid" id="lessonGrid"></div>
+    </section>
+  </div>
+
+  <!-- DETAIL VIEW (inline, same page) -->
+  <div id="lessonDetail">
+    <button class="back-btn" onclick="showGrid()">← Dib u casharro dhammaan</button>
+    <div class="lp-bar"><div class="lp-fill" id="detailFill" style="width:0%"></div></div>
+    <div id="detailContent"></div>
+    <div class="lp-nav">
+      <button class="learn-quiz-btn" onclick="showGrid()" style="background:var(--surface);color:var(--black);border:1.5px solid var(--border)">← Casharro</button>
+      <button class="learn-quiz-btn" id="prevBtn" style="background:var(--surface);color:var(--black);border:1.5px solid var(--border);display:none" onclick="navLesson(-1)">← Hore</button>
+      <button class="learn-quiz-btn" id="nextBtn" style="background:#4a5aaf" onclick="navLesson(1)">Cashar xiga →</button>
+    </div>
+  </div>
+</main>
+
+<footer><p>Built with care for the Somali language · <strong>Higaad</strong> · © 2025</p></footer>
+
+<div class="search-popup-overlay" id="searchPopup">
+  <div class="search-popup">
+    <div class="search-popup-inner">
+      <span class="popup-search-icon">⌕</span>
+      <input type="text" id="popupSearchInput" placeholder="Search Somali or English word..." autocomplete="off" spellcheck="false" />
+      <button class="popup-esc" onclick="closeSearchPopup()">ESC</button>
+    </div>
+    <div class="popup-divider"></div>
+    <div class="popup-results-wrap" id="popupResultsWrap"></div>
+    <div class="popup-hint">
+      <span><kbd>↑</kbd><kbd>↓</kbd> navigate &nbsp;<kbd>Enter</kbd> select</span>
+      <span><kbd>Ctrl+E</kbd> close</span>
+    </div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script>
+var LESSONS = [
+  { id:'en-1', num:'Cashar 1', title:'Salaamaha & Is-Barashada', sub:'Greetings & Introductions',
+    desc:'Baranee sida loo salaameeyo oo Ingiriisi ah iyo sida loo xiriiro dadka cusub.',
+    level:'Bilowga', dur:'10 daqiiqo',
+    vocab:[
+      {so:'Salaan',en:'Hello / Hi',note:''},{so:'Nabad',en:'Goodbye / Peace',note:''},
+      {so:'Subax wanaagsan',en:'Good morning',note:''},{so:'Galab wanaagsan',en:'Good afternoon',note:''},
+      {so:'Habeennimo fiican',en:'Good night',note:''},{so:'Magacaagu waa maxay?',en:'What is your name?',note:''},
+      {so:'Magacaygu waa...',en:'My name is...',note:''},{so:'Sideed tahay?',en:'How are you?',note:''},
+      {so:'Waan fiicanahay',en:'I am fine',note:''},{so:'Mahadsanid',en:'Thank you',note:'Aad muhiim'},
+      {so:'Adaa mudan',en:'You are welcome',note:''},{so:'Raali ahow',en:'Sorry / Excuse me',note:''}
+    ],
+    phrases:[
+      {so:'Xaggee baad ka timid?',en:'Where are you from?',note:''},
+      {so:'Waxaan ka imid Soomaaliya',en:'I am from Somalia',note:''},
+      {so:'Ma ku hadashaa Ingiriisi?',en:'Do you speak English?',note:''},
+      {so:'Waxaan baraneysaa Ingiriisi',en:'I am learning English',note:''}
+    ]
+  },
+  { id:'en-2', num:'Cashar 2', title:'Tirada & Xisaabta', sub:'Numbers & Math',
+    desc:'Tirada 1-100 oo Ingiriisi ah iyo sida loo isticmaalo xisaabta maalinta.',
+    level:'Bilowga', dur:'12 daqiiqo',
+    vocab:[
+      {so:'Kow',en:'One',note:'1'},{so:'Laba',en:'Two',note:'2'},{so:'Saddex',en:'Three',note:'3'},
+      {so:'Afar',en:'Four',note:'4'},{so:'Shan',en:'Five',note:'5'},{so:'Lix',en:'Six',note:'6'},
+      {so:'Toddoba',en:'Seven',note:'7'},{so:'Sideed',en:'Eight',note:'8'},{so:'Sagaal',en:'Nine',note:'9'},
+      {so:'Toban',en:'Ten',note:'10'},{so:'Labaatan',en:'Twenty',note:'20'},{so:'Boqol',en:'Hundred',note:'100'},
+      {so:'Kun',en:'Thousand',note:'1,000'},{so:'Koowaad',en:'First',note:''},{so:'Labaad',en:'Second',note:''}
+    ],
+    phrases:[
+      {so:'Imisa?',en:'How many? / How much?',note:''},
+      {so:'Qiimihiisu waa toban',en:'It costs ten',note:''},
+      {so:'Laba buug ayaan leeyahay',en:'I have two books',note:''}
+    ]
+  },
+  { id:'en-3', num:'Cashar 3', title:'Qoyska & Dadka', sub:'Family & People',
+    desc:'Ereyada qoyska oo Ingiriisi ah iyo sida loola hadlo dadka kuu dhow.',
+    level:'Bilowga', dur:'10 daqiiqo',
+    vocab:[
+      {so:'Hooyo',en:'Mother',note:''},{so:'Aabe',en:'Father',note:''},{so:'Walaal',en:'Sibling',note:''},
+      {so:'Wiil',en:'Son / Boy',note:''},{so:'Gabadh',en:'Daughter / Girl',note:''},
+      {so:'Awoowe',en:'Grandfather',note:''},{so:'Ayeeyo',en:'Grandmother',note:''},
+      {so:'Saaxiib',en:'Friend',note:''},{so:'Qof',en:'Person',note:''},
+      {so:'Ilmo',en:'Child',note:''},{so:'Nin',en:'Man',note:''},{so:'Naag',en:'Woman',note:''}
+    ],
+    phrases:[
+      {so:'Hooyaday waa naxariis leh',en:'My mother is kind',note:''},
+      {so:'Waxaan leeyahay laba walaal',en:'I have two siblings',note:''},
+      {so:'Kani waa qoyskaygii',en:'This is my family',note:''}
+    ]
+  },
+  { id:'en-4', num:'Cashar 4', title:'Midabada & Sharraxaadda', sub:'Colors & Descriptions',
+    desc:'Midabada oo Ingiriisi ah iyo ereyada sharraxaadda maalinta.',
+    level:'Bilowga', dur:'8 daqiiqo',
+    vocab:[
+      {so:'Cas',en:'Red',note:''},{so:'Buluug',en:'Blue',note:''},{so:'Cagaar',en:'Green',note:''},
+      {so:'Cad',en:'White',note:''},{so:'Madow',en:'Black',note:''},{so:'Jaalle',en:'Yellow',note:''},
+      {so:'Weyn',en:'Big / Large',note:''},{so:'Yar',en:'Small / Little',note:''},
+      {so:'Qurxoon',en:'Beautiful',note:''},{so:'Cusub',en:'New',note:''},
+      {so:'Gaboobay',en:'Old',note:''},{so:'Fiican',en:'Good',note:''}
+    ],
+    phrases:[
+      {so:'Samada waa buluug',en:'The sky is blue',note:''},
+      {so:'Midabkiisu waa maxay?',en:'What color is it?',note:''},
+      {so:'Kani aad buu u weyn yahay',en:'This is very big',note:''}
+    ]
+  },
+  { id:'en-5', num:'Cashar 5', title:'Cuntada & Cabitaanka', sub:'Food & Drinks',
+    desc:'Ereyada cuntada oo Ingiriisi ah iyo sida loo dalbo makhaayadda.',
+    level:'Bilowga', dur:'14 daqiiqo',
+    vocab:[
+      {so:'Biyo',en:'Water',note:''},{so:'Shaah',en:'Tea',note:''},{so:'Bariis',en:'Rice',note:''},
+      {so:'Hilib',en:'Meat',note:''},{so:'Muus',en:'Banana',note:''},{so:'Rooti',en:'Bread',note:''},
+      {so:'Macaan',en:'Sweet / Delicious',note:''},{so:'Gaajoonaya',en:'Hungry',note:''},
+      {so:'Oommanaya',en:'Thirsty',note:''},{so:'Cuno',en:'Eat',note:'Fal'},
+      {so:'Caabi',en:'Drink',note:'Fal'},{so:'Kari',en:'Cook',note:'Fal'},
+      {so:'Makhaayadda',en:'Restaurant',note:''},{so:'Caano',en:'Milk',note:''}
+    ],
+    phrases:[
+      {so:'Gaajoonayaa',en:'I am hungry',note:''},
+      {so:'Cuntada waa macaan tahay',en:'The food is delicious',note:''},
+      {so:'Biyo ii sii kartaa?',en:'Can I have water please?',note:''}
+    ]
+  },
+  { id:'en-6', num:'Cashar 6', title:'Shaqada & Waxbarashadda', sub:'Work & Education',
+    desc:'Ereyada shaqada iyo waxbarashadda oo Ingiriisi ah.',
+    level:'Dhexe', dur:'15 daqiiqo',
+    vocab:[
+      {so:'Shaqo',en:'Work / Job',note:''},{so:'Shaqaale',en:'Employee / Worker',note:''},
+      {so:'Waxbarasho',en:'Education',note:''},{so:'Dugsiga',en:'School',note:''},
+      {so:'Jaamacadda',en:'University',note:''},{so:'Macallin',en:'Teacher',note:''},
+      {so:'Arday',en:'Student',note:''},{so:'Buug',en:'Book',note:''},
+      {so:'Xafiis',en:'Office',note:''},{so:'Lacag',en:'Money',note:''},
+      {so:'Xirfad',en:'Skill',note:''},{so:'Barnaamij',en:'Programme / Schedule',note:''},
+      {so:'Warbaahinta',en:'Media / News',note:''},{so:'Shaqo raadinta',en:'Job hunting',note:''}
+    ],
+    phrases:[
+      {so:'Waxaan ka shaqeeyaa...',en:'I work at...',note:''},
+      {so:'Maxaad baratay?',en:'What did you study?',note:''},
+      {so:'Shaqo baad u baahan tahay?',en:'Are you looking for work?',note:''}
+    ]
+  },
+  { id:'en-7', num:'Cashar 7', title:'Caafimaadka & Jirka', sub:'Health & The Body',
+    desc:'Ereyada caafimaadka iyo jirka aadamaha oo Ingiriisi ah.',
+    level:'Dhexe', dur:'18 daqiiqo',
+    vocab:[
+      {so:'Jir',en:'Body',note:''},{so:'Madax',en:'Head',note:''},{so:'Wadne',en:'Heart',note:''},
+      {so:'Caafimaad',en:'Health',note:''},{so:'Jirro',en:'Illness / Disease',note:''},
+      {so:'Xanuun',en:'Pain',note:''},{so:'Dhakhtar',en:'Doctor',note:''},
+      {so:'Cisbitaal',en:'Hospital',note:''},{so:'Daawo',en:'Medicine',note:''},
+      {so:'Dhiig',en:'Blood',note:''},{so:'Caloosha',en:'Stomach',note:''},
+      {so:'Lug',en:'Leg / Foot',note:''},{so:'Gacanta',en:'Hand / Arm',note:''},
+      {so:'Indho',en:'Eyes',note:''}
+    ],
+    phrases:[
+      {so:'Madaxaygu wuu xanuunayaa',en:'My head hurts',note:''},
+      {so:'Dhakhtar baaan u baahnahay',en:'I need a doctor',note:''},
+      {so:'Xanuunka xaggee ayuu ku jiraa?',en:'Where does it hurt?',note:''}
+    ]
+  },
+  { id:'en-8', num:'Cashar 8', title:'Naxwaha Ingiriisiga', sub:'English Grammar Basics',
+    desc:'Fahamka naxwaha Ingiriisiga — nidaamka ereyada, jirka afka, iyo falalka muhiimka ah.',
+    level:'Dhexe', dur:'20 daqiiqo',
+    vocab:[
+      {so:'Magac (noun)',en:'Noun — naming word',note:'e.g. book, car'},
+      {so:'Fal (verb)',en:'Verb — action word',note:'e.g. run, eat'},
+      {so:'Sifo (adjective)',en:'Adjective — describing word',note:'e.g. big, red'},
+      {so:'Xaadir (present)',en:'Present tense',note:'I eat / I am eating'},
+      {so:'Dhaafay (past)',en:'Past tense',note:'I ate / I was eating'},
+      {so:'Mustaqbal (future)',en:'Future tense',note:'I will eat'},
+      {so:'Weydiin (question)',en:'Question',note:'Who, What, Where, When'},
+      {so:'Mawduuca',en:'Subject',note:'Who does the action'},
+      {so:"Maf'uulka",en:'Object',note:'Receives the action'},
+      {so:'Jumlad',en:'Sentence',note:'Subject + Verb + Object'},
+      {so:'Munaasab (article)',en:'Article: a / an / the',note:''},
+      {so:'Faro badan',en:'Plural',note:'cats, books, cars'}
+    ],
+    phrases:[
+      {so:'Ingiriisiga waa luqad SVO ah',en:'English uses Subject-Verb-Object order',note:''},
+      {so:'Bisadda ayaa kalluunka cunaysa',en:'The cat eats fish (SVO)',note:''},
+      {so:'Falalka: be, have, do',en:'Key verbs: be, have, do',note:''}
+    ]
+  }
+];
+
+var curIdx = 0;
+
+function esc(s){ return s?String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'):''; }
+
+function getP(){ try{ return JSON.parse(localStorage.getItem('higaad_learn_en')||'{}'); }catch(e){ return {}; } }
+function saveP(id){ var p=getP(); p[id]=true; try{ localStorage.setItem('higaad_learn_en',JSON.stringify(p)); }catch(e){} }
+
+function updateBar(){
+  var p=getP(), done=LESSONS.filter(function(l){ return p[l.id]; }).length;
+  var pct=Math.round(done/LESSONS.length*100);
+  var bar=document.getElementById('progressBar'), lbl=document.getElementById('progressLabel');
+  if(bar) bar.style.width=pct+'%';
+  if(lbl) lbl.textContent=done+' / '+LESSONS.length;
+}
+
+function renderGrid(){
+  var p=getP();
+  document.getElementById('lessonGrid').innerHTML=LESSONS.map(function(l,i){
+    var done=!!p[l.id];
+    return '<div class="lesson-card" onclick="openLesson('+i+')" style="cursor:pointer'+(done?';border-color:#4a5aaf':'')+'">' +
+      '<div class="lesson-card-num">'+esc(l.num)+(done?' <span style="color:#4a5aaf">✓</span>':'')+' <span style="float:right;opacity:.4;font-size:.7rem">→</span></div>' +
+      '<div class="lesson-card-title">'+esc(l.title)+'</div>' +
+      '<div style="font-size:.76rem;color:#4a5aaf;font-style:italic;margin-bottom:8px">'+esc(l.sub)+'</div>' +
+      '<div class="lesson-card-desc">'+esc(l.desc)+'</div>' +
+      '<div class="lesson-card-meta">' +
+        '<span class="lesson-pill '+(l.level==='Bilowga'?'beginner':'intermediate')+'">'+esc(l.level)+'</span>' +
+        '<span class="lesson-pill">⏱ '+esc(l.dur)+'</span>' +
+        '<span class="lesson-pill">📖 '+l.vocab.length+' erayo</span>' +
+      '</div>' +
+    '</div>';
+  }).join('');
+}
+
+function openLesson(idx){
+  curIdx=idx;
+  var l=LESSONS[idx];
+  saveP(l.id); updateBar(); renderGrid();
+  document.getElementById('detailFill').style.width=Math.round((idx+1)/LESSONS.length*100)+'%';
+  document.getElementById('detailContent').innerHTML=
+    '<div style="margin-bottom:32px">' +
+      '<div style="font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:8px">'+esc(l.num)+' of 8 · '+esc(l.level)+' · '+esc(l.dur)+'</div>' +
+      '<h1 style="font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--black);line-height:1.2;margin-bottom:8px">'+esc(l.title)+'</h1>' +
+      '<div style="font-size:.9rem;color:#4a5aaf;font-style:italic;margin-bottom:16px">'+esc(l.sub)+'</div>' +
+      '<p style="font-size:.88rem;color:var(--mid);line-height:1.7">'+esc(l.desc)+'</p>' +
+    '</div>' +
+    '<div class="lesson-section">' +
+      '<div class="lesson-section-title">📖 Ereybixin — '+l.vocab.length+' erayo</div>' +
+      '<table class="vocab-table"><thead><tr><th>Soomaali</th><th>English</th><th>Xusuusin</th></tr></thead><tbody>' +
+      l.vocab.map(function(v){ return '<tr><td class="vocab-so" style="color:#4a5aaf">'+esc(v.so)+'</td><td class="vocab-en">'+esc(v.en)+'</td><td class="vocab-note">'+esc(v.note)+'</td></tr>'; }).join('') +
+      '</tbody></table></div>' +
+    '<div class="lesson-section">' +
+      '<div class="lesson-section-title">💬 Jumlado Faa\'iido leh</div>' +
+      l.phrases.map(function(p){ return '<div class="phrase-row"><div class="phrase-so" style="color:#4a5aaf;font-weight:600">'+esc(p.so)+'</div><div class="phrase-en">'+esc(p.en)+'</div>'+(p.note?'<div class="phrase-note">'+esc(p.note)+'</div>':'')+'</div>'; }).join('') +
+    '</div>' +
+    '<div class="lesson-section" style="background:var(--surface)">' +
+      '<div class="lesson-section-title">⚡ Ku Celceli</div>' +
+      '<p style="font-size:.84rem;color:var(--mid);margin-bottom:16px">Waxaad baratay ku celceli si aad ugu xusuusato.</p>' +
+      '<div style="display:flex;gap:10px;flex-wrap:wrap">' +
+        '<a class="learn-quiz-btn" href="flashcards.html" style="background:#4a5aaf">Flashcards</a>' +
+        '<a class="learn-quiz-btn" href="az.html" style="background:var(--white);color:var(--black);border:1.5px solid var(--border)">Qaamuuska A–Z</a>' +
+      '</div>' +
+    '</div>';
+  document.getElementById('prevBtn').style.display=idx>0?'':'none';
+  document.getElementById('nextBtn').style.display=idx<LESSONS.length-1?'':'none';
+  document.getElementById('gridView').style.display='none';
+  document.getElementById('pageHero').style.display='none';
+  document.getElementById('lessonDetail').classList.add('open');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function navLesson(dir){ var n=curIdx+dir; if(n>=0&&n<LESSONS.length) openLesson(n); }
+
+function showGrid(){
+  document.getElementById('lessonDetail').classList.remove('open');
+  document.getElementById('gridView').style.display='';
+  document.getElementById('pageHero').style.display='';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+  renderGrid(); updateBar();
+  var sp=document.getElementById('searchPopup'), si=document.getElementById('popupSearchInput');
+  window.closeSearchPopup=function(){ sp.classList.remove('open'); document.body.style.overflow=''; si.value=''; };
+  document.addEventListener('keydown',function(ev){
+    if((ev.ctrlKey||ev.metaKey)&&ev.key==='e'){ ev.preventDefault(); sp.classList.contains('open')?window.closeSearchPopup():(sp.classList.add('open'),document.body.style.overflow='hidden',si.focus()); }
+    if(ev.key==='Escape'&&sp.classList.contains('open')) window.closeSearchPopup();
+  });
+  sp.addEventListener('click',function(ev){ if(ev.target===sp) window.closeSearchPopup(); });
+});
+</script>
+<script src="settings.js"></script>
+</body>
+</html>
