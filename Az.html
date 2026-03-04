@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+  <script>
+    try { var s=JSON.parse(localStorage.getItem('higaad_settings')||'{}'); if(s.theme)document.documentElement.setAttribute('data-theme',s.theme); if(s.fontsize)document.documentElement.setAttribute('data-fontsize',s.fontsize); if(s.compact)document.documentElement.setAttribute('data-compact','true'); } catch(e){}
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A–Z Words — Higaad</title>
+  <meta name="description" content="Browse all words A–Z — Higaad Somali-English Dictionary." />
+  <link rel="icon" href="images/Logo and favicon/hingaad icon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html"><img src="images/Higaad logo.png" alt="Higaad" class="logo-img logo-light"><img src="images/black logo.png" alt="Higaad" class="logo-img logo-dark"></a>
+  <div class="nav-links">
+    <a class="nav-link"        href="index.html"      data-i18n="nav_home">Home</a>
+    <a class="nav-link"        href="tech.html"       data-i18n="nav_tech">Tech Stack</a>
+    <a class="nav-link"        href="medical.html"    data-i18n="nav_medical">Medical</a>
+    <a class="nav-link active" href="az.html"         data-i18n="nav_az">A–Z</a>
+    <a class="nav-link"        href="flashcards.html" data-i18n="nav_flashcards">Flashcards</a>
+    <div class="nav-dropdown" id="learnDropdown">
+      <button class="nav-dropdown-toggle" id="learnDropdownBtn">Learn <span class="dd-arrow">&#9660;</span></button>
+      <div class="nav-dropdown-menu" id="learnDropdownMenu">
+        <div class="nav-dd-header"><span class="nav-dd-header-title">Learning Paths</span></div>
+        <div class="nav-dd-cols">
+          <div class="nav-dd-col"><div class="nav-dd-col-label">🇸🇴 Baranee Soomaali</div><a class="nav-dd-item" href="learn-somali.html"><div class="nav-dd-item-icon so">🇸🇴</div><div class="nav-dd-item-text"><strong data-i18n="nav_learn_so">Learn Somali</strong><span data-i18n="nav_learn_so_sub">For English speakers</span></div></a></div>
+          <div class="nav-dd-col"><div class="nav-dd-col-label">🇬🇧 Baranee Ingiriisi</div><a class="nav-dd-item" href="learn-english.html"><div class="nav-dd-item-icon en">🇬🇧</div><div class="nav-dd-item-text"><strong data-i18n="nav_learn_en">Learn English</strong><span data-i18n="nav_learn_en_sub">For Somali speakers</span></div></a></div>
+        </div>
+        <div class="nav-dd-footer"><span class="nav-dd-footer-text">8 lessons · Free</span><a class="nav-dd-footer-link" href="flashcards.html">Flashcards →</a></div>
+      </div>
+    </div>
+    <a class="nav-link" href="about.html">About</a>
+    <div class="nav-kbd"><kbd>Ctrl</kbd><kbd>E</kbd></div>
+  </div>
+</nav>
+
+<section class="hero az-hero">
+  <div class="hero-eyebrow"><span class="hero-eyebrow-dot"></span>Qaamuuska Oo Dhan</div>
+  <h1 class="hero-title" data-i18n="az_title">All Words <em>A–Z</em></h1>
+  <p class="hero-subtitle" data-i18n="az_meta">Browse every word in the dictionary alphabetically</p>
+  <div class="tech-search-wrap" style="margin-bottom:0">
+    <span class="search-icon">⌕</span>
+    <input type="text" id="azSearch" placeholder="Search any word..." autocomplete="off" spellcheck="false" />
+    <button class="tech-clear" id="azClear" onclick="clearAzSearch()" title="Clear">✕</button>
+  </div>
+</section>
+
+<main>
+  <div class="az-alphabet-nav" id="azAlphabetNav"></div>
+  <div class="filters-bar" style="margin-bottom:28px">
+    <button class="filter-btn active" onclick="setAzFilter('all',this)">All</button>
+    <button class="filter-btn"        onclick="setAzFilter('somali',this)">Somali</button>
+    <button class="filter-btn"        onclick="setAzFilter('english',this)">English</button>
+    <button class="filter-btn"        onclick="setAzFilter('tech',this)">Tech</button>
+    <button class="filter-btn"        onclick="setAzFilter('medical',this)">Medical</button>
+    <span class="word-count-badge" id="azWordCount">0 words</span>
+  </div>
+  <div id="azContent"></div>
+</main>
+
+<footer><p>Built with care for the Somali language &nbsp;·&nbsp; <strong>Higaad</strong> &nbsp;·&nbsp; © 2025</p></footer>
+
+<div class="search-popup-overlay" id="searchPopup">
+  <div class="search-popup">
+    <div class="search-popup-inner"><span class="popup-search-icon">⌕</span><input type="text" id="popupSearchInput" placeholder="Raadi eray Somali ama English..." autocomplete="off" spellcheck="false" /><button class="popup-esc" onclick="closeSearchPopup()">ESC</button></div>
+    <div class="popup-divider"></div>
+    <div class="popup-results-wrap" id="popupResultsWrap"></div>
+    <div class="popup-hint"><span><kbd>↑</kbd><kbd>↓</kbd> navigate</span><span><kbd>Ctrl+E</kbd> close</span></div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="techData.js"></script>
+<script src="medicalData.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var azFilter='all', azQuery='';
+  var LETTERS='ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  var azSearchEl=document.getElementById('azSearch'), azClearEl=document.getElementById('azClear');
+  var azCountEl=document.getElementById('azWordCount'), azContent=document.getElementById('azContent');
+  var azAlphNav=document.getElementById('azAlphabetNav');
+  var searchPopupEl=document.getElementById('searchPopup'), popupSearchInput=document.getElementById('popupSearchInput'), popupResultsWrap=document.getElementById('popupResultsWrap');
+
+  function getAllWords(){
+    var main=(typeof dictionary!=='undefined')?dictionary:[];
+    var med=(typeof medicalDictionary!=='undefined')?medicalDictionary.map(function(e){return Object.assign({},e,{isMedical:true});}):[]; return main.concat(med);
+  }
+  function getFilteredWords(){
+    var q=azQuery.toLowerCase();
+    return getAllWords().filter(function(e){
+      if(azFilter==='somali'  && e.language!=='somali')  return false;
+      if(azFilter==='english' && e.language!=='english') return false;
+      if(azFilter==='tech'    && !e.isTech)              return false;
+      if(azFilter==='medical' && !e.isMedical)           return false;
+      if(!q) return true;
+      return e.word.toLowerCase().includes(q)||(e.traditionalMeaning||'').toLowerCase().includes(q)||(e.modernMeaning||'').toLowerCase().includes(q)||(e.somaliWord||'').toLowerCase().includes(q);
+    });
+  }
+  function buildAlphabetNav(){
+    var hasLetter={};
+    getAllWords().forEach(function(e){if(e.word)hasLetter[e.word.charAt(0).toUpperCase()]=true;});
+    azAlphNav.innerHTML=LETTERS.map(function(l){return '<button class="az-letter-btn '+(hasLetter[l]?'has-words':'no-words')+'" id="az-btn-'+l+'" onclick="scrollToLetter(\''+l+'\')">'+l+'</button>';}).join('');
+  }
+  window.scrollToLetter=function(letter){var s=document.getElementById('az-section-'+letter);if(s)s.scrollIntoView({behavior:'smooth',block:'start'});};
+  window.setAzFilter=function(filter,btn){azFilter=filter;document.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active');});btn.classList.add('active');renderAz();};
+  azSearchEl.addEventListener('input',function(){azQuery=azSearchEl.value.trim();azClearEl.classList.toggle('visible',azQuery.length>0);renderAz();});
+  window.clearAzSearch=function(){azSearchEl.value='';azQuery='';azClearEl.classList.remove('visible');azSearchEl.focus();renderAz();};
+
+  function renderAz(){
+    var words=getFilteredWords();
+    if(azCountEl)azCountEl.textContent=words.length+' word'+(words.length!==1?'s':'');
+    if(!words.length){azContent.innerHTML='<div class="tech-empty"><div class="tech-empty-icon">🔍</div><div class="tech-empty-text">Eraygan lama helin</div><div class="tech-empty-sub">No words match</div></div>';return;}
+    var groups={};
+    words.forEach(function(e){if(!e.word)return;var l=e.word.charAt(0).toUpperCase();if(!groups[l])groups[l]=[];groups[l].push(e);});
+    var sortedLetters=Object.keys(groups).sort(), globalIdx=0;
+    azContent.innerHTML=sortedLetters.map(function(letter){
+      var groupWords=groups[letter].slice().sort(function(a,b){return a.word.localeCompare(b.word);});
+      var cards=groupWords.map(function(e){
+        var delay=Math.min(globalIdx++*0.012,0.4);
+        var url=e.isMedical?'medical-word.html?id='+e.id:'word.html?id='+e.id;
+        var badge=e.language.toUpperCase()+(e.isTech?' · TECH':'')+(e.isMedical?' · MED':'');
+        return '<div class="tech-card" style="animation-delay:'+delay+'s" onclick="window.location.href=\''+url+'\'">' +
+          '<div class="tech-card-lang">'+badge+'</div>' +
+          '<div class="tech-card-word">'+escHtml(e.word)+'</div>' +
+          '<div class="tech-card-trad">'+escHtml((e.traditionalMeaning||'').slice(0,80))+((e.traditionalMeaning||'').length>80?'…':'')+'</div>' +
+          (e.modernMeaning||e.somaliWord?'<div class="tech-card-modern"><span class="tech-modern-dot"></span>'+escHtml(e.modernMeaning||e.somaliWord)+'</div>':'') +
+        '</div>';
+      }).join('');
+      return '<div class="az-section" id="az-section-'+letter+'"><div class="az-section-letter">'+letter+'</div><div class="az-grid">'+cards+'</div></div>';
+    }).join('');
+  }
+
+  function openSearchPopup(){searchPopupEl.classList.add('open');document.body.style.overflow='hidden';popupSearchInput.focus();renderPopupResults('');}
+  function closeSearchPopup(){searchPopupEl.classList.remove('open');document.body.style.overflow='';popupSearchInput.value='';}
+  window.closeSearchPopup=closeSearchPopup;
+  popupSearchInput.addEventListener('input',function(){renderPopupResults(popupSearchInput.value.trim());});
+  function renderPopupResults(query){
+    var q=query.toLowerCase(), all=getAllWords();
+    var results=q?all.filter(function(e){return e.word.toLowerCase().includes(q)||(e.traditionalMeaning||'').toLowerCase().includes(q);}):all.slice(0,8);
+    if(!results.length){popupResultsWrap.innerHTML='<div class="popup-empty">Eraygan lama helin — Word not found</div>';return;}
+    popupResultsWrap.innerHTML=results.slice(0,12).map(function(e,i){var url=e.isMedical?'medical-word.html?id='+e.id:'word.html?id='+e.id;return '<div class="popup-result-item" style="animation-delay:'+(i*0.025)+'s" onclick="window.location.href=\''+url+'\'"><div class="popup-item-left"><div class="popup-item-word">'+escHtml(e.word)+'</div><div class="popup-item-meaning">'+escHtml(e.traditionalMeaning)+'</div></div><div class="popup-item-arrow">→</div></div>';}).join('');
+  }
+  document.addEventListener('keydown',function(ev){if((ev.ctrlKey||ev.metaKey)&&ev.key==='e'){ev.preventDefault();searchPopupEl.classList.contains('open')?closeSearchPopup():openSearchPopup();return;}if(ev.key==='Escape'&&searchPopupEl.classList.contains('open'))closeSearchPopup();});
+  searchPopupEl.addEventListener('click',function(ev){if(ev.target===searchPopupEl)closeSearchPopup();});
+  buildAlphabetNav(); renderAz();
+});
+function escHtml(str){if(!str)return '';return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+</script>
+<script src="settings.js"></script>
+</body>
+</html>

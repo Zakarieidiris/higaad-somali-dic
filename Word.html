@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+  <script>
+    try {
+      var s = JSON.parse(localStorage.getItem('higaad_settings') || '{}');
+      if (s.theme)    document.documentElement.setAttribute('data-theme',    s.theme);
+      if (s.fontsize) document.documentElement.setAttribute('data-fontsize', s.fontsize);
+      if (s.compact)  document.documentElement.setAttribute('data-compact',  'true');
+    } catch(e) {}
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Higaad — Word</title>
+  <meta name="description" content="Deep word definition — Higaad Somali-English Dictionary" />
+  <link rel="icon" href="images/Logo and favicon/hingaad icon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img src="images/Higaad logo.png" alt="Higaad Home" class="logo-img logo-light">
+    <img src="images/black logo.png"  alt="Higaad Home" class="logo-img logo-dark">
+  </a>
+  <div class="nav-links">
+    <a class="nav-link" href="index.html"      data-i18n="nav_home">Home</a>
+    <a class="nav-link" href="tech.html"       data-i18n="nav_tech">Tech Stack</a>
+    <a class="nav-link" href="medical.html"    data-i18n="nav_medical">Medical Terminology</a>
+    <a class="nav-link" href="az.html"         data-i18n="nav_az">A–Z</a>
+    <a class="nav-link" href="flashcards.html" data-i18n="nav_flashcards">Flashcards</a>
+        <div class="nav-dropdown" id="learnDropdown">
+      <button class="nav-dropdown-toggle" id="learnDropdownBtn">Learn <span class="dd-arrow">&#9660;</span></button>
+      <div class="nav-dropdown-menu" id="learnDropdownMenu">
+        <div class="nav-dd-header">
+          <span class="nav-dd-header-title">Learning Paths</span>
+        </div>
+        <div class="nav-dd-cols">
+          <div class="nav-dd-col">
+            <div class="nav-dd-col-label">&#127480;&#127476; Baranee Soomaali</div>
+            <a class="nav-dd-item" href="learn-somali.html">
+              <div class="nav-dd-item-icon so">&#127480;&#127476;</div>
+              <div class="nav-dd-item-text">
+                <strong data-i18n="nav_learn_so">Learn Somali</strong>
+                <span data-i18n="nav_learn_so_sub">For English speakers</span>
+              </div>
+            </a>
+          </div>
+          <div class="nav-dd-col">
+            <div class="nav-dd-col-label">&#127468;&#127463; Baranee Ingiriisi</div>
+            <a class="nav-dd-item" href="learn-english.html">
+              <div class="nav-dd-item-icon en">&#127468;&#127463;</div>
+              <div class="nav-dd-item-text">
+                <strong data-i18n="nav_learn_en">Learn English</strong>
+                <span data-i18n="nav_learn_en_sub">For Somali speakers</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="nav-dd-footer">
+          <span class="nav-dd-footer-text">8 lessons per path · Free</span>
+          <a class="nav-dd-footer-link" href="flashcards.html">Flashcards &#8594;</a>
+        </div>
+      </div>
+    </div>
+    <a class="nav-link"        href="about.html">About</a>
+    <div class="nav-kbd"><kbd>Ctrl</kbd><kbd>E</kbd></div>
+  </div>
+</nav>
+
+<div class="word-page" id="wordPage"></div>
+<div id="toast" class="toast"></div>
+
+<div class="search-popup-overlay" id="searchPopup">
+  <div class="search-popup">
+    <div class="search-popup-inner">
+      <span class="popup-search-icon">⌕</span>
+      <input type="text" id="popupSearchInput" placeholder="Raadi eray Somali ama English..." autocomplete="off" spellcheck="false" />
+      <button class="popup-esc" onclick="closeSearchPopup()">ESC</button>
+    </div>
+    <div class="popup-divider"></div>
+    <div class="popup-results-wrap" id="popupResultsWrap"></div>
+    <div class="popup-hint">
+      <span><kbd>↑</kbd> <kbd>↓</kbd> navigate &nbsp; <kbd>Enter</kbd> select</span>
+      <span><kbd>Ctrl+E</kbd> close</span>
+    </div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="techData.js"></script>
+<script src="featured.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // ── LOAD WORD FROM URL PARAM ──────────────────────────────
+  var params = new URLSearchParams(window.location.search);
+  var id     = parseInt(params.get('id'), 10);
+  var entry  = dictionary.find(function(e) { return e.id === id; });
+  if (entry) renderWord(entry);
+  else       renderNotFound();
+
+  // ── POPUP SEARCH ──────────────────────────────────────────
+  var searchPopupEl    = document.getElementById('searchPopup');
+  var popupSearchInput = document.getElementById('popupSearchInput');
+  var popupResultsWrap = document.getElementById('popupResultsWrap');
+
+  function openSearchPopup() {
+    searchPopupEl.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    popupSearchInput.focus();
+    renderPopupResults('');
+  }
+  function closeSearchPopup() {
+    searchPopupEl.classList.remove('open');
+    document.body.style.overflow = '';
+    popupSearchInput.value = '';
+  }
+  window.closeSearchPopup = closeSearchPopup;
+
+  popupSearchInput.addEventListener('input', function() {
+    renderPopupResults(popupSearchInput.value.trim());
+  });
+
+  function renderPopupResults(query) {
+    var q = query.toLowerCase();
+    var results = q
+      ? dictionary.filter(function(e) {
+          return e.word.toLowerCase().includes(q) ||
+            (e.traditionalMeaning || '').toLowerCase().includes(q) ||
+            (e.modernMeaning      || '').toLowerCase().includes(q);
+        })
+      : dictionary.slice(0, 8);
+
+    if (!results.length) {
+      popupResultsWrap.innerHTML = '<div class="popup-empty">Eraygan lama helin — Word not found</div>';
+      return;
+    }
+    popupResultsWrap.innerHTML = results.slice(0, 12).map(function(e, i) {
+      return '<div class="popup-result-item" style="animation-delay:' + (i * 0.03) + 's"' +
+             ' onclick="window.location.href=\'word.html?id=' + e.id + '\'">' +
+        '<div class="popup-item-left">' +
+          '<div class="popup-item-word">'    + escHtml(e.word) + '</div>' +
+          '<div class="popup-item-meaning">' + escHtml(e.traditionalMeaning) + '</div>' +
+        '</div>' +
+        '<div class="popup-item-arrow">→</div>' +
+      '</div>';
+    }).join('');
+  }
+
+  document.addEventListener('keydown', function(ev) {
+    if ((ev.ctrlKey || ev.metaKey) && ev.key === 'e') {
+      ev.preventDefault();
+      searchPopupEl.classList.contains('open') ? closeSearchPopup() : openSearchPopup();
+      return;
+    }
+    if (ev.key === 'Escape' && searchPopupEl.classList.contains('open')) closeSearchPopup();
+  });
+
+  searchPopupEl.addEventListener('click', function(ev) {
+    if (ev.target === searchPopupEl) closeSearchPopup();
+  });
+});
+
+// ── RENDER WORD ───────────────────────────────────────────
+function renderWord(e) {
+  document.title = e.word + ' — Higaad';
+  var langLabel = e.language === 'somali' ? 'Somali' : 'English';
+  var langBadge = e.language === 'somali'
+    ? '<span class="badge badge-lg badge-lang-so">Somali</span>'
+    : '<span class="badge badge-lg badge-lang-en">English</span>';
+  var techBadge = e.isTech ? '<span class="badge badge-lg badge-tech">Tech</span>' : '';
+  var typeBadge = '<span class="badge badge-lg badge-type">' + capitalize(e.type) + '</span>';
+
+  var related = dictionary
+    .filter(function(r) { return r.id !== e.id && r.language === e.language && r.isTech === e.isTech; })
+    .slice(0, 4);
+
+  var relatedHtml = '';
+  if (related.length) {
+    relatedHtml = '<div class="sidebar-card"><div class="sidebar-label">Related Words</div>' +
+      related.map(function(r) {
+        return '<a class="sidebar-related-item" href="word.html?id=' + r.id + '">' +
+          '<div>' +
+            '<div class="related-word">' + escHtml(r.word) + '</div>' +
+            '<div class="related-meaning">' + escHtml(r.traditionalMeaning.slice(0,36)) + (r.traditionalMeaning.length>36?'…':'') + '</div>' +
+          '</div>' +
+          '<span class="related-arrow">→</span>' +
+        '</a>';
+      }).join('') +
+    '</div>';
+  }
+
+  document.getElementById('wordPage').innerHTML =
+    '<div class="word-hero">' +
+      '<div class="word-hero-inner">' +
+        '<div class="breadcrumb">' +
+          '<a href="index.html">Home</a>' +
+          '<span class="breadcrumb-sep">›</span>' +
+          '<a href="index.html">Dictionary</a>' +
+          '<span class="breadcrumb-sep">›</span>' +
+          '<span>' + escHtml(e.word) + '</span>' +
+        '</div>' +
+        '<div class="word-header-top">' +
+          '<div class="word-title-block">' +
+            '<h1 class="word-main-title">' + escHtml(e.word) + '</h1>' +
+            '<div class="word-hero-badges">' + langBadge + techBadge + typeBadge + '</div>' +
+            '<div class="word-pronunciation">/ ' + escHtml(e.word.toLowerCase()) + ' /</div>' +
+          '</div>' +
+          '<button class="word-share-btn" onclick="shareWord()">↗ Share</button>' +
+        '</div>' +
+      '</div>' +
+    '</div>' +
+
+    '<div class="word-content">' +
+      '<div class="word-main">' +
+
+        '<div class="def-block' + (e.isTech ? ' tech-block' : '') + '">' +
+          '<div class="def-block-accent"></div>' +
+          '<div class="def-label">' +
+            '<div class="def-label-icon' + (e.isTech ? ' tech' : '') + '">' + (e.isTech ? '⚡' : 'M') + '</div>' +
+            (e.isTech ? 'Technical Definition' : 'Macnaha / Definition') +
+          '</div>' +
+          '<div class="def-text">' + escHtml(e.traditionalMeaning) + '</div>' +
+          (e.modernMeaning
+            ? '<div class="modern-term-block">' +
+                '<div class="modern-term-icon">✦</div>' +
+                '<div>' +
+                  '<div class="modern-term-label">Modern Somali Term</div>' +
+                  '<div class="modern-term-word">' + escHtml(e.modernMeaning) + '</div>' +
+                  '<div class="modern-term-desc">Recommended Somali equivalent for everyday use</div>' +
+                '</div>' +
+              '</div>'
+            : '') +
+        '</div>' +
+
+        (e.example
+          ? '<div class="example-block">' +
+              '<div class="def-label"><div class="def-label-icon">T</div>Tusaale / Example Sentence</div>' +
+              '<p class="example-text">' + escHtml(e.example) + '</p>' +
+            '</div>'
+          : '') +
+
+        (e.synonyms && e.synonyms.length
+          ? '<div class="synonyms-block">' +
+              '<div class="def-label"><div class="def-label-icon">S</div>Ereyada La Xiriira / Synonyms</div>' +
+              '<div class="syn-list">' +
+                e.synonyms.map(function(s) {
+                  return '<span class="syn-pill" onclick="searchSynonym(\'' + escHtml(s) + '\')">' + escHtml(s) + '</span>';
+                }).join('') +
+              '</div>' +
+            '</div>'
+          : '') +
+
+        /* ── English Explanation ─────────────────────── */
+        (e.language === 'somali'
+          ? '<div class="explanation-block en-block">' +
+              '<div class="def-label">' +
+                '<div class="def-label-icon explanation-label-icon en">EN</div>' +
+                'Explanation in English' +
+              '</div>' +
+              '<div class="explanation-text">' + escHtml(e.traditionalMeaning) +
+                (e.modernMeaning ? ' — Modern equivalent: <em>' + escHtml(e.modernMeaning) + '</em>' : '') +
+              '</div>' +
+            '</div>'
+          : '<div class="explanation-block en-block">' +
+              '<div class="def-label">' +
+                '<div class="def-label-icon explanation-label-icon en">EN</div>' +
+                'Full English Explanation' +
+              '</div>' +
+              '<div class="explanation-text">' + escHtml(e.traditionalMeaning) + '</div>' +
+            '</div>') +
+
+        /* ── Somali Explanation ──────────────────────── */
+        (e.language === 'english'
+          ? '<div class="explanation-block so-block">' +
+              '<div class="def-label">' +
+                '<div class="def-label-icon explanation-label-icon so">SO</div>' +
+                'Sharaxaad Soomaali ah / Somali Explanation' +
+              '</div>' +
+              '<div class="explanation-text">' +
+                (e.modernMeaning
+                  ? escHtml(e.modernMeaning) + ' — ' + escHtml(e.traditionalMeaning)
+                  : 'Eraygan macnaheeda Soomaaliga waa: ' + escHtml(e.traditionalMeaning)) +
+              '</div>' +
+            '</div>'
+          : '<div class="explanation-block so-block">' +
+              '<div class="def-label">' +
+                '<div class="def-label-icon explanation-label-icon so">SO</div>' +
+                'Sharaxaad Soomaali ah / Somali Explanation' +
+              '</div>' +
+              '<div class="explanation-text">' + escHtml(e.traditionalMeaning) + '</div>' +
+            '</div>') +
+
+        /* ── Date & Reference ────────────────────────── */
+        '<div class="word-meta-row">' +
+          '<div class="word-meta-pill"><span class="meta-icon">📅</span> Date of Entry: <strong>' + (e.dateAdded || '2024–2025') + '</strong></div>' +
+          '<div class="word-meta-pill"><span class="meta-icon">📚</span> Source: <strong>' + (e.source || 'Higaad Dictionary Editorial Team') + '</strong></div>' +
+        '</div>' +
+
+        '<div class="usage-block">' +
+          '<div class="def-label"><div class="def-label-icon">I</div>Word Information</div>' +
+          '<div class="usage-row">' +
+            '<div class="usage-item"><div class="usage-item-label">Language</div><div class="usage-item-val">' + langLabel + '</div></div>' +
+            '<div class="usage-item"><div class="usage-item-label">Part of Speech</div><div class="usage-item-val">' + capitalize(e.type) + '</div></div>' +
+            '<div class="usage-item"><div class="usage-item-label">Category</div><div class="usage-item-val">' + (e.isTech ? 'Technology' : 'General') + '</div></div>' +
+            '<div class="usage-item"><div class="usage-item-label">ID</div><div class="usage-item-val">#' + String(e.id).padStart(4,'0') + '</div></div>' +
+          '</div>' +
+        '</div>' +
+
+      '</div>' +
+
+      '<div class="word-sidebar">' +
+        '<div class="sidebar-card">' +
+          '<div class="sidebar-label">Navigation</div>' +
+          '<a class="back-btn" href="index.html">← Back to Dictionary</a>' +
+        '</div>' +
+        '<div class="sidebar-card">' +
+          '<div class="sidebar-label">Quick Facts</div>' +
+          '<div class="sidebar-meta-row"><span class="sidebar-meta-key">Word</span><span class="sidebar-meta-val">' + escHtml(e.word) + '</span></div>' +
+          '<div class="sidebar-meta-row"><span class="sidebar-meta-key">Language</span><span class="sidebar-meta-val">' + langLabel + '</span></div>' +
+          '<div class="sidebar-meta-row"><span class="sidebar-meta-key">Type</span><span class="sidebar-meta-val">' + capitalize(e.type) + '</span></div>' +
+          (e.modernMeaning
+            ? '<div class="sidebar-meta-row"><span class="sidebar-meta-key">Modern</span><span class="sidebar-meta-val" style="color:var(--gold)">' + escHtml(e.modernMeaning) + '</span></div>'
+            : '') +
+        '</div>' +
+        relatedHtml +
+      '</div>' +
+    '</div>' +
+
+    '<footer><p>Built with care for the Somali language &nbsp;·&nbsp; <strong>Higaad</strong> &nbsp;·&nbsp; © 2025</p></footer>';
+}
+
+function renderNotFound() {
+  document.title = 'Word not found — Higaad';
+  document.getElementById('wordPage').innerHTML =
+    '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:80vh;text-align:center;padding:24px">' +
+      '<div style="font-size:2.5rem;margin-bottom:16px;opacity:0.3">⌕</div>' +
+      '<h1 style="font-family:var(--serif);font-size:1.8rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:8px">Eraygan lama helin</h1>' +
+      '<p style="color:var(--muted);font-size:0.88rem;margin-bottom:32px">This word could not be found in the dictionary.</p>' +
+      '<a href="index.html" style="font-size:0.82rem;font-weight:500;color:var(--black);text-decoration:none;padding:10px 24px;border:1.5px solid var(--black);border-radius:20px">← Back to Dictionary</a>' +
+    '</div>';
+}
+
+function capitalize(str) { return str ? str.charAt(0).toUpperCase() + str.slice(1) : ''; }
+function searchSynonym(word) { window.location.href = 'index.html?q=' + encodeURIComponent(word); }
+
+function shareWord() {
+  navigator.clipboard.writeText(window.location.href)
+    .then(function()  { showToast('Link copied to clipboard!'); })
+    .catch(function() { showToast('Copy this URL to share'); });
+}
+
+function showToast(msg) {
+  var t = document.getElementById('toast');
+  if (!t) return;
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(function() { t.classList.remove('show'); }, 2500);
+}
+
+function escHtml(str) {
+  if (!str) return '';
+  return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+</script>
+<script src="settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+  <script>
+    try {
+      var s = JSON.parse(localStorage.getItem('higaad_settings') || '{}');
+      if (s.theme)    document.documentElement.setAttribute('data-theme',    s.theme);
+      if (s.fontsize) document.documentElement.setAttribute('data-fontsize', s.fontsize);
+      if (s.compact)  document.documentElement.setAttribute('data-compact',  'true');
+    } catch(e) {}
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Higaad — Somali-English Dictionary</title>
+  <meta name="description" content="Qaamuuska Soomaaliga — Modern Somali-English dictionary with tech vocabulary." />
+  <link rel="icon" href="images/Logo and favicon/hingaad icon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- WELCOME POPUP -->
+<div class="welcome-overlay" id="welcomeOverlay" style="display:none">
+  <div class="welcome-card">
+    <div class="welcome-header">
+      <div class="welcome-logo-glyph">H</div>
+      <div class="welcome-title">Ku soo dhowow<br><em>Higaad</em></div>
+      <div class="welcome-sub">Your Somali–English Dictionary</div>
+    </div>
+    <div class="welcome-body">
+      <div class="welcome-features">
+        <div class="welcome-feat">
+          <div class="welcome-feat-icon">📖</div>
+          <div class="welcome-feat-text">
+            <strong data-i18n="wlc_feat1_title">Full Dictionary</strong>
+            <span data-i18n="wlc_feat1_sub">Somali &amp; English words with definitions</span>
+          </div>
+        </div>
+        <div class="welcome-feat">
+          <div class="welcome-feat-icon">⚡</div>
+          <div class="welcome-feat-text">
+            <strong data-i18n="wlc_feat2_title">Tech &amp; Medical</strong>
+            <span data-i18n="wlc_feat2_sub">Modern terminology in your language</span>
+          </div>
+        </div>
+        <div class="welcome-feat">
+          <div class="welcome-feat-icon">🃏</div>
+          <div class="welcome-feat-text">
+            <strong data-i18n="wlc_feat3_title">Flashcards</strong>
+            <span data-i18n="wlc_feat3_sub">Learn vocabulary interactively</span>
+          </div>
+        </div>
+      </div>
+      <div class="welcome-lang-select">
+        <div class="welcome-lang-label" data-i18n="wlc_lang_label">Choose your language</div>
+        <div class="welcome-lang-btns">
+          <button class="welcome-lang-btn active" data-lang="en" onclick="selectWelcomeLang('en', this)">English</button>
+          <button class="welcome-lang-btn" data-lang="so" onclick="selectWelcomeLang('so', this)">Soomaali</button>
+        </div>
+      </div>
+      <button class="welcome-cta" id="welcomeCtaBtn" onclick="closeWelcome()" data-i18n="wlc_cta">
+        Explore the Dictionary →
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img src="images/Higaad logo.png" alt="Higaad" class="logo-img logo-light">
+    <img src="images/black logo.png"  alt="Higaad" class="logo-img logo-dark">
+  </a>
+  <div class="nav-links">
+    <a class="nav-link active" href="index.html"      data-i18n="nav_home">Home</a>
+    <a class="nav-link"        href="tech.html"       data-i18n="nav_tech">Tech Stack</a>
+    <a class="nav-link"        href="medical.html"    data-i18n="nav_medical">Medical</a>
+    <a class="nav-link"        href="az.html"         data-i18n="nav_az">A–Z</a>
+    <a class="nav-link"        href="flashcards.html" data-i18n="nav_flashcards">Flashcards</a>
+    <div class="nav-dropdown" id="learnDropdown">
+      <button class="nav-dropdown-toggle" id="learnDropdownBtn">Learn <span class="dd-arrow">&#9660;</span></button>
+      <div class="nav-dropdown-menu" id="learnDropdownMenu">
+        <div class="nav-dd-header"><span class="nav-dd-header-title">Learning Paths</span></div>
+        <div class="nav-dd-cols">
+          <div class="nav-dd-col">
+            <div class="nav-dd-col-label">🇸🇴 Baranee Soomaali</div>
+            <a class="nav-dd-item" href="learn-somali.html">
+              <div class="nav-dd-item-icon so">🇸🇴</div>
+              <div class="nav-dd-item-text">
+                <strong data-i18n="nav_learn_so">Learn Somali</strong>
+                <span data-i18n="nav_learn_so_sub">For English speakers</span>
+              </div>
+            </a>
+          </div>
+          <div class="nav-dd-col">
+            <div class="nav-dd-col-label">🇬🇧 Baranee Ingiriisi</div>
+            <a class="nav-dd-item" href="learn-english.html">
+              <div class="nav-dd-item-icon en">🇬🇧</div>
+              <div class="nav-dd-item-text">
+                <strong data-i18n="nav_learn_en">Learn English</strong>
+                <span data-i18n="nav_learn_en_sub">For Somali speakers</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="nav-dd-footer">
+          <span class="nav-dd-footer-text">8 lessons · Free</span>
+          <a class="nav-dd-footer-link" href="flashcards.html">Flashcards →</a>
+        </div>
+      </div>
+    </div>
+    <a class="nav-link" href="about.html">About</a>
+    <div class="nav-kbd"><kbd>Ctrl</kbd><kbd>E</kbd></div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-eyebrow">
+    <span class="hero-eyebrow-dot"></span>
+    Qaamuuska Soomaaliga
+  </div>
+  <h1 class="hero-title">Somali–English<br><em>Dictionary</em></h1>
+  <p class="hero-subtitle">
+    Explore Somali words, English translations,<br>and modern tech terminology in one place.
+  </p>
+  <div class="search-container">
+    <div class="search-input-wrap">
+      <span class="search-icon">⌕</span>
+      <input type="text" id="searchInput" placeholder="Raadi eray Somali ama English..." autocomplete="off" spellcheck="false" />
+      <button class="search-clear" id="searchClear" onclick="clearSearch()" title="Clear">✕</button>
+    </div>
+  </div>
+  <div class="search-buttons">
+    <button class="btn btn-primary"   id="btnSoEn" onclick="setMode('so-en')" data-i18n="btn_so_en">Somali → English</button>
+    <button class="btn btn-secondary" id="btnEnSo" onclick="setMode('en-so')" data-i18n="btn_en_so">English → Somali</button>
+  </div>
+  <div class="inline-results" id="inlineResults"></div>
+</section>
+
+<!-- MAIN -->
+<main>
+  <section class="wotd-section">
+    <div class="section-header">
+      <h2 class="section-title" data-i18n="wotd_title">Erayga Maalinta</h2>
+      <span class="section-meta" data-i18n="wotd_meta">Word of the Day</span>
+    </div>
+    <div class="section-rule"></div>
+    <div class="wotd-card" id="wotd"></div>
+  </section>
+
+  <section class="tech-section" id="tech-section">
+    <div class="section-header">
+      <h2 class="section-title" data-i18n="tech_title">Ereyada Teknoolojiyada</h2>
+      <span class="section-meta" data-i18n="tech_meta">Modern tech vocabulary</span>
+    </div>
+    <div class="section-rule"></div>
+    <div class="tech-grid" id="techGrid"></div>
+  </section>
+
+  <section class="medical-section" id="medical-section">
+    <div class="section-header">
+      <h2 class="section-title" data-i18n="med_home_title">Ereyada Caafimaadka</h2>
+      <span class="section-meta" data-i18n="med_home_meta">Medical terminology</span>
+    </div>
+    <div class="section-rule"></div>
+    <div class="medical-home-grid" id="medicalHomeGrid"></div>
+  </section>
+</main>
+
+<footer>
+  <p>Built with care for the Somali language &nbsp;·&nbsp; <strong>Higaad</strong> &nbsp;·&nbsp; © 2025</p>
+</footer>
+
+<!-- SEARCH POPUP -->
+<div class="search-popup-overlay" id="searchPopup">
+  <div class="search-popup">
+    <div class="search-popup-inner">
+      <span class="popup-search-icon">⌕</span>
+      <input type="text" id="popupSearchInput" placeholder="Raadi eray Somali ama English..." autocomplete="off" spellcheck="false" />
+      <button class="popup-esc" onclick="closeSearchPopup()">ESC</button>
+    </div>
+    <div class="popup-divider"></div>
+    <div class="popup-results-wrap" id="popupResultsWrap"></div>
+    <div class="popup-hint">
+      <span><kbd>↑</kbd><kbd>↓</kbd> navigate &nbsp;<kbd>Enter</kbd> select</span>
+      <span><kbd>Ctrl+E</kbd> close</span>
+    </div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="techData.js"></script>
+<script src="medicalData.js"></script>
+<script src="featured.js"></script>
+<script src="script.js"></script>
+<script src="settings.js"></script>
+
+<script>
+(function initWelcome() {
+  const WELCOME_KEY = 'higaad_welcomed_v2';
+  function selectWelcomeLang(lang, btn) {
+    document.querySelectorAll('.welcome-lang-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    try { var s = JSON.parse(localStorage.getItem('higaad_settings')||'{}'); s.uilang=lang; localStorage.setItem('higaad_settings',JSON.stringify(s)); } catch(e){}
+    var ctaBtn = document.getElementById('welcomeCtaBtn');
+    if (ctaBtn) ctaBtn.textContent = lang==='so' ? 'Bilow Sahaminta →' : 'Explore the Dictionary →';
+  }
+  window.selectWelcomeLang = selectWelcomeLang;
+  function closeWelcome() {
+    var overlay = document.getElementById('welcomeOverlay');
+    if (!overlay) return;
+    overlay.style.opacity = '0'; overlay.style.pointerEvents = 'none';
+    setTimeout(function() { overlay.style.display='none'; }, 320);
+    try { localStorage.setItem(WELCOME_KEY,'true'); } catch(e){}
+  }
+  window.closeWelcome = closeWelcome;
+  document.addEventListener('DOMContentLoaded', function() {
+    var overlay = document.getElementById('welcomeOverlay');
+    if (!overlay) return;
+    try { if (!localStorage.getItem(WELCOME_KEY)) { overlay.style.display='flex'; setTimeout(function(){overlay.classList.add('open');},50); } } catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
