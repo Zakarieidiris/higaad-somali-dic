@@ -331,6 +331,80 @@
     const nav = document.querySelector('nav');
     if (!nav) return;
 
+    // ── Inject hamburger button (mobile) ──────────────────────
+    if (!document.getElementById('navHamburger')) {
+      const hamburger = document.createElement('button');
+      hamburger.className = 'nav-hamburger';
+      hamburger.id = 'navHamburger';
+      hamburger.setAttribute('aria-label', 'Open menu');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.innerHTML = '<span></span><span></span><span></span>';
+      nav.appendChild(hamburger);
+    }
+
+    // ── Inject overlay ────────────────────────────────────────
+    if (!document.getElementById('navOverlay')) {
+      const overlay = document.createElement('div');
+      overlay.className = 'nav-overlay';
+      overlay.id = 'navOverlay';
+      document.body.appendChild(overlay);
+    }
+
+    // ── Inject close button inside drawer ─────────────────────
+    const navLinks = nav.querySelector('.nav-links');
+    if (navLinks && !navLinks.querySelector('.nav-mobile-close')) {
+      const closeBtn = document.createElement('button');
+      closeBtn.className = 'nav-mobile-close';
+      closeBtn.textContent = '✕ Close';
+      navLinks.prepend(closeBtn);
+      closeBtn.addEventListener('click', closeMobileNav);
+    }
+
+    // ── Hamburger / drawer logic ──────────────────────────────
+    const hamburgerBtn = document.getElementById('navHamburger');
+    const navOverlay   = document.getElementById('navOverlay');
+
+    function openMobileNav() {
+      navLinks && navLinks.classList.add('open');
+      navOverlay && navOverlay.classList.add('open');
+      hamburgerBtn && hamburgerBtn.classList.add('active');
+      hamburgerBtn && hamburgerBtn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileNav() {
+      navLinks && navLinks.classList.remove('open');
+      navOverlay && navOverlay.classList.remove('open');
+      hamburgerBtn && hamburgerBtn.classList.remove('active');
+      hamburgerBtn && hamburgerBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    if (hamburgerBtn) {
+      hamburgerBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navLinks && navLinks.classList.contains('open') ? closeMobileNav() : openMobileNav();
+      });
+    }
+    if (navOverlay) {
+      navOverlay.addEventListener('click', closeMobileNav);
+    }
+
+    // Close drawer on nav link click (mobile)
+    if (navLinks) {
+      navLinks.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 768) closeMobileNav();
+        });
+      });
+    }
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinks && navLinks.classList.contains('open')) {
+        closeMobileNav();
+      }
+    });
+
     const panel = buildPanel();
     // Append directly to <nav> so it sits at the far right end
     nav.appendChild(panel);
@@ -353,10 +427,19 @@
     if (learnDropdown && learnBtn) {
       learnBtn.addEventListener('click', (e) => {
         e.stopPropagation();
+        // On mobile: toggle inline; on desktop: toggle class
         learnDropdown.classList.toggle('open');
       });
       document.addEventListener('click', (e) => {
-        if (!learnDropdown.contains(e.target)) learnDropdown.classList.remove('open');
+        if (!learnDropdown.contains(e.target) && window.innerWidth > 768) {
+          learnDropdown.classList.remove('open');
+        }
+      });
+      // Close dropdown on mobile learn-item click
+      learnDropdown.querySelectorAll('.nav-dd-item').forEach(item => {
+        item.addEventListener('click', () => {
+          if (window.innerWidth <= 768) closeMobileNav();
+        });
       });
     }
 

@@ -2052,6 +2052,17 @@ const dictionary = [
   synonyms: [],
   isTech: false
 },
+{
+  id: 166,
+  word: "Aaamus",
+  language: "somali",
+  type: "noun",
+  traditionalMeaning: "Silence",
+  modernMeaning: null,
+  example: "Waan aamusay markii aan maqlo wararka xun.",
+  synonyms: [],
+  isTech: false
+},
 
 ];
 
