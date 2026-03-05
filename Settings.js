@@ -223,7 +223,7 @@
     document.querySelectorAll('footer p').forEach(el => {
       if (el.textContent.includes('Higaad')) {
         el.innerHTML = lang === 'so'
-          ? 'Waxaa loogu dhisay luuqadda Soomaaliga &nbsp;·&nbsp; <strong>Higaad</strong> &nbsp;·&nbsp; © 2025'
+          ? 'Waxan Ku dhisney Si jaceyl Somalinimo ku jirto &nbsp;·&nbsp; <strong>Higaad</strong> &nbsp;·&nbsp; © 2025'
           : 'Built with care for the Somali language &nbsp;·&nbsp; <strong>Higaad</strong> &nbsp;·&nbsp; © 2025';
       }
     });
@@ -234,7 +234,7 @@
       'nav_tech':       lang === 'so' ? 'Teknoolojiyada — Higaad'       : 'Tech Stack — Higaad',
       'nav_medical':    lang === 'so' ? 'Caafimaadka — Higaad'          : 'Medical — Higaad',
       'nav_az':         lang === 'so' ? 'A–Z Ereyada — Higaad'          : 'A–Z Words — Higaad',
-      'nav_flashcards': lang === 'so' ? 'Kaadhadhka — Higaad'           : 'Flashcards — Higaad',
+      'nav_flashcards': lang === 'so' ? 'Garasho — Higaad'           : 'Flashcards — Higaad',
     };
     // Find active nav link to determine page
     const activeLink = document.querySelector('.nav-link.active');
