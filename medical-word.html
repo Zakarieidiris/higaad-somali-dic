@@ -111,7 +111,7 @@
 </div>
 
 <script src="data.js"></script>
-<script src="medicalData.js"></script>
+<script src="medicaldata.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   // ── LOAD WORD FROM URL PARAM ──────────────────────────────
@@ -277,7 +277,8 @@ function renderWord(e) {
             '<div class="def-label-icon explanation-label-icon en">EN</div>' +
             'Full English Explanation' +
           '</div>' +
-          '<div class="explanation-text">' + escHtml(e.traditionalMeaning) +
+          '<div class="explanation-text">' +
+            escHtml(e.explanationEn || e.traditionalMeaning) +
             (e.somaliWord && isEn ? ' The Somali equivalent is <em>' + escHtml(e.somaliWord) + '</em>.' : '') +
           '</div>' +
         '</div>' +
@@ -289,9 +290,7 @@ function renderWord(e) {
             'Sharaxaad Soomaali ah / Somali Explanation' +
           '</div>' +
           '<div class="explanation-text">' +
-            (e.somaliWord
-              ? escHtml(e.somaliWord) + ' waa erayga Soomaaliga loogu talagalay "' + escHtml(e.word) + '". ' + escHtml(e.traditionalMeaning)
-              : 'Macnaha caafimaadeed: ' + escHtml(e.traditionalMeaning)) +
+            escHtml(e.explanationSo || (e.somaliWord ? e.somaliWord + ' — ' + e.traditionalMeaning : e.traditionalMeaning)) +
           '</div>' +
         '</div>' +
 

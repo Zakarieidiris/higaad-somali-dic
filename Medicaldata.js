@@ -15,7 +15,9 @@ const medicalDictionary = [
     example: "The heart beats about 100,000 times a day.",
     category: "anatomy",
     synonyms: ["cardiac muscle", "myocardium"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "The muscular organ in the chest that pumps blood continuously around the body to sustain life.",
+    explanationSo: "Xubinta muruqyada leh ee laabta ku jirta oo joogtada ah dhiigga jirka ku riixda si nolol loo sii wado."
   },
   {
     id: 1002,
@@ -28,7 +30,9 @@ const medicalDictionary = [
     example: "Wadnahu waa gabar aad u muhiim ah.",
     category: "anatomy",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "The Somali word for heart; the vital organ that circulates blood through the body.",
+    explanationSo: "Erayga Soomaali ee wadnaha; xubinta muhiimka ah ee dhiigga jirka ku wareejisa."
   },
   {
     id: 1003,
@@ -41,7 +45,9 @@ const medicalDictionary = [
     example: "Blood carries oxygen to all organs.",
     category: "anatomy",
     synonyms: ["plasma", "hemoglobin"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "The red fluid that flows through blood vessels, carrying oxygen and nutrients to all parts of the body.",
+    explanationSo: "Dareeraha casaan ah ee dhiig-mareenka ku socdaa, oo qaada oksijiinta iyo nafaqada qaybaha jirka oo dhan."
   },
   {
     id: 1004,
@@ -54,7 +60,9 @@ const medicalDictionary = [
     example: "Dhiigu wuxuu qaadaa oksijiinta.",
     category: "anatomy",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "The Somali word for blood; the vital red fluid that circulates oxygen and nutrients throughout the body.",
+    explanationSo: "Erayga Soomaali ee dhiigga; dareeraha casaan ah ee muhiimka ah ee oksijiinta iyo nafaqada jirka ku wareejisa."
   },
   {
     id: 1005,
@@ -67,7 +75,9 @@ const medicalDictionary = [
     example: "The doctor examined the patient carefully.",
     category: "profession",
     synonyms: ["physician", "medic", "clinician"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A licensed medical professional who diagnoses illness and prescribes treatment.",
+    explanationSo: "Xirfadle caafimaad oo ruqsad leh oo ogaanaya jirrada oo daaweynta qoray."
   },
   {
     id: 1006,
@@ -80,7 +90,9 @@ const medicalDictionary = [
     example: "Dhaktorku wuu baaray bukaan-socodyaasha.",
     category: "profession",
     synonyms: ["khabiir caafimaad"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "The Somali word for doctor; a trained healthcare professional who treats patients.",
+    explanationSo: "Erayga Soomaali ee dhakhtarka; xirfadle caafimaad oo tababaran oo bukaanka daawaaya."
   },
   {
     id: 1007,
@@ -93,7 +105,9 @@ const medicalDictionary = [
     example: "She was admitted to the hospital.",
     category: "facility",
     synonyms: ["clinic", "medical center", "infirmary"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A medical institution where patients receive treatment, surgery, and emergency care.",
+    explanationSo: "Hay'ad caafimaad oo bukaanku ku helaan daaweyn, qalliin, iyo daryeel degdeg ah."
   },
   {
     id: 1008,
@@ -106,7 +120,9 @@ const medicalDictionary = [
     example: "Isbitaalka cusub ayaa la furay.",
     category: "facility",
     synonyms: ["xarunta caafimaadka"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "The Somali word for hospital; a facility where medical care is provided to the sick and injured.",
+    explanationSo: "Erayga Soomaali ee isbitaalka; xarun lagu bixiyo daryeel caafimaad bukaanka iyo dhaawacmayaasha."
   },
   {
     id: 1009,
@@ -119,7 +135,9 @@ const medicalDictionary = [
     example: "The child had a high fever overnight.",
     category: "symptom",
     synonyms: ["pyrexia", "high temperature"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "An elevated body temperature, often a sign that the body is fighting an infection.",
+    explanationSo: "Heerkulka jirka oo sarreeya, inta badan astaan ah in jirku la dagaalamayo caabuq."
   },
   {
     id: 1010,
@@ -132,7 +150,9 @@ const medicalDictionary = [
     example: "Ilmuhu wuxuu qabo qandho.",
     category: "symptom",
     synonyms: ["kulaylka jidhka"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "The Somali word for fever; a higher than normal body temperature indicating illness.",
+    explanationSo: "Erayga Soomaali ee qandhada; heerkulka jirka oo caadiga ka sareeya oo tilmaamaya jirrad."
   },
   {
     id: 1011,
@@ -145,7 +165,9 @@ const medicalDictionary = [
     example: "Take this medicine twice a day.",
     category: "treatment",
     synonyms: ["drug", "medication", "remedy"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A drug or other preparation used to treat or prevent disease.",
+    explanationSo: "Dawo ama diyaarinta kale loo isticmaalo si loo daaweeyo ama looga hortago cudur."
   },
   {
     id: 1012,
@@ -158,7 +180,9 @@ const medicalDictionary = [
     example: "Dawada waxaad qaadataa laba jeer maalintii.",
     category: "treatment",
     synonyms: ["daawo", "ku-daweyn"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to dawo.",
+    explanationSo: "Eray la xiriira dawo."
   },
   {
     id: 1013,
@@ -171,7 +195,9 @@ const medicalDictionary = [
     example: "Calcium strengthens your bones.",
     category: "anatomy",
     synonyms: ["ossicle", "skeleton"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to bone.",
+    explanationSo: "Eray la xiriira bone."
   },
   {
     id: 1014,
@@ -184,7 +210,9 @@ const medicalDictionary = [
     example: "Lafteydu way jab-jabantay.",
     category: "anatomy",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to lafta.",
+    explanationSo: "Eray la xiriira lafta."
   },
   {
     id: 1015,
@@ -197,7 +225,9 @@ const medicalDictionary = [
     example: "Smoking damages your lungs.",
     category: "anatomy",
     synonyms: ["pulmonary organ"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to lung.",
+    explanationSo: "Eray la xiriira lung."
   },
   {
     id: 1016,
@@ -210,7 +240,9 @@ const medicalDictionary = [
     example: "Sigaarka wuxuu waxyeeleyaa sambabyada.",
     category: "anatomy",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to sambab.",
+    explanationSo: "Eray la xiriira sambab."
   },
   {
     id: 1017,
@@ -223,7 +255,9 @@ const medicalDictionary = [
     example: "The surgery lasted three hours.",
     category: "treatment",
     synonyms: ["operation", "procedure"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A medical procedure involving incisions into the body to repair or remove diseased tissue.",
+    explanationSo: "Hawlgal caafimaad oo ku lug leh goynta jirka si loo saamiyo ama looga saaro unugga cudurka qaba."
   },
   {
     id: 1018,
@@ -236,7 +270,9 @@ const medicalDictionary = [
     example: "Qalliinka wuxuu qaatay saddex saacadood.",
     category: "treatment",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "The Somali word for surgery; a medical operation that involves cutting into the body.",
+    explanationSo: "Erayga Soomaali ee qalliinka; hawlgal caafimaad oo ku lug leh goynta jirka."
   },
   {
     id: 1019,
@@ -249,7 +285,9 @@ const medicalDictionary = [
     example: "A healthy pregnancy lasts about 40 weeks.",
     category: "reproductive",
     synonyms: ["gestation", "expecting"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "The nine-month period during which a fertilised egg develops into a baby inside the womb.",
+    explanationSo: "Muddada sagaal bilood ah oo ukun la bacrin ahi uu ku koro ilmo mindhicirka gudahood."
   },
   {
     id: 1020,
@@ -262,7 +300,9 @@ const medicalDictionary = [
     example: "Uurka caafimaadk wuxuu qaataa 40 wiig.",
     category: "reproductive",
     synonyms: ["ilmo-galeenimo"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "The Somali word for pregnancy; the state of carrying a developing baby in the womb.",
+    explanationSo: "Erayga Soomaali ee uurka; xaalada lagu sito ilmaha kobcaya mindhicirka gudahood."
   },
   {
     id: 1021,
@@ -275,7 +315,9 @@ const medicalDictionary = [
     example: "Diabetes requires daily monitoring.",
     category: "disease",
     synonyms: ["hyperglycemia", "insulin resistance"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A chronic condition where the body cannot properly control blood sugar, leading to high glucose levels.",
+    explanationSo: "Xaalad joogto ah oo jirku ku xukumi karin sonkorowga dhiigga, keentana heer glucose oo sarreeya."
   },
   {
     id: 1022,
@@ -288,7 +330,9 @@ const medicalDictionary = [
     example: "Sokor-xanuunka waxaa lagula dagaalamaa dawo iyo cunto fiican.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to sokor-xanuun.",
+    explanationSo: "Eray la xiriira sokor-xanuun."
   },
   {
     id: 1023,
@@ -301,7 +345,9 @@ const medicalDictionary = [
     example: "Vaccination prevents many deadly diseases.",
     category: "prevention",
     synonyms: ["immunization", "inoculation"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to vaccination.",
+    explanationSo: "Eray la xiriira vaccination."
   },
   {
     id: 1024,
@@ -314,7 +360,9 @@ const medicalDictionary = [
     example: "Tallaalka cocowl waa muhiim carruurta.",
     category: "prevention",
     synonyms: ["ka-difaac xanuun"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "The Somali word for vaccine; a preventive injection that builds immunity against disease.",
+    explanationSo: "Erayga Soomaali ee tallaalka; irbad ka hortagga ah oo difaac ka difaacaya cudur dhisaa."
   },
   {
     id: 1025,
@@ -327,7 +375,9 @@ const medicalDictionary = [
     example: "She felt pain in her lower back.",
     category: "symptom",
     synonyms: ["ache", "soreness", "discomfort"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to pain.",
+    explanationSo: "Eray la xiriira pain."
   },
   {
     id: 1026,
@@ -340,7 +390,9 @@ const medicalDictionary = [
     example: "Xanuunka dhabarka ayaan dareemay.",
     category: "symptom",
     synonyms: ["dhibaato", "murugayn"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to xanuun.",
+    explanationSo: "Eray la xiriira xanuun."
   },
   {
     id: 1027,
@@ -353,7 +405,9 @@ const medicalDictionary = [
     example: "The nurse checked the patient's vitals.",
     category: "profession",
     synonyms: ["caregiver", "health worker"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A healthcare professional trained to care for and support patients under medical supervision.",
+    explanationSo: "Xirfadle caafimaad oo tababaran daryeelka iyo taageerada bukaanka hoos timaada xukun caafimaad."
   },
   {
     id: 1028,
@@ -366,7 +420,9 @@ const medicalDictionary = [
     example: "Kalkaaliyuhu wuxuu kaalin muhiim ah ka ciyaaraa isbitaalka.",
     category: "profession",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "The Somali word for nurse; a trained person who provides direct care to patients.",
+    explanationSo: "Erayga Soomaali ee kalkaaliyaha; qof tababaran oo si toos ah daryeel bukaanka siiya."
   },
   {
     id: 1029,
@@ -379,7 +435,9 @@ const medicalDictionary = [
     example: "The brain contains about 86 billion neurons.",
     category: "anatomy",
     synonyms: ["cerebrum", "cranium", "mind"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to brain.",
+    explanationSo: "Eray la xiriira brain."
   },
   {
     id: 1030,
@@ -392,7 +450,9 @@ const medicalDictionary = [
     example: "Maskaxdu waxay xukumtaa jirka oo dhan.",
     category: "anatomy",
     synonyms: ["caqli"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to maskax.",
+    explanationSo: "Eray la xiriira maskax."
   },
   {
     id: 1031,
@@ -405,7 +465,9 @@ const medicalDictionary = [
     example: "The wound showed signs of infection.",
     category: "disease",
     synonyms: ["sepsis", "contamination"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "The invasion of the body by harmful microorganisms such as bacteria or viruses, causing disease.",
+    explanationSo: "Galitaanka jirka miraha waxyeelada leh sida bakteeriyada ama fayraaska, oo keenta cudur."
   },
   {
     id: 1032,
@@ -418,7 +480,9 @@ const medicalDictionary = [
     example: "Cudurku waa mid fara badan.",
     category: "disease",
     synonyms: ["xanuun", "bukaan"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to cudur.",
+    explanationSo: "Eray la xiriira cudur."
   },
   {
     id: 1033,
@@ -431,7 +495,9 @@ const medicalDictionary = [
     example: "Call an ambulance immediately!",
     category: "facility",
     synonyms: ["emergency vehicle"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A specially equipped vehicle used to transport sick or injured people to medical care quickly.",
+    explanationSo: "Gaari si gaar ah loo qaabeeyay oo loo isticmaalo geynta bukaanka ama dhaawacmayaasha daaweynta xawli ah."
   },
   {
     id: 1034,
@@ -444,7 +510,9 @@ const medicalDictionary = [
     example: "Wac baabuurka caafimaadka hadda!",
     category: "facility",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to baabuur-caafimaad.",
+    explanationSo: "Eray la xiriira baabuur-caafimaad."
   },
   {
     id: 1035,
@@ -457,7 +525,9 @@ const medicalDictionary = [
     example: "She has a severe allergy to peanuts.",
     category: "disease",
     synonyms: ["hypersensitivity", "reaction"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "An overreaction of the immune system to a normally harmless substance, causing symptoms like rashes or sneezing.",
+    explanationSo: "Xasaasiyad dheeraad ah ee nidaamka difaaca jirka walxaha caadi ahaan waxyeelo lahayn, keenta astaamaha sida xakamaynta ama hindhisaha."
   },
   {
     id: 1036,
@@ -470,7 +540,9 @@ const medicalDictionary = [
     example: "Xasaasiyadeydu waxay ka timid midabka abuurka.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to xasaasi.",
+    explanationSo: "Eray la xiriira xasaasi."
   },
   {
     id: 1037,
@@ -483,7 +555,9 @@ const medicalDictionary = [
     example: "Malaria is preventable with mosquito nets.",
     category: "disease",
     synonyms: ["plasmodium infection"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to malaria.",
+    explanationSo: "Eray la xiriira malaria."
   },
   {
     id: 1038,
@@ -496,7 +570,9 @@ const medicalDictionary = [
     example: "Vitamin C boosts the immune system.",
     category: "nutrition",
     synonyms: ["nutrient", "supplement"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to vitamin.",
+    explanationSo: "Eray la xiriira vitamin."
   },
   {
     id: 1039,
@@ -509,7 +585,9 @@ const medicalDictionary = [
     example: "Fiitamiin C waxay xoojisaa difaaca jirka.",
     category: "nutrition",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to fiitamiin.",
+    explanationSo: "Eray la xiriira fiitamiin."
   },
   {
     id: 1040,
@@ -522,7 +600,9 @@ const medicalDictionary = [
     example: "Drinking water protects your kidneys.",
     category: "anatomy",
     synonyms: ["renal organ"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to kidney.",
+    explanationSo: "Eray la xiriira kidney."
   },
   {
     id: 1041,
@@ -535,7 +615,9 @@ const medicalDictionary = [
     example: "Kaadi-galku wuu xanuunsaday.",
     category: "anatomy",
     synonyms: ["kiidni"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to kaadi-gal.",
+    explanationSo: "Eray la xiriira kaadi-gal."
   },
   {
     id: 1042,
@@ -548,7 +630,9 @@ const medicalDictionary = [
     example: "Good health is the greatest wealth.",
     category: "general",
     synonyms: ["wellness", "wellbeing"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to health.",
+    explanationSo: "Eray la xiriira health."
   },
   {
     id: 1043,
@@ -561,7 +645,9 @@ const medicalDictionary = [
     example: "Caafimaadku waa mid aad u qaaliga ah.",
     category: "general",
     synonyms: ["fayow", "nadaafad"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to caafimaad.",
+    explanationSo: "Eray la xiriira caafimaad."
   },
   {
     id: 1044,
@@ -574,7 +660,9 @@ const medicalDictionary = [
     example: "High blood pressure is called hypertension.",
     category: "vital signs",
     synonyms: ["hypertension", "BP"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to blood pressure.",
+    explanationSo: "Eray la xiriira blood pressure."
   },
   {
     id: 1045,
@@ -587,7 +675,9 @@ const medicalDictionary = [
     example: "Cadaadiska dhiiggiisu waa sare.",
     category: "vital signs",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to cadaadis-dhiig.",
+    explanationSo: "Eray la xiriira cadaadis-dhiig."
   },
   // ===== PROFESSIONAL MEDICAL PACK (Batch 2) =====
 
@@ -600,7 +690,9 @@ const medicalDictionary = [
   modernMeaning: null,
   example: "Cardiology focuses on heart diseases.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The medical speciality focusing on the heart and cardiovascular system, diagnosing and treating heart conditions.",
+  explanationSo: "Takhasusta caafimaadka ee diiradsha ku haya wadnaha iyo nidaamka dhiig-socodka, ogaanaya oo daaweeya xaaladaha wadnaha."
 },
 {
   id: 145,
@@ -611,7 +703,9 @@ const medicalDictionary = [
   modernMeaning: null,
   example: "Neurology studies the nervous system.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The branch of medicine that studies and treats disorders of the brain, spinal cord, and nerves.",
+  explanationSo: "Laanka daawada ee baadha oo daaweeya xaaladaha maskaxda, xididka dhabanka, iyo neerfaha."
 },
 {
   id: 146,
@@ -622,7 +716,9 @@ const medicalDictionary = [
   modernMeaning: null,
   example: "Dermatology treats skin conditions.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The medical field dedicated to diagnosing and treating conditions affecting the skin, hair, and nails.",
+  explanationSo: "Goobta caafimaadka ee ku heysata ogaanshaha iyo daaweynta xaaladaha saameynaya maqaarka, timaha, iyo cidiyaha."
 },
 {
   id: 147,
@@ -633,7 +729,9 @@ const medicalDictionary = [
   modernMeaning: null,
   example: "Orthopedics deals with bone injuries.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The medical speciality concerned with the musculoskeletal system, particularly bones, joints, and muscles.",
+  explanationSo: "Takhasusta caafimaadka ee ku wajahan nidaamka lafaha-muruqyada, gaar ahaan lafaha, xubnaha isku-xidha, iyo muruqyada."
 },
 {
   id: 148,
@@ -644,7 +742,9 @@ const medicalDictionary = [
   modernMeaning: null,
   example: "Pediatrics treats children.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The branch of medicine specialising in the health and medical care of infants, children, and adolescents.",
+  explanationSo: "Laanka daawada ku takhasusay caafimaadka iyo daaweynta ilmaha yar-yar, carruurta, iyo dhalinyarada."
 },
 {
   id: 149,
@@ -655,7 +755,9 @@ const medicalDictionary = [
   modernMeaning: null,
   example: "Gynecology focuses on women’s health.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The medical practice dealing with the health of the female reproductive system and its diseases.",
+  explanationSo: "Dhaqanka caafimaadka ku takhasusay caafimaadka nidaamka taranka haweenka iyo cudurradiisa."
 },
 {
   id: 150,
@@ -666,7 +768,9 @@ const medicalDictionary = [
   modernMeaning: null,
   example: "Psychiatry treats mental disorders.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The medical specialty for diagnosing, preventing, and treating mental, emotional, and behavioural disorders.",
+  explanationSo: "Takhasusta caafimaadka ee ogaanaya, ka hortagga, iyo daaweynta xaaladaha maskaxda, dareenka, iyo dhaqanka."
 },
 {
   id: 151,
@@ -677,7 +781,9 @@ const medicalDictionary = [
   modernMeaning: null,
   example: "Radiology uses imaging technology.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The use of medical imaging technologies such as X-rays and MRI to diagnose and treat diseases.",
+  explanationSo: "Isticmaalka teknoolojiyada sawir-qaadista caafimaadka sida X-ray iyo MRI si loo ogaado oo loo daaweeyo cudurrada."
 },
 {
   id: 152,
@@ -688,7 +794,9 @@ const medicalDictionary = [
   modernMeaning: null,
   example: "Anesthesia prevents pain during surgery.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The administration of drugs to induce a temporary loss of sensation or consciousness before surgery.",
+  explanationSo: "Bixinta daawada si loo keeno luminta ku-meel-gaadhka ah ee dareemida ama miyirka kahor qalliinka."
 },
 {
   id: 153,
@@ -699,7 +807,9 @@ const medicalDictionary = [
   modernMeaning: null,
   example: "Pathology studies disease causes.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The scientific study of disease, including its causes, development, and effects on the body.",
+  explanationSo: "Daraasadda sayniska ee cudurka, oo ay ku jiraan sababihiisa, kobcigiisa, iyo saameyntiisa jirka."
 },
 {
   id: 154,
@@ -710,7 +820,9 @@ const medicalDictionary = [
   modernMeaning: null,
   example: "Epidemiology tracks disease outbreaks.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The study of how diseases occur, spread, and can be controlled within populations.",
+  explanationSo: "Cilmiga sida cudurrada u dhacaan, u faafaan, oo lagu xukumi karo dadka badan."
 },
 {
   id: 155,
@@ -721,7 +833,9 @@ const medicalDictionary = [
   modernMeaning: null,
   example: "Oncology treats cancer patients.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The medical discipline focused on the prevention, diagnosis, and treatment of cancer.",
+  explanationSo: "Laan-daawada diiradsha ku haya ka hortagga, ogaanshaha, iyo daaweynta kansarka."
 },
 {
   id: 156,
@@ -732,7 +846,9 @@ const medicalDictionary = [
   modernMeaning: null,
   example: "Immunology studies immune responses.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The science that examines the structure and function of the immune system in health and disease.",
+  explanationSo: "Cilmiga baadha dhismaha iyo hawsha nidaamka difaaca jirka caafimaadka iyo jirradda."
 },
 {
   id: 157,
@@ -743,7 +859,9 @@ const medicalDictionary = [
   modernMeaning: null,
   example: "Hematology examines blood disorders.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The branch of medicine concerned with the study, diagnosis, and treatment of blood disorders.",
+  explanationSo: "Laanka daawada ku wajahan baadha, ogaanshaha, iyo daaweynta xaaladaha dhiigga."
 },
 {
   id: 158,
@@ -754,7 +872,9 @@ const medicalDictionary = [
   modernMeaning: null,
   example: "Nephrology treats kidney diseases.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The medical field specialising in kidney function and the treatment of kidney diseases.",
+  explanationSo: "Goobta caafimaadka ku takhasusay hawsha kilyaha iyo daaweynta cudurrada kilyaha."
 },
 {
   id: 159,
@@ -765,7 +885,9 @@ const medicalDictionary = [
   modernMeaning: null,
   example: "Pulmonology deals with lung disorders.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The medical speciality dealing with the respiratory system and diseases affecting the lungs.",
+  explanationSo: "Takhasusta caafimaadka ku takhasusay nidaamka neefta iyo cudurrada saameynaya sambabada."
 },
 {
   id: 160,
@@ -776,7 +898,9 @@ const medicalDictionary = [
   modernMeaning: null,
   example: "Gastroenterology treats digestive diseases.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The medical field focused on the digestive system, including the stomach, intestines, and related organs.",
+  explanationSo: "Goobta caafimaadka diiradsha ku haya nidaamka dheefshiidka, oo ay ku jiraan caloosha, mindhicirka, iyo xubnahaas la xiriira."
 },
 {
   id: 161,
@@ -787,7 +911,9 @@ const medicalDictionary = [
   modernMeaning: null,
   example: "Urology focuses on urinary system.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The medical speciality dealing with conditions of the urinary tract and male reproductive organs.",
+  explanationSo: "Takhasusta caafimaadka ku takhasusay xaaladaha jidka kaadi-mareenka iyo xubnahaas taranka lab."
 },
 {
   id: 162,
@@ -798,7 +924,9 @@ const medicalDictionary = [
   modernMeaning: null,
   example: "Obstetrics manages pregnancy and childbirth.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The branch of medicine specialising in pregnancy, childbirth, and postnatal care.",
+  explanationSo: "Laanka daawada ku takhasusay uurka, dhalmada, iyo daryeelka kadib dhalashada."
 },
 {
   id: 163,
@@ -809,7 +937,9 @@ const medicalDictionary = [
   modernMeaning: null,
   example: "Rehabilitation helps recovery.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "A programme of therapeutic treatment to restore function and well-being after illness, injury, or surgery.",
+  explanationSo: "Barnaamij daaweyn dabiici ah oo soo celinaya hawsha iyo caafimaadka kadib jirrad, dhaawac, ama qalliin."
 },
 {
   id: 164,
@@ -820,7 +950,9 @@ const medicalDictionary = [
   modernMeaning: null,
   example: "Dr.abdifitah jama is a medical professional.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "A term related to dr.abdifitah jama.",
+  explanationSo: "Eray la xiriira dr.abdifitah jama."
 },
 {
   id: 165,
@@ -831,7 +963,9 @@ const medicalDictionary = [
   modernMeaning: null,
   example: "dr. Mohamed Abdi Hergeye is a medical professional.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "A term related to dr. mohamed abdi hergeye.",
+  explanationSo: "Eray la xiriira dr. mohamed abdi hergeye."
 },
 {
   id: 166,
@@ -842,7 +976,9 @@ const medicalDictionary = [
   modernMeaning: null,
   example: "dr. Fathia Mohamed Nour is a medical professional.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "A term related to dr. fathia mohamed nour.",
+  explanationSo: "Eray la xiriira dr. fathia mohamed nour."
 },
 
   {
@@ -856,7 +992,9 @@ const medicalDictionary = [
     example: "Stress can worsen a stomach ulcer.",
     category: "disease",
     synonyms: ["peptic ulcer"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to ulcer.",
+    explanationSo: "Eray la xiriira ulcer."
   },
   {
     id: 1063,
@@ -869,7 +1007,9 @@ const medicalDictionary = [
     example: "Boog-calooleedku wuxuu keenaa xanuun daran.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to boog-calooleed.",
+    explanationSo: "Eray la xiriira boog-calooleed."
   },
 
   {
@@ -883,7 +1023,9 @@ const medicalDictionary = [
     example: "Arthritis causes joint stiffness.",
     category: "disease",
     synonyms: ["joint inflammation"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to arthritis.",
+    explanationSo: "Eray la xiriira arthritis."
   },
   {
     id: 1065,
@@ -896,7 +1038,9 @@ const medicalDictionary = [
     example: "Barar-kala-goysku wuxuu adkeeyaa dhaqaaqa.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to barar-kala-goys.",
+    explanationSo: "Eray la xiriira barar-kala-goys."
   },
 
   {
@@ -910,7 +1054,9 @@ const medicalDictionary = [
     example: "Migraine may cause sensitivity to light.",
     category: "disease",
     synonyms: ["vascular headache"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to migraine.",
+    explanationSo: "Eray la xiriira migraine."
   },
   {
     id: 1067,
@@ -923,7 +1069,9 @@ const medicalDictionary = [
     example: "Madax-xanuun-daran ayaa iga haya subax walba.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to madax-xanuun-daran.",
+    explanationSo: "Eray la xiriira madax-xanuun-daran."
   },
 
   {
@@ -937,7 +1085,9 @@ const medicalDictionary = [
     example: "Insomnia affects mental health.",
     category: "condition",
     synonyms: ["sleep disorder"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to insomnia.",
+    explanationSo: "Eray la xiriira insomnia."
   },
   {
     id: 1069,
@@ -950,7 +1100,9 @@ const medicalDictionary = [
     example: "Hurdo-la'aantu waxay keentaa daal.",
     category: "condition",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to hurdo-la'aan.",
+    explanationSo: "Eray la xiriira hurdo-la'aan."
   },
 
   {
@@ -964,7 +1116,9 @@ const medicalDictionary = [
     example: "Obesity increases diabetes risk.",
     category: "condition",
     synonyms: ["overweight"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to obesity.",
+    explanationSo: "Eray la xiriira obesity."
   },
   {
     id: 1071,
@@ -977,7 +1131,9 @@ const medicalDictionary = [
     example: "Buurni-xad-dhaafku waa dhibaato caafimaad.",
     category: "condition",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to buurni-xad-dhaaf.",
+    explanationSo: "Eray la xiriira buurni-xad-dhaaf."
   },
 
   {
@@ -991,7 +1147,9 @@ const medicalDictionary = [
     example: "Pneumonia can be life-threatening.",
     category: "disease",
     synonyms: ["lung infection"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to pneumonia.",
+    explanationSo: "Eray la xiriira pneumonia."
   },
   {
     id: 1073,
@@ -1004,7 +1162,9 @@ const medicalDictionary = [
     example: "Oof-wareenku wuxuu saameeyaa neefsashada.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to oof-wareen.",
+    explanationSo: "Eray la xiriira oof-wareen."
   },
 
   {
@@ -1018,7 +1178,9 @@ const medicalDictionary = [
     example: "Hemorrhoids cause rectal pain.",
     category: "disease",
     synonyms: ["piles"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to hemorrhoids.",
+    explanationSo: "Eray la xiriira hemorrhoids."
   },
   {
     id: 1075,
@@ -1031,7 +1193,9 @@ const medicalDictionary = [
     example: "Baabasiirku wuxuu keenaa xanuun iyo dhiig.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to baabasiir.",
+    explanationSo: "Eray la xiriira baabasiir."
   },
 
   {
@@ -1045,7 +1209,9 @@ const medicalDictionary = [
     example: "Jaundice is common in newborns.",
     category: "disease",
     synonyms: ["bilirubin disorder"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to jaundice.",
+    explanationSo: "Eray la xiriira jaundice."
   },
   {
     id: 1077,
@@ -1058,7 +1224,9 @@ const medicalDictionary = [
     example: "Cagaarshowgu wuxuu ka yimaadaa beer-xanuun.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to cagaarshow.",
+    explanationSo: "Eray la xiriira cagaarshow."
   },
     {
     id: 1078,
@@ -1071,7 +1239,9 @@ const medicalDictionary = [
     example: "Appendicitis requires urgent surgery.",
     category: "disease",
     synonyms: ["appendix inflammation"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to appendicitis.",
+    explanationSo: "Eray la xiriira appendicitis."
   },
   {
     id: 1079,
@@ -1084,7 +1254,9 @@ const medicalDictionary = [
     example: "Caabuqa-lifaaq waa xaalad degdeg ah.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to caabuqa-lifaaq.",
+    explanationSo: "Eray la xiriira caabuqa-lifaaq."
   },
 
   {
@@ -1098,7 +1270,9 @@ const medicalDictionary = [
     example: "Cirrhosis can result from long-term alcohol use.",
     category: "disease",
     synonyms: ["liver fibrosis"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to cirrhosis.",
+    explanationSo: "Eray la xiriira cirrhosis."
   },
   {
     id: 1081,
@@ -1111,7 +1285,9 @@ const medicalDictionary = [
     example: "Beer-adkaanshadu waxay saameysaa shaqada beerka.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to beer-adkaansho.",
+    explanationSo: "Eray la xiriira beer-adkaansho."
   },
 
   {
@@ -1125,7 +1301,9 @@ const medicalDictionary = [
     example: "Epilepsy can be managed with medication.",
     category: "disease",
     synonyms: ["seizure disorder"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to epilepsy.",
+    explanationSo: "Eray la xiriira epilepsy."
   },
   {
     id: 1083,
@@ -1138,7 +1316,9 @@ const medicalDictionary = [
     example: "Suuxdin-joogto waxay u baahan tahay daawo joogto ah.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to suuxdin-joogto.",
+    explanationSo: "Eray la xiriira suuxdin-joogto."
   },
 
   {
@@ -1152,7 +1332,9 @@ const medicalDictionary = [
     example: "Ultrasound is commonly used during pregnancy.",
     category: "diagnostic",
     synonyms: ["sonography"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to ultrasound.",
+    explanationSo: "Eray la xiriira ultrasound."
   },
   {
     id: 1085,
@@ -1165,7 +1347,9 @@ const medicalDictionary = [
     example: "Sawir-dhawaaq ayaa lagu eegay uurka.",
     category: "diagnostic",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to sawir-dhawaaq.",
+    explanationSo: "Eray la xiriira sawir-dhawaaq."
   },
 
   {
@@ -1179,7 +1363,9 @@ const medicalDictionary = [
     example: "Dialysis is needed in kidney failure.",
     category: "treatment",
     synonyms: ["renal replacement therapy"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to dialysis.",
+    explanationSo: "Eray la xiriira dialysis."
   },
   {
     id: 1087,
@@ -1192,7 +1378,9 @@ const medicalDictionary = [
     example: "Nadiifin-dhiig ayaa lagu sameeyaa bukaanka kelyo-fashilka.",
     category: "treatment",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to nadiifin-dhiig.",
+    explanationSo: "Eray la xiriira nadiifin-dhiig."
   },
 
   {
@@ -1206,7 +1394,9 @@ const medicalDictionary = [
     example: "Anxiety can affect daily life.",
     category: "mental health",
     synonyms: ["nervousness", "stress"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to anxiety.",
+    explanationSo: "Eray la xiriira anxiety."
   },
   {
     id: 1089,
@@ -1219,7 +1409,9 @@ const medicalDictionary = [
     example: "Walbahaar badan ayaa saameeya hurdada.",
     category: "mental health",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to walbahaar.",
+    explanationSo: "Eray la xiriira walbahaar."
   },
     {
     id: 1090,
@@ -1232,7 +1424,9 @@ const medicalDictionary = [
     example: "Glaucoma can cause permanent blindness if untreated.",
     category: "disease",
     synonyms: ["optic neuropathy"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to glaucoma.",
+    explanationSo: "Eray la xiriira glaucoma."
   },
   {
     id: 1091,
@@ -1245,7 +1439,9 @@ const medicalDictionary = [
     example: "Cadaadis-indho wuxuu dhaawici karaa neerfaha aragga.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to cadaadis-indho.",
+    explanationSo: "Eray la xiriira cadaadis-indho."
   },
 
   {
@@ -1259,7 +1455,9 @@ const medicalDictionary = [
     example: "Hepatitis can spread through contaminated blood.",
     category: "disease",
     synonyms: ["liver inflammation"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to hepatitis.",
+    explanationSo: "Eray la xiriira hepatitis."
   },
   {
     id: 1093,
@@ -1272,7 +1470,9 @@ const medicalDictionary = [
     example: "Caabuq-beerku wuxuu saameeyaa shaqada beerka.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to caabuq-beer.",
+    explanationSo: "Eray la xiriira caabuq-beer."
   },
 
   {
@@ -1286,7 +1486,9 @@ const medicalDictionary = [
     example: "Eczema often appears in childhood.",
     category: "disease",
     synonyms: ["dermatitis"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to eczema.",
+    explanationSo: "Eray la xiriira eczema."
   },
   {
     id: 1095,
@@ -1299,7 +1501,9 @@ const medicalDictionary = [
     example: "Finan-maqaareedku wuxuu keenaa cuncun daran.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to finan-maqaareed.",
+    explanationSo: "Eray la xiriira finan-maqaareed."
   },
 
   {
@@ -1313,7 +1517,9 @@ const medicalDictionary = [
     example: "Anaphylaxis requires immediate medical treatment.",
     category: "emergency",
     synonyms: ["severe allergic reaction"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to anaphylaxis.",
+    explanationSo: "Eray la xiriira anaphylaxis."
   },
   {
     id: 1097,
@@ -1326,7 +1532,9 @@ const medicalDictionary = [
     example: "Xasaasiyad-daran waa xaalad degdeg ah.",
     category: "emergency",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to xasaasiyad-daran.",
+    explanationSo: "Eray la xiriira xasaasiyad-daran."
   },
 
   {
@@ -1340,7 +1548,9 @@ const medicalDictionary = [
     example: "Osteoporosis increases fracture risk.",
     category: "disease",
     synonyms: ["bone density loss"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to osteoporosis.",
+    explanationSo: "Eray la xiriira osteoporosis."
   },
   {
     id: 1099,
@@ -1353,7 +1563,9 @@ const medicalDictionary = [
     example: "Laf-jileec wuxuu ku badan yahay waayeelka.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to laf-jileec.",
+    explanationSo: "Eray la xiriira laf-jileec."
   },
 
   {
@@ -1367,7 +1579,9 @@ const medicalDictionary = [
     example: "Hypothyroidism can cause weight gain.",
     category: "disease",
     synonyms: ["underactive thyroid"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to hypothyroidism.",
+    explanationSo: "Eray la xiriira hypothyroidism."
   },
   {
     id: 1101,
@@ -1380,7 +1594,9 @@ const medicalDictionary = [
     example: "Qanjir-yaraansho wuxuu sababi karaa daal.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to qanjir-yaraansho.",
+    explanationSo: "Eray la xiriira qanjir-yaraansho."
   },
     {
     id: 1102,
@@ -1393,7 +1609,9 @@ const medicalDictionary = [
     example: "Pancreatitis can cause severe abdominal pain.",
     category: "disease",
     synonyms: ["pancreatic inflammation"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to pancreatitis.",
+    explanationSo: "Eray la xiriira pancreatitis."
   },
   {
     id: 1103,
@@ -1406,7 +1624,9 @@ const medicalDictionary = [
     example: "Caabuq-beeryar wuxuu keenaa xanuun caloosha ah.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to caabuq-beeryar.",
+    explanationSo: "Eray la xiriira caabuq-beeryar."
   },
 
   {
@@ -1420,7 +1640,9 @@ const medicalDictionary = [
     example: "Bronchitis causes persistent coughing.",
     category: "disease",
     synonyms: ["bronchial inflammation"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to bronchitis.",
+    explanationSo: "Eray la xiriira bronchitis."
   },
   {
     id: 1105,
@@ -1433,7 +1655,9 @@ const medicalDictionary = [
     example: "Caabuq-neefmareenku wuxuu keenaa qufac joogto ah.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to caabuq-neefmareen.",
+    explanationSo: "Eray la xiriira caabuq-neefmareen."
   },
 
   {
@@ -1447,7 +1671,9 @@ const medicalDictionary = [
     example: "Dermatitis can be triggered by allergies.",
     category: "disease",
     synonyms: ["skin inflammation"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to dermatitis.",
+    explanationSo: "Eray la xiriira dermatitis."
   },
   {
     id: 1107,
@@ -1460,7 +1686,9 @@ const medicalDictionary = [
     example: "Barar-maqaarka wuxuu sababi karaa cuncun.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to barar-maqaarka.",
+    explanationSo: "Eray la xiriira barar-maqaarka."
   },
 
   {
@@ -1474,7 +1702,9 @@ const medicalDictionary = [
     example: "Arrhythmia may require medical monitoring.",
     category: "disease",
     synonyms: ["irregular heartbeat"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to arrhythmia.",
+    explanationSo: "Eray la xiriira arrhythmia."
   },
   {
     id: 1109,
@@ -1487,7 +1717,9 @@ const medicalDictionary = [
     example: "Garaac-wadne-aan-caadi wuxuu keeni karaa wareer.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to garaac-wadne-aan-caadi.",
+    explanationSo: "Eray la xiriira garaac-wadne-aan-caadi."
   },
 
   {
@@ -1501,7 +1733,9 @@ const medicalDictionary = [
     example: "Sepsis is a medical emergency.",
     category: "emergency",
     synonyms: ["blood infection"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to sepsis.",
+    explanationSo: "Eray la xiriira sepsis."
   },
   {
     id: 1111,
@@ -1514,7 +1748,9 @@ const medicalDictionary = [
     example: "Caabuq-dhiig waa xaalad halis ah.",
     category: "emergency",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to caabuq-dhiig.",
+    explanationSo: "Eray la xiriira caabuq-dhiig."
   },
 
   {
@@ -1528,7 +1764,9 @@ const medicalDictionary = [
     example: "Hernia may require surgical repair.",
     category: "disease",
     synonyms: ["protrusion"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to hernia.",
+    explanationSo: "Eray la xiriira hernia."
   },
   {
     id: 1113,
@@ -1541,7 +1779,9 @@ const medicalDictionary = [
     example: "Xiidho-bax waxaa lagu daaweeyaa qalliin.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to xiidho-bax.",
+    explanationSo: "Eray la xiriira xiidho-bax."
   },
     {
     id: 1114,
@@ -1554,7 +1794,9 @@ const medicalDictionary = [
     example: "Gastritis can cause burning stomach pain.",
     category: "disease",
     synonyms: ["stomach inflammation"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to gastritis.",
+    explanationSo: "Eray la xiriira gastritis."
   },
   {
     id: 1115,
@@ -1567,7 +1809,9 @@ const medicalDictionary = [
     example: "Caabuq-calooleedku wuxuu sababi karaa lalabo.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to caabuq-calooleed.",
+    explanationSo: "Eray la xiriira caabuq-calooleed."
   },
 
   {
@@ -1581,7 +1825,9 @@ const medicalDictionary = [
     example: "The athlete suffered a concussion.",
     category: "injury",
     synonyms: ["brain trauma"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to concussion.",
+    explanationSo: "Eray la xiriira concussion."
   },
   {
     id: 1117,
@@ -1594,7 +1840,9 @@ const medicalDictionary = [
     example: "Jug-maskaxeed wuxuu keeni karaa wareer.",
     category: "injury",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to jug-maskaxeed.",
+    explanationSo: "Eray la xiriira jug-maskaxeed."
   },
 
   {
@@ -1608,7 +1856,9 @@ const medicalDictionary = [
     example: "The cyst was removed surgically.",
     category: "disease",
     synonyms: ["fluid sac"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to cyst.",
+    explanationSo: "Eray la xiriira cyst."
   },
   {
     id: 1119,
@@ -1621,7 +1871,9 @@ const medicalDictionary = [
     example: "Kiish-biyood ayaa laga helay maqaarka.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to kiish-biyood.",
+    explanationSo: "Eray la xiriira kiish-biyood."
   },
 
   {
@@ -1635,7 +1887,9 @@ const medicalDictionary = [
     example: "Hypertension crisis can damage organs.",
     category: "emergency",
     synonyms: ["hypertensive emergency"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to hypertension crisis.",
+    explanationSo: "Eray la xiriira hypertension crisis."
   },
   {
     id: 1121,
@@ -1648,7 +1902,9 @@ const medicalDictionary = [
     example: "Dhiig-kar-daran waa xaalad degdeg ah.",
     category: "emergency",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to dhiig-kar-daran.",
+    explanationSo: "Eray la xiriira dhiig-kar-daran."
   },
 
   {
@@ -1662,7 +1918,9 @@ const medicalDictionary = [
     example: "Severe anemia may require blood transfusion.",
     category: "disease",
     synonyms: ["critical anemia"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to anemia severe.",
+    explanationSo: "Eray la xiriira anemia severe."
   },
   {
     id: 1123,
@@ -1675,7 +1933,9 @@ const medicalDictionary = [
     example: "Dhiig-yaraan-daran waxay sababi kartaa suuxdin.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to dhiig-yaraan-daran.",
+    explanationSo: "Eray la xiriira dhiig-yaraan-daran."
   },
 
   {
@@ -1689,7 +1949,9 @@ const medicalDictionary = [
     example: "Vertigo makes the room feel like it is spinning.",
     category: "symptom",
     synonyms: ["spinning dizziness"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to vertigo.",
+    explanationSo: "Eray la xiriira vertigo."
   },
   {
     id: 1125,
@@ -1702,7 +1964,9 @@ const medicalDictionary = [
     example: "Wareer-wareeg ayaa iga haya marka aan istaago.",
     category: "symptom",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to wareer-wareeg.",
+    explanationSo: "Eray la xiriira wareer-wareeg."
   },
     {
     id: 1114,
@@ -1715,7 +1979,9 @@ const medicalDictionary = [
     example: "Gastritis can cause burning stomach pain.",
     category: "disease",
     synonyms: ["stomach inflammation"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to gastritis.",
+    explanationSo: "Eray la xiriira gastritis."
   },
   {
     id: 1115,
@@ -1728,7 +1994,9 @@ const medicalDictionary = [
     example: "Caabuq-calooleedku wuxuu sababi karaa lalabo.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to caabuq-calooleed.",
+    explanationSo: "Eray la xiriira caabuq-calooleed."
   },
 
   {
@@ -1742,7 +2010,9 @@ const medicalDictionary = [
     example: "The athlete suffered a concussion.",
     category: "injury",
     synonyms: ["brain trauma"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to concussion.",
+    explanationSo: "Eray la xiriira concussion."
   },
   {
     id: 1117,
@@ -1755,7 +2025,9 @@ const medicalDictionary = [
     example: "Jug-maskaxeed wuxuu keeni karaa wareer.",
     category: "injury",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to jug-maskaxeed.",
+    explanationSo: "Eray la xiriira jug-maskaxeed."
   },
 
   {
@@ -1769,7 +2041,9 @@ const medicalDictionary = [
     example: "The cyst was removed surgically.",
     category: "disease",
     synonyms: ["fluid sac"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to cyst.",
+    explanationSo: "Eray la xiriira cyst."
   },
   {
     id: 1119,
@@ -1782,7 +2056,9 @@ const medicalDictionary = [
     example: "Kiish-biyood ayaa laga helay maqaarka.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to kiish-biyood.",
+    explanationSo: "Eray la xiriira kiish-biyood."
   },
 
   {
@@ -1796,7 +2072,9 @@ const medicalDictionary = [
     example: "Hypertension crisis can damage organs.",
     category: "emergency",
     synonyms: ["hypertensive emergency"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to hypertension crisis.",
+    explanationSo: "Eray la xiriira hypertension crisis."
   },
   {
     id: 1121,
@@ -1809,7 +2087,9 @@ const medicalDictionary = [
     example: "Dhiig-kar-daran waa xaalad degdeg ah.",
     category: "emergency",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to dhiig-kar-daran.",
+    explanationSo: "Eray la xiriira dhiig-kar-daran."
   },
 
   {
@@ -1823,7 +2103,9 @@ const medicalDictionary = [
     example: "Severe anemia may require blood transfusion.",
     category: "disease",
     synonyms: ["critical anemia"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to anemia severe.",
+    explanationSo: "Eray la xiriira anemia severe."
   },
   {
     id: 1123,
@@ -1836,7 +2118,9 @@ const medicalDictionary = [
     example: "Dhiig-yaraan-daran waxay sababi kartaa suuxdin.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to dhiig-yaraan-daran.",
+    explanationSo: "Eray la xiriira dhiig-yaraan-daran."
   },
 
   {
@@ -1850,7 +2134,9 @@ const medicalDictionary = [
     example: "Vertigo makes the room feel like it is spinning.",
     category: "symptom",
     synonyms: ["spinning dizziness"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to vertigo.",
+    explanationSo: "Eray la xiriira vertigo."
   },
   {
     id: 1125,
@@ -1863,7 +2149,9 @@ const medicalDictionary = [
     example: "Wareer-wareeg ayaa iga haya marka aan istaago.",
     category: "symptom",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to wareer-wareeg.",
+    explanationSo: "Eray la xiriira wareer-wareeg."
   },
     {
     id: 1126,
@@ -1876,7 +2164,9 @@ const medicalDictionary = [
     example: "Colitis can cause abdominal pain and diarrhea.",
     category: "disease",
     synonyms: ["colon inflammation"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to colitis.",
+    explanationSo: "Eray la xiriira colitis."
   },
   {
     id: 1127,
@@ -1889,7 +2179,9 @@ const medicalDictionary = [
     example: "Caabuq-mindhicirku wuxuu sababi karaa shuban.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to caabuq-mindhicir.",
+    explanationSo: "Eray la xiriira caabuq-mindhicir."
   },
 
   {
@@ -1903,7 +2195,9 @@ const medicalDictionary = [
     example: "Tachycardia may cause chest discomfort.",
     category: "disease",
     synonyms: ["rapid heartbeat"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to tachycardia.",
+    explanationSo: "Eray la xiriira tachycardia."
   },
   {
     id: 1129,
@@ -1916,7 +2210,9 @@ const medicalDictionary = [
     example: "Garaac-wadne-degdeg ayaa iga bilaabmay jimicsiga kadib.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to garaac-wadne-degdeg.",
+    explanationSo: "Eray la xiriira garaac-wadne-degdeg."
   },
 
   {
@@ -1930,7 +2226,9 @@ const medicalDictionary = [
     example: "Bradycardia can lead to dizziness.",
     category: "disease",
     synonyms: ["slow heartbeat"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to bradycardia.",
+    explanationSo: "Eray la xiriira bradycardia."
   },
   {
     id: 1131,
@@ -1943,7 +2241,9 @@ const medicalDictionary = [
     example: "Garaac-wadne-gaabis wuxuu keeni karaa suuxdin.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to garaac-wadne-gaabis.",
+    explanationSo: "Eray la xiriira garaac-wadne-gaabis."
   },
 
   {
@@ -1957,7 +2257,9 @@ const medicalDictionary = [
     example: "Nephritis may affect urine production.",
     category: "disease",
     synonyms: ["kidney inflammation"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to nephritis.",
+    explanationSo: "Eray la xiriira nephritis."
   },
   {
     id: 1133,
@@ -1970,7 +2272,9 @@ const medicalDictionary = [
     example: "Caabuq-kelyo wuxuu saameeyaa sifaynta dhiigga.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to caabuq-kelyo.",
+    explanationSo: "Eray la xiriira caabuq-kelyo."
   },
 
   {
@@ -1984,7 +2288,9 @@ const medicalDictionary = [
     example: "Hypoxia can damage vital organs.",
     category: "condition",
     synonyms: ["oxygen deficiency"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to hypoxia.",
+    explanationSo: "Eray la xiriira hypoxia."
   },
   {
     id: 1135,
@@ -1997,7 +2303,9 @@ const medicalDictionary = [
     example: "Oksijiin-yaraan waxay keentaa neef-qabad.",
     category: "condition",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to oksijiin-yaraan.",
+    explanationSo: "Eray la xiriira oksijiin-yaraan."
   },
 
   {
@@ -2011,7 +2319,9 @@ const medicalDictionary = [
     example: "Ulcerative colitis causes bloody diarrhea.",
     category: "disease",
     synonyms: ["inflammatory bowel disease"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to ulcerative colitis.",
+    explanationSo: "Eray la xiriira ulcerative colitis."
   },
   {
     id: 1137,
@@ -2024,7 +2334,9 @@ const medicalDictionary = [
     example: "Boog-mindhicir wuxuu sababi karaa dhiig saxarada ku jira.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to boog-mindhicir.",
+    explanationSo: "Eray la xiriira boog-mindhicir."
   },
     {
     id: 1138,
@@ -2037,7 +2349,9 @@ const medicalDictionary = [
     example: "Sepsis requires immediate medical treatment.",
     category: "emergency",
     synonyms: ["blood infection"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to sepsis.",
+    explanationSo: "Eray la xiriira sepsis."
   },
   {
     id: 1139,
@@ -2050,7 +2364,9 @@ const medicalDictionary = [
     example: "Caabuq-dhiig waa xaalad halis ah.",
     category: "emergency",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to caabuq-dhiig.",
+    explanationSo: "Eray la xiriira caabuq-dhiig."
   },
 
   {
@@ -2064,7 +2380,9 @@ const medicalDictionary = [
     example: "Pulmonary embolism can cause sudden chest pain.",
     category: "condition",
     synonyms: ["vascular blockage"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to embolism.",
+    explanationSo: "Eray la xiriira embolism."
   },
   {
     id: 1141,
@@ -2077,7 +2395,9 @@ const medicalDictionary = [
     example: "Xirid-dhiig wuxuu sababi karaa neef-qabad.",
     category: "condition",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to xirid-dhiig.",
+    explanationSo: "Eray la xiriira xirid-dhiig."
   },
 
   {
@@ -2091,7 +2411,9 @@ const medicalDictionary = [
     example: "Osteoporosis increases fracture risk.",
     category: "disease",
     synonyms: ["bone thinning"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to osteoporosis.",
+    explanationSo: "Eray la xiriira osteoporosis."
   },
   {
     id: 1143,
@@ -2104,7 +2426,9 @@ const medicalDictionary = [
     example: "Laf-jileec waxay keeni kartaa jab fudud.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to laf-jileec.",
+    explanationSo: "Eray la xiriira laf-jileec."
   },
 
   {
@@ -2118,7 +2442,9 @@ const medicalDictionary = [
     example: "Migraine attacks can last for hours.",
     category: "symptom",
     synonyms: ["severe headache"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to migraine.",
+    explanationSo: "Eray la xiriira migraine."
   },
   {
     id: 1145,
@@ -2131,7 +2457,9 @@ const medicalDictionary = [
     example: "Madax-xanuun-daran ayaa igu bilaabma iftiin badan.",
     category: "symptom",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to madax-xanuun-daran.",
+    explanationSo: "Eray la xiriira madax-xanuun-daran."
   },
 
   {
@@ -2145,7 +2473,9 @@ const medicalDictionary = [
     example: "Cirrhosis may result from long-term alcohol use.",
     category: "disease",
     synonyms: ["liver scarring"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to cirrhosis.",
+    explanationSo: "Eray la xiriira cirrhosis."
   },
   {
     id: 1147,
@@ -2158,7 +2488,9 @@ const medicalDictionary = [
     example: "Beer-adkaansho waxay saameysaa shaqada beerka.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to beer-adkaansho.",
+    explanationSo: "Eray la xiriira beer-adkaansho."
   },
 
   {
@@ -2172,7 +2504,9 @@ const medicalDictionary = [
     example: "Epilepsy requires long-term treatment.",
     category: "disease",
     synonyms: ["seizure disorder"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to epilepsy.",
+    explanationSo: "Eray la xiriira epilepsy."
   },
   {
     id: 1149,
@@ -2185,7 +2519,9 @@ const medicalDictionary = [
     example: "Suuxdin-joogto waxay u baahan tahay daawo joogto ah.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to suuxdin-joogto.",
+    explanationSo: "Eray la xiriira suuxdin-joogto."
   },
     {
     id: 1150,
@@ -2198,7 +2534,9 @@ const medicalDictionary = [
     example: "Arthritis causes joint pain and stiffness.",
     category: "disease",
     synonyms: ["joint inflammation"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to arthritis.",
+    explanationSo: "Eray la xiriira arthritis."
   },
   {
     id: 1151,
@@ -2211,7 +2549,9 @@ const medicalDictionary = [
     example: "Barar-kala-goysyada ayaa igu adkeeya socodka.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to barar-kala-goysyada.",
+    explanationSo: "Eray la xiriira barar-kala-goysyada."
   },
 
   {
@@ -2225,7 +2565,9 @@ const medicalDictionary = [
     example: "Pneumothorax causes sudden chest pain.",
     category: "emergency",
     synonyms: ["collapsed lung"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to pneumothorax.",
+    explanationSo: "Eray la xiriira pneumothorax."
   },
   {
     id: 1153,
@@ -2238,7 +2580,9 @@ const medicalDictionary = [
     example: "Hawo-xabadka waa xaalad degdeg ah.",
     category: "emergency",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to hawo-xabadka.",
+    explanationSo: "Eray la xiriira hawo-xabadka."
   },
 
   {
@@ -2252,7 +2596,9 @@ const medicalDictionary = [
     example: "Dermatitis may cause itching.",
     category: "disease",
     synonyms: ["skin inflammation"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to dermatitis.",
+    explanationSo: "Eray la xiriira dermatitis."
   },
   {
     id: 1155,
@@ -2265,7 +2611,9 @@ const medicalDictionary = [
     example: "Caabuq-maqaarka wuxuu keeni karaa finan.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to caabuq-maqaarka.",
+    explanationSo: "Eray la xiriira caabuq-maqaarka."
   },
 
   {
@@ -2279,7 +2627,9 @@ const medicalDictionary = [
     example: "Hemorrhage can be life-threatening.",
     category: "emergency",
     synonyms: ["severe bleeding"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to hemorrhage.",
+    explanationSo: "Eray la xiriira hemorrhage."
   },
   {
     id: 1157,
@@ -2292,7 +2642,9 @@ const medicalDictionary = [
     example: "Dhiig-bax-daran wuxuu u baahan yahay gargaar degdeg ah.",
     category: "emergency",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to dhiig-bax-daran.",
+    explanationSo: "Eray la xiriira dhiig-bax-daran."
   },
 
   {
@@ -2306,7 +2658,9 @@ const medicalDictionary = [
     example: "Hepatitis affects liver function.",
     category: "disease",
     synonyms: ["liver inflammation"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to hepatitis.",
+    explanationSo: "Eray la xiriira hepatitis."
   },
   {
     id: 1159,
@@ -2319,7 +2673,9 @@ const medicalDictionary = [
     example: "Caabuq-beer wuxuu sababi karaa cagaarshow.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to caabuq-beer.",
+    explanationSo: "Eray la xiriira caabuq-beer."
   },
 
   {
@@ -2333,7 +2689,9 @@ const medicalDictionary = [
     example: "The X-ray confirmed a fracture.",
     category: "injury",
     synonyms: ["broken bone"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A complete or partial break in the continuity of a bone due to force or disease.",
+    explanationSo: "Jab dhamaystiran ama qaybeed ah ee joogteynta lafta sabab oo ah xoog ama cudur."
   },
   {
     id: 1161,
@@ -2346,7 +2704,9 @@ const medicalDictionary = [
     example: "Jab-laf ayaa iga dhacay gacanta.",
     category: "injury",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to jab-laf.",
+    explanationSo: "Eray la xiriira jab-laf."
   },
     {
     id: 1162,
@@ -2359,7 +2719,9 @@ const medicalDictionary = [
     example: "Pancreatitis causes severe abdominal pain.",
     category: "disease",
     synonyms: ["pancreas inflammation"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to pancreatitis.",
+    explanationSo: "Eray la xiriira pancreatitis."
   },
   {
     id: 1163,
@@ -2372,7 +2734,9 @@ const medicalDictionary = [
     example: "Caabuq-xameetida wuxuu sababi karaa matag.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to caabuq-xameetida.",
+    explanationSo: "Eray la xiriira caabuq-xameetida."
   },
 
   {
@@ -2386,7 +2750,9 @@ const medicalDictionary = [
     example: "Thrombosis may block blood flow.",
     category: "condition",
     synonyms: ["blood clot"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to thrombosis.",
+    explanationSo: "Eray la xiriira thrombosis."
   },
   {
     id: 1165,
@@ -2399,7 +2765,9 @@ const medicalDictionary = [
     example: "Xinjiro-dhiig wuxuu keeni karaa xanuun lugta ah.",
     category: "condition",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to xinjiro-dhiig.",
+    explanationSo: "Eray la xiriira xinjiro-dhiig."
   },
 
   {
@@ -2413,7 +2781,9 @@ const medicalDictionary = [
     example: "Laryngitis causes hoarseness.",
     category: "disease",
     synonyms: ["voice box inflammation"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to laryngitis.",
+    explanationSo: "Eray la xiriira laryngitis."
   },
   {
     id: 1167,
@@ -2426,7 +2796,9 @@ const medicalDictionary = [
     example: "Caabuq-cod ayaa iga dhigay cod la'aan.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to caabuq-cod.",
+    explanationSo: "Eray la xiriira caabuq-cod."
   },
 
   {
@@ -2440,7 +2812,9 @@ const medicalDictionary = [
     example: "Meningitis can cause stiff neck and fever.",
     category: "disease",
     synonyms: ["brain membrane infection"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to meningitis.",
+    explanationSo: "Eray la xiriira meningitis."
   },
   {
     id: 1169,
@@ -2453,7 +2827,9 @@ const medicalDictionary = [
     example: "Caabuq-maskax-dabool waa xanuun halis ah.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to caabuq-maskax-dabool.",
+    explanationSo: "Eray la xiriira caabuq-maskax-dabool."
   },
 
   {
@@ -2467,7 +2843,9 @@ const medicalDictionary = [
     example: "Edema is common in heart failure.",
     category: "symptom",
     synonyms: ["fluid swelling"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to edema.",
+    explanationSo: "Eray la xiriira edema."
   },
   {
     id: 1171,
@@ -2480,7 +2858,9 @@ const medicalDictionary = [
     example: "Barar-dareere ayaa lugaha iga haya.",
     category: "symptom",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to barar-dareere.",
+    explanationSo: "Eray la xiriira barar-dareere."
   },
 
   {
@@ -2494,7 +2874,9 @@ const medicalDictionary = [
     example: "Appendicitis requires surgery.",
     category: "disease",
     synonyms: ["appendix inflammation"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to appendicitis.",
+    explanationSo: "Eray la xiriira appendicitis."
   },
   {
     id: 1173,
@@ -2507,7 +2889,9 @@ const medicalDictionary = [
     example: "Caabuq-appendix waa xanuun degdeg ah.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to caabuq-appendix.",
+    explanationSo: "Eray la xiriira caabuq-appendix."
   },
     {
     id: 1174,
@@ -2520,7 +2904,9 @@ const medicalDictionary = [
     example: "Bronchitis causes coughing and mucus production.",
     category: "disease",
     synonyms: ["bronchial inflammation"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to bronchitis.",
+    explanationSo: "Eray la xiriira bronchitis."
   },
   {
     id: 1175,
@@ -2533,7 +2919,9 @@ const medicalDictionary = [
     example: "Caabuq-mareenka-neef wuxuu keenaa qufac joogto ah.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to caabuq-mareenka-neef.",
+    explanationSo: "Eray la xiriira caabuq-mareenka-neef."
   },
 
   {
@@ -2547,7 +2935,9 @@ const medicalDictionary = [
     example: "Anaphylaxis requires immediate injection of epinephrine.",
     category: "emergency",
     synonyms: ["severe allergy"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to anaphylaxis.",
+    explanationSo: "Eray la xiriira anaphylaxis."
   },
   {
     id: 1177,
@@ -2560,7 +2950,9 @@ const medicalDictionary = [
     example: "Xasaasiyad-daran waxay sababi kartaa neef-qabad.",
     category: "emergency",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to xasaasiyad-daran.",
+    explanationSo: "Eray la xiriira xasaasiyad-daran."
   },
 
   {
@@ -2574,7 +2966,9 @@ const medicalDictionary = [
     example: "Glaucoma can lead to blindness.",
     category: "disease",
     synonyms: ["eye pressure disease"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to glaucoma.",
+    explanationSo: "Eray la xiriira glaucoma."
   },
   {
     id: 1179,
@@ -2587,7 +2981,9 @@ const medicalDictionary = [
     example: "Cadaadis-indho wuxuu saameeyaa aragga.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to cadaadis-indho.",
+    explanationSo: "Eray la xiriira cadaadis-indho."
   },
 
   {
@@ -2601,7 +2997,9 @@ const medicalDictionary = [
     example: "An ulcer may cause burning pain.",
     category: "disease",
     synonyms: ["stomach sore"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to ulcer.",
+    explanationSo: "Eray la xiriira ulcer."
   },
   {
     id: 1181,
@@ -2614,7 +3012,9 @@ const medicalDictionary = [
     example: "Boog-calooleed waxay keeni kartaa matag dhiig leh.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to boog-calooleed.",
+    explanationSo: "Eray la xiriira boog-calooleed."
   },
 
   {
@@ -2628,7 +3028,9 @@ const medicalDictionary = [
     example: "Insomnia affects mental health.",
     category: "condition",
     synonyms: ["sleep disorder"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to insomnia.",
+    explanationSo: "Eray la xiriira insomnia."
   },
   {
     id: 1183,
@@ -2641,7 +3043,9 @@ const medicalDictionary = [
     example: "Hurdo-la'aan ayaa iga dhalatay walwal.",
     category: "condition",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to hurdo-la'aan.",
+    explanationSo: "Eray la xiriira hurdo-la'aan."
   },
 
   {
@@ -2655,7 +3059,9 @@ const medicalDictionary = [
     example: "Lymphoma affects white blood cells.",
     category: "disease",
     synonyms: ["lymph cancer"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to lymphoma.",
+    explanationSo: "Eray la xiriira lymphoma."
   },
   {
     id: 1185,
@@ -2668,7 +3074,9 @@ const medicalDictionary = [
     example: "Kansar-qanjir wuxuu sababi karaa qanjir barar.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to kansar-qanjir.",
+    explanationSo: "Eray la xiriira kansar-qanjir."
   },
     {
     id: 1186,
@@ -2681,7 +3089,9 @@ const medicalDictionary = [
     example: "Anemia causes fatigue and weakness.",
     category: "disease",
     synonyms: ["low hemoglobin"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A condition where the blood has too few red blood cells, reducing oxygen supply to the body.",
+    explanationSo: "Xaalad ay dhiiggu ku yaryihiin unugyada casaan, hoos u dhigta bixinta oksijiinta jirka."
   },
   {
     id: 1187,
@@ -2694,7 +3104,9 @@ const medicalDictionary = [
     example: "Dhiig-yaraan waxay keeni kartaa daal.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "The Somali phrase for anemia; a medical condition where there is a shortage of red blood cells.",
+    explanationSo: "Odhaahda Soomaali ee dhiig-yara; xaalad caafimaad oo yarida unugyada dhiigga casaan jirto."
   },
 
   {
@@ -2708,7 +3120,9 @@ const medicalDictionary = [
     example: "Fibrosis reduces organ function.",
     category: "disease",
     synonyms: ["tissue scarring"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to fibrosis.",
+    explanationSo: "Eray la xiriira fibrosis."
   },
   {
     id: 1189,
@@ -2721,7 +3135,9 @@ const medicalDictionary = [
     example: "Nabaro-adkaansho waxay saameysaa sambabada.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to nabaro-adkaansho.",
+    explanationSo: "Eray la xiriira nabaro-adkaansho."
   },
 
   {
@@ -2735,7 +3151,9 @@ const medicalDictionary = [
     example: "A seizure may cause shaking.",
     category: "symptom",
     synonyms: ["convulsion"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to seizure.",
+    explanationSo: "Eray la xiriira seizure."
   },
   {
     id: 1191,
@@ -2748,7 +3166,9 @@ const medicalDictionary = [
     example: "Suuxdin ayaa ku dhacday bukaanka.",
     category: "symptom",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to suuxdin.",
+    explanationSo: "Eray la xiriira suuxdin."
   },
 
   {
@@ -2762,7 +3182,9 @@ const medicalDictionary = [
     example: "Cataract surgery restores vision.",
     category: "disease",
     synonyms: ["lens opacity"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to cataract.",
+    explanationSo: "Eray la xiriira cataract."
   },
   {
     id: 1193,
@@ -2775,7 +3197,9 @@ const medicalDictionary = [
     example: "Indho-madow wuxuu yareeyaa aragga.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to indho-madow.",
+    explanationSo: "Eray la xiriira indho-madow."
   },
 
   {
@@ -2789,7 +3213,9 @@ const medicalDictionary = [
     example: "Hemophilia causes prolonged bleeding.",
     category: "disease",
     synonyms: ["bleeding disorder"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to hemophilia.",
+    explanationSo: "Eray la xiriira hemophilia."
   },
   {
     id: 1195,
@@ -2802,7 +3228,9 @@ const medicalDictionary = [
     example: "Dhiig-joogsi-la'aan waa cudur hidde-side ah.",
     category: "disease",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to dhiig-joogsi-la'aan.",
+    explanationSo: "Eray la xiriira dhiig-joogsi-la'aan."
   },
 
   {
@@ -2816,7 +3244,9 @@ const medicalDictionary = [
     example: "Malnutrition weakens the immune system.",
     category: "condition",
     synonyms: ["undernutrition"],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to malnutrition.",
+    explanationSo: "Eray la xiriira malnutrition."
   },
   {
     id: 1197,
@@ -2829,7 +3259,9 @@ const medicalDictionary = [
     example: "Nafaqo-darro waxay saameysaa carruurta.",
     category: "condition",
     synonyms: [],
-    isMedical: true
+    isMedical: true,
+    explanationEn: "A term related to nafaqo-darro.",
+    explanationSo: "Eray la xiriira nafaqo-darro."
   },
 ];
 

@@ -10,6 +10,8 @@
     } catch(e) {}
   </script>
   <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Higaad — Word</title>
   <meta name="description" content="Deep word definition — Higaad Somali-English Dictionary" />
@@ -88,7 +90,7 @@
 </div>
 
 <script src="data.js"></script>
-<script src="techData.js"></script>
+<script src="techdata.js"></script>
 <script src="featured.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -252,44 +254,27 @@ function renderWord(e) {
           : '') +
 
         /* ── English Explanation ─────────────────────── */
-        (e.language === 'somali'
-          ? '<div class="explanation-block en-block">' +
-              '<div class="def-label">' +
-                '<div class="def-label-icon explanation-label-icon en">EN</div>' +
-                'Explanation in English' +
-              '</div>' +
-              '<div class="explanation-text">' + escHtml(e.traditionalMeaning) +
-                (e.modernMeaning ? ' — Modern equivalent: <em>' + escHtml(e.modernMeaning) + '</em>' : '') +
-              '</div>' +
-            '</div>'
-          : '<div class="explanation-block en-block">' +
-              '<div class="def-label">' +
-                '<div class="def-label-icon explanation-label-icon en">EN</div>' +
-                'Full English Explanation' +
-              '</div>' +
-              '<div class="explanation-text">' + escHtml(e.traditionalMeaning) + '</div>' +
-            '</div>') +
+        '<div class="explanation-block en-block">' +
+          '<div class="def-label">' +
+            '<div class="def-label-icon explanation-label-icon en">EN</div>' +
+            'Explanation in English' +
+          '</div>' +
+          '<div class="explanation-text">' +
+            escHtml(e.explanationEn || e.traditionalMeaning) +
+            (e.modernMeaning ? ' — Modern equivalent: <em>' + escHtml(e.modernMeaning) + '</em>' : '') +
+          '</div>' +
+        '</div>' +
 
         /* ── Somali Explanation ──────────────────────── */
-        (e.language === 'english'
-          ? '<div class="explanation-block so-block">' +
-              '<div class="def-label">' +
-                '<div class="def-label-icon explanation-label-icon so">SO</div>' +
-                'Sharaxaad Soomaali ah / Somali Explanation' +
-              '</div>' +
-              '<div class="explanation-text">' +
-                (e.modernMeaning
-                  ? escHtml(e.modernMeaning) + ' — ' + escHtml(e.traditionalMeaning)
-                  : 'Eraygan macnaheeda Soomaaliga waa: ' + escHtml(e.traditionalMeaning)) +
-              '</div>' +
-            '</div>'
-          : '<div class="explanation-block so-block">' +
-              '<div class="def-label">' +
-                '<div class="def-label-icon explanation-label-icon so">SO</div>' +
-                'Sharaxaad Soomaali ah / Somali Explanation' +
-              '</div>' +
-              '<div class="explanation-text">' + escHtml(e.traditionalMeaning) + '</div>' +
-            '</div>') +
+        '<div class="explanation-block so-block">' +
+          '<div class="def-label">' +
+            '<div class="def-label-icon explanation-label-icon so">SO</div>' +
+            'Sharaxaad Soomaali ah / Somali Explanation' +
+          '</div>' +
+          '<div class="explanation-text">' +
+            escHtml(e.explanationSo || e.traditionalMeaning) +
+          '</div>' +
+        '</div>' +
 
         /* ── Date & Reference ────────────────────────── */
         '<div class="word-meta-row">' +

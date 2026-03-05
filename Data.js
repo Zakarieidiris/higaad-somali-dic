@@ -9,7 +9,9 @@ const dictionary = [
     modernMeaning: null,
     example: "Buugga waa mid fiican.",
     synonyms: ["qoraal", "buugaag"],
-    isTech: false
+    isTech: false,
+    explanationEn: "A written or printed work consisting of pages bound together, used for reading, study, or reference.",
+    explanationSo: "Waa shay qoraal ah oo xidhan oo lagu aqriyo ama laga barto macluumaad."
   },
   {
     id: 2,
@@ -20,7 +22,9 @@ const dictionary = [
     modernMeaning: null,
     example: "Gurigaygu waa weyn yahay.",
     synonyms: ["hoy", "meel deganaanshaha"],
-    isTech: false
+    isTech: false,
+    explanationEn: "A building where a person or family lives; a place of shelter and belonging.",
+    explanationSo: "Waa dhisme ay degaan qoys ama qof; meel ay dadku ku nool yihiin oo ay ku nabad galaan."
   },
   {
     id: 3,
@@ -31,7 +35,9 @@ const dictionary = [
     modernMeaning: null,
     example: "Biyaha badda waa cusbo.",
     synonyms: ["roob (rain water)"],
-    isTech: false
+    isTech: false,
+    explanationEn: "A clear, colourless liquid essential for all life; water in its natural form.",
+    explanationSo: "Waa dareeraha daahir ah ee aan midab lahayn oo nolosha ku xidna; biyaha dabiiciga ah."
   },
   {
     id: 4,
@@ -42,7 +48,9 @@ const dictionary = [
     modernMeaning: null,
     example: "Nabad iyo nolol.",
     synonyms: ["xasilloon", "aamaanshaha"],
-    isTech: false
+    isTech: false,
+    explanationEn: "A state of harmony and absence of conflict; also used as a common Somali greeting meaning 'peace'.",
+    explanationSo: "Xaalad naxariis iyo is-afgarad ah; sidoo kale waa salaan caadi ah oo Soomaali ah oo micnaheedu yahay 'nabadgelyo'."
   },
   {
     id: 5,
@@ -51,9 +59,11 @@ const dictionary = [
     type: "noun",
     traditionalMeaning: "education / learning",
     modernMeaning: null,
-    example: "Waxbarashaду waa muhiim.",
+    example: "Waxbarashaddu waa muhiim.",
     synonyms: ["tacliim", "barashada"],
-    isTech: false
+    isTech: false,
+    explanationEn: "The process of acquiring knowledge, skills, and values through study or teaching.",
+    explanationSo: "Habka lagu helayo aqoon, xirfad, iyo qiimayaal iyada oo loo marayo barasho ama waxbarasho."
   },
   {
     id: 6,
@@ -64,7 +74,9 @@ const dictionary = [
     modernMeaning: null,
     example: "Dhulku waa mid qurxoon.",
     synonyms: ["carrada", "aduunka"],
-    isTech: false
+    isTech: false,
+    explanationEn: "The solid surface of the earth; ground, soil, or a territory belonging to a group or nation.",
+    explanationSo: "Dhulka adduunka ee adag; carrada, ciidda, ama gobol u gaar ah qolo ama wadan."
   },
   {
     id: 7,
@@ -75,7 +87,9 @@ const dictionary = [
     modernMeaning: null,
     example: "Xididkaygu waa Soomaaliya.",
     synonyms: ["asalka", "abtirsiinyo"],
-    isTech: false
+    isTech: false,
+    explanationEn: "The part of a plant that anchors it in the ground; also used figuratively for one's ancestry or origin.",
+    explanationSo: "Qaybta geedka ee ciidda ku xidnaanta; sidoo kale si la filayso waxaa loo isticmaalaa xididka qof."
   },
   {
     id: 8,
@@ -86,7 +100,9 @@ const dictionary = [
     modernMeaning: null,
     example: "Fekerkaaga waa fiican yahay.",
     synonyms: ["fikrad", "aragti"],
-    isTech: false
+    isTech: false,
+    explanationEn: "A mental process of considering or reasoning; an idea or opinion formed in the mind.",
+    explanationSo: "Hawl maskax ah oo ah in la is-arko ama la fikiyo; fikrad ama ra'yi maskaxda ka dhashay."
   },
 
   // English → Somali words
@@ -99,7 +115,9 @@ const dictionary = [
     modernMeaning: null,
     example: "Knowledge is power — Aqoontu waa awoodda.",
     synonyms: ["information", "wisdom", "understanding"],
-    isTech: false
+    isTech: false,
+    explanationEn: "Facts, information, and skills acquired through experience or education.",
+    explanationSo: "Xaqiiqooyin, macluumaad, iyo xirfadood la helay iyada oo loo marayo khibrad ama waxbarasho."
   },
   {
     id: 10,
@@ -110,7 +128,9 @@ const dictionary = [
     modernMeaning: null,
     example: "Somali is a beautiful language.",
     synonyms: ["tongue", "dialect", "speech"],
-    isTech: false
+    isTech: false,
+    explanationEn: "A system of communication using words, grammar, and sounds used by a people.",
+    explanationSo: "Nidaam xiriir ah oo isticmaala ereyada, naxwaha, iyo codadka ee dadku isticmaalaan."
   },
   {
     id: 11,
@@ -121,7 +141,9 @@ const dictionary = [
     modernMeaning: null,
     example: "Science helps us understand the world.",
     synonyms: ["research", "study"],
-    isTech: false
+    isTech: false,
+    explanationEn: "The systematic study of the physical and natural world through observation and experiment.",
+    explanationSo: "Daraasadda nidaamsan ee adduunka jirka iyo dabiiciga ah iyada oo loo marayo arista iyo tijaabada."
   },
   {
     id: 12,
@@ -132,7 +154,9 @@ const dictionary = [
     modernMeaning: null,
     example: "Somali culture is rich and diverse.",
     synonyms: ["tradition", "heritage", "civilization"],
-    isTech: false
+    isTech: false,
+    explanationEn: "The ideas, customs, and social behaviour of a particular people or society.",
+    explanationSo: "Fikradaha, caadooyinka, iyo dhaqanka bulshada ee shacab ama bulsho gaar ah."
   },
 
   // Tech Words
@@ -145,7 +169,9 @@ const dictionary = [
     modernMeaning: "Caqli",
     example: "Artificial intelligence is changing the world.",
     synonyms: ["AI", "machine learning", "deep learning"],
-    isTech: true
+    isTech: true,
+    explanationEn: "The simulation of human intelligence processes by computer systems, including learning and problem-solving.",
+    explanationSo: "Mashaqada caqliga aadanaha ee nidaamyada kombiyuutarka, oo ay ku jiraan barashada iyo xallinta dhibaatooyinka."
   },
   {
     id: 14,
@@ -156,7 +182,9 @@ const dictionary = [
     modernMeaning: "Qaacido",
     example: "Search engines use algorithms to rank results.",
     synonyms: ["procedure", "process", "formula"],
-    isTech: true
+    isTech: true,
+    explanationEn: "A set of rules or instructions followed by a computer to solve a problem or complete a task.",
+    explanationSo: "Jilbaha ama tilmaamaha kombiyuutarka raacaa si uu dhibaato u xalliyo ama hawl u dhammaystiro."
   },
   {
     id: 15,
@@ -167,7 +195,9 @@ const dictionary = [
     modernMeaning: "Barnaamijsi",
     example: "Programming is the language of the future.",
     synonyms: ["coding", "software development"],
-    isTech: true
+    isTech: true,
+    explanationEn: "The process of writing instructions for a computer to perform specific tasks.",
+    explanationSo: "Habka lagu qoro tilmaamaha kombiyuutarka si uu hawlo gaar ah u qabto."
   },
   {
     id: 16,
@@ -178,7 +208,9 @@ const dictionary = [
     modernMeaning: "Kayd-xog",
     example: "The database stores millions of records.",
     synonyms: ["data store", "repository"],
-    isTech: true
+    isTech: true,
+    explanationEn: "An organised collection of data stored and accessed electronically.",
+    explanationSo: "Ururinta xogta nidaamsan ee elektaroonig lagu kaydiyay lana geli karo."
   },
   {
     id: 17,
@@ -189,7 +221,9 @@ const dictionary = [
     modernMeaning: "Xarig",
     example: "The internet connects the world.",
     synonyms: ["web", "network", "online"],
-    isTech: true
+    isTech: true,
+    explanationEn: "A global network of computers and servers connected by communication protocols.",
+    explanationSo: "Shabakadda adduunka ee kombiyuutarrada iyo server-yada xidha xiriiro xiriir."
   },
   {
     id: 18,
@@ -200,7 +234,9 @@ const dictionary = [
     modernMeaning: "Amni-xarig",
     example: "Cybersecurity protects your digital life.",
     synonyms: ["digital security", "information security"],
-    isTech: true
+    isTech: true,
+    explanationEn: "The practice of protecting computers, networks, and data from digital attacks.",
+    explanationSo: "Dhaqanka ilaalinta kombiyuutarrada, shabakadaha, iyo xogta weeraryada dijitaalka."
   },
   {
     id: 19,
@@ -211,7 +247,9 @@ const dictionary = [
     modernMeaning: "Daruuro-xisaab",
     example: "Cloud computing enables remote work.",
     synonyms: ["cloud storage", "SaaS", "remote computing"],
-    isTech: true
+    isTech: true,
+    explanationEn: "The delivery of computing services over the internet, including storage and processing.",
+    explanationSo: "Bixinta adeegyada kombiyuutarka iyada oo loo marayo internet, oo ay ku jiraan kaydinta iyo hawlgelinta."
   },
   {
     id: 20,
@@ -222,7 +260,9 @@ const dictionary = [
     modernMeaning: "Silsilad-xog",
     example: "Blockchain powers cryptocurrencies.",
     synonyms: ["distributed ledger", "crypto"],
-    isTech: true
+    isTech: true,
+    explanationEn: "A distributed digital ledger that records transactions across multiple computers securely.",
+    explanationSo: "Diiwaanka dijitaalka ah ee qaybsan ee diiwaangeliya macaamiladaha kombiyuutarrada badan si ammaan ah."
   },
   {
     id: 21,
@@ -233,7 +273,9 @@ const dictionary = [
     modernMeaning: "Nidaam-kombiyuutar",
     example: "This software is open source.",
     synonyms: ["program", "application", "app"],
-    isTech: true
+    isTech: true,
+    explanationEn: "Programs and operating information used by a computer.",
+    explanationSo: "Barnaamijyada iyo macluumaadka hawlgelinta ee kombiyuutarka isticmaalo."
   },
 
   {
@@ -245,7 +287,9 @@ const dictionary = [
     modernMeaning: "Mishiin-aadane",
     example: "Robots are used in manufacturing.",
     synonyms: ["automaton", "android", "machine"],
-    isTech: true
+    isTech: true,
+    explanationEn: "A machine capable of carrying out complex actions automatically, often programmed by a computer.",
+    explanationSo: "Mishiin awood u leh in uu si toos ah u qaabto hawlo adag, oo inta badan kombiyuutar barnaamij sameeyay."
   },
   {
     id: 23,
@@ -265,7 +309,9 @@ const dictionary = [
   modernMeaning: "Bilow-ganacsi",
   example: "He launched a tech startup in 2026.",
   synonyms: ["new company", "venture"],
-  isTech: true
+  isTech: true,
+  explanationEn: "A newly established business, especially one in the technology sector.",
+  explanationSo: "Ganacsiga la aasaasay, gaar ahaan mid ku jira qaybta teknoolojiyada."
 },
 {
   id: 25,
@@ -276,7 +322,9 @@ const dictionary = [
   modernMeaning: "Abuur-cusub",
   example: "Innovation drives progress.",
   synonyms: ["creativity", "invention"],
-  isTech: true
+  isTech: true,
+  explanationEn: "The introduction of new ideas, methods, or products to improve processes or solve problems.",
+  explanationSo: "Hordhaca fikradaha cusub, hababka, ama waxsoosaarka si loo wanaajin nidaamyada ama loo xalliyo dhibaatooyinka."
 },
 {
   id: 26,
@@ -287,7 +335,9 @@ const dictionary = [
   modernMeaning: "Xog",
   example: "Data is the new oil.",
   synonyms: ["information", "records"],
-  isTech: true
+  isTech: true,
+  explanationEn: "Facts and statistics collected for analysis or reference.",
+  explanationSo: "Xaqiiqooyin iyo tirakoob la ururiyay si loo falanqeeyo ama loo tixraaco."
 },
 {
   id: 27,
@@ -298,7 +348,9 @@ const dictionary = [
   modernMeaning: "Adeeg-xog",
   example: "The server is down.",
   synonyms: ["host", "backend machine"],
-  isTech: true
+  isTech: true,
+  explanationEn: "A computer or system that provides data and services to other computers over a network.",
+  explanationSo: "Kombiyuutar ama nidaam bixiya xogta iyo adeegyada kombiyuutarrada kale iyada oo loo marayo shabakad."
 },
 {
   id: 28,
@@ -309,7 +361,9 @@ const dictionary = [
   modernMeaning: "Hore-nidaam",
   example: "He works as a frontend developer.",
   synonyms: ["UI side", "client side"],
-  isTech: true
+  isTech: true,
+  explanationEn: "The part of a website or app that users interact with directly, visible in the browser.",
+  explanationSo: "Qaybta websaydhka ama app-ka ee isticmaaluhu si toos ah uga dhexgalaan, muuqata browser-ka."
 },
 {
   id: 29,
@@ -320,7 +374,9 @@ const dictionary = [
   modernMeaning: "Dambe-nidaam",
   example: "Backend handles database logic.",
   synonyms: ["server side"],
-  isTech: true
+  isTech: true,
+  explanationEn: "The server-side part of a website that users do not see, handling data and logic.",
+  explanationSo: "Qaybta server-gaas ee websaydhka ee isticmaaluhu arkaynin, xogta iyo curiyeysa qaabila."
 },
 {
   id: 30,
@@ -331,7 +387,9 @@ const dictionary = [
   modernMeaning: "Xiriir-nidaam",
   example: "The app connects using an API.",
   synonyms: ["interface", "endpoint"],
-  isTech: true
+  isTech: true,
+  explanationEn: "A set of rules that allows different software applications to communicate with each other.",
+  explanationSo: "Jilbaha u oggolaanaya barnaamijyada software-ka kala duwan in ay isku xiraan."
 },
 {
   id: 31,
@@ -342,7 +400,9 @@ const dictionary = [
   modernMeaning: "Sir-xog",
   example: "Encryption protects user data.",
   synonyms: ["data protection"],
-  isTech: true
+  isTech: true,
+  explanationEn: "The process of converting data into a code to prevent unauthorised access.",
+  explanationSo: "Habka loo rogayo xogta kood si looga hortago gelitaanka aan la oggolayn."
 },
 {
   id: 32,
@@ -353,7 +413,9 @@ const dictionary = [
   modernMeaning: "Hubin-aqoonsi",
   example: "Two-factor authentication is secure.",
   synonyms: ["verification"],
-  isTech: true
+  isTech: true,
+  explanationEn: "The process of verifying the identity of a user or system before granting access.",
+  explanationSo: "Habka loo xaqiijiyo aqoonsiga isticmaale ama nidaam kahor inta aan gelitaan la siin."
 },
 {
   id: 33,
@@ -364,7 +426,9 @@ const dictionary = [
   modernMeaning: "Jir-aqoonsi",
   example: "Biometric login uses fingerprint.",
   synonyms: ["fingerprint ID"],
-  isTech: true
+  isTech: true,
+  explanationEn: "Technology using unique physical characteristics, such as fingerprints, to identify individuals.",
+  explanationSo: "Teknoolojiyada isticmaalaysa sifooyinka jireed ee goonida ah, sida faraha, si loo aqoonsado shakhsiyaadka."
 },
 {
   id: 34,
@@ -375,7 +439,9 @@ const dictionary = [
   modernMeaning: "Baro-mashiin",
   example: "Machine learning improves predictions.",
   synonyms: ["ML"],
-  isTech: true
+  isTech: true,
+  explanationEn: "A type of AI where systems learn from data and improve their performance over time.",
+  explanationSo: "Nooc AI ah oo nidaamyadu xogta ka baranayaan oo waqti ka waqti waxqabadkooda wanaajiyaan."
 },
 {
   id: 35,
@@ -386,7 +452,9 @@ const dictionary = [
   modernMeaning: "Arag-dhexgal",
   example: "The user interface is clean.",
   synonyms: ["UI"],
-  isTech: true
+  isTech: true,
+  explanationEn: "The visual layout and controls through which a user interacts with a software application.",
+  explanationSo: "Qaab-muuqaalka iyo kontarooliga uu isticmaaluhu uga dhexgalo barnaamijka software-ka."
 },
 {
   id: 36,
@@ -397,7 +465,9 @@ const dictionary = [
   modernMeaning: "Khibrad-isticmaal",
   example: "Good UX increases engagement.",
   synonyms: ["UX"],
-  isTech: true
+  isTech: true,
+  explanationEn: "The overall experience a person has when using a product, especially a digital one.",
+  explanationSo: "Khibradda guud ee qofku helo isagoo isticmaalaya alaabta, gaar ahaan tan dijitaalka ah."
 },
 {
   id: 37,
@@ -408,7 +478,9 @@ const dictionary = [
   modernMeaning: "Cilad-kood",
   example: "There is a bug in the system.",
   synonyms: ["error"],
-  isTech: true
+  isTech: true,
+  explanationEn: "An error or flaw in a computer program that causes it to behave unexpectedly.",
+  explanationSo: "Khalad ama cilad ku jirta barnaamijka kombiyuutarka oo keenta in uu si aan la filanayn u dhaqmo."
 },
 {
   id: 38,
@@ -419,7 +491,9 @@ const dictionary = [
   modernMeaning: "Cilad-saar",
   example: "Debugging takes time.",
   synonyms: ["fixing errors"],
-  isTech: true
+  isTech: true,
+  explanationEn: "The process of finding and fixing errors in computer code.",
+  explanationSo: "Habka la helaa oo la saxaya khaladaadka koodka kombiyuutarka."
 },
 {
   id: 39,
@@ -430,7 +504,9 @@ const dictionary = [
   modernMeaning: "Qaab-nidaam",
   example: "React is a frontend framework.",
   synonyms: ["structure"],
-  isTech: true
+  isTech: true,
+  explanationEn: "A pre-built platform or structure that developers use to build software applications.",
+  explanationSo: "Madal ama dhismo hore loo diyaariyay oo horumariyayaashu isticmaalaan si ay barnaamijyada software-ka u dhisaan."
 },
 {
   id: 40,
@@ -441,7 +517,9 @@ const dictionary = [
   modernMeaning: "Daahfur-nidaam",
   example: "Deployment is successful.",
   synonyms: ["launch"],
-  isTech: true
+  isTech: true,
+  explanationEn: "The process of making a software application available for use in a live environment.",
+  explanationSo: "Habka lagu samaynayo barnaamijka software-ka mid la heli karo oo ku hawlan deegaan nool."
 },
 {
   id: 41,
@@ -452,7 +530,9 @@ const dictionary = [
   modernMeaning: "Furan-kood",
   example: "Linux is open source.",
   synonyms: ["public code"],
-  isTech: true
+  isTech: true,
+  explanationEn: "Software whose source code is freely available for anyone to view, modify, or distribute.",
+  explanationSo: "Software oo koodkiisa isha si xor ah u heli karo qof kasta si uu u arko, u beddelo, ama u qaybsado."
 },
 {
   id: 42,
@@ -463,7 +543,9 @@ const dictionary = [
   modernMeaning: "Kayd-kood",
   example: "Push the code to repository.",
   synonyms: ["repo"],
-  isTech: true
+  isTech: true,
+  explanationEn: "A storage location where source code and project files are managed and tracked.",
+  explanationSo: "Meel kayd ah oo ay koodka isha iyo faylasha mashruuca lagu maamuul oo lagu raaco."
 },
 {
   id: 43,
@@ -474,7 +556,9 @@ const dictionary = [
   modernMeaning: "Nooc-maamul",
   example: "Git is a version control system.",
   synonyms: ["Git system"],
-  isTech: true
+  isTech: true,
+  explanationEn: "A system that records changes to files over time so you can recall specific versions later.",
+  explanationSo: "Nidaam diiwaangeliya isbedelada faylasha waqti ka waqti si aad u soo ceshan karto noocyada gaar ah markii dambe."
 },
 
 {
@@ -486,7 +570,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Aabbahay waa shaqeeyaa.",
   synonyms: ["abbaha"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A male parent; the father of a child.",
+  explanationSo: "Waa aabbaha lab ah ee cunugga; mid ka mid ah waalidiinta."
 },
 {
   id: 45,
@@ -497,7 +583,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Hooyaday waa naxariis badan.",
   synonyms: ["ummo"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A female parent; the mother of a child.",
+  explanationSo: "Waa hooyada dheddig ah ee cunugga; mid ka mid ah waalidiinta."
 },
 {
   id: 46,
@@ -508,7 +596,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Wiilku waa ciyaarayaa.",
   synonyms: ["inan"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A male child; a young boy or a son.",
+  explanationSo: "Waa ilmo lab ah; wiil yar ama inan."
 },
 {
   id: 47,
@@ -519,7 +609,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Gabartu waa waxbaranaysaa.",
   synonyms: ["inanad"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A female child; a young girl or a daughter.",
+  explanationSo: "Waa ilmo dheddig ah; gabar yar ama inanad."
 },
 {
   id: 48,
@@ -530,7 +622,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Cuntadu waa diyaar.",
   synonyms: ["raashin"],
-  isTech: false
+  isTech: false,
+  explanationEn: "Any nutritious substance that people eat to maintain life and growth.",
+  explanationSo: "Wax kasta oo nafaqo leh oo dadku cunaan si ay u noolaadaan oo ay u koraanina."
 },
 {
   id: 49,
@@ -541,7 +635,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Cabitaanka waa qabow.",
   synonyms: ["shanbaar"],
-  isTech: false
+  isTech: false,
+  explanationEn: "Any liquid that a person drinks, such as water, juice, or tea.",
+  explanationSo: "Dareer kasta oo qof cabbo, sida biyo, casiir, ama shaah."
 },
 {
   id: 50,
@@ -552,7 +648,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Waxaan aaday suuqa.",
   synonyms: ["ganacsi"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A place where goods are bought and sold; a marketplace or commercial centre.",
+  explanationSo: "Goob ay badeecado lagu iibsado lana iibiyo; suuq ama xarun ganacsi."
 },
 {
   id: 51,
@@ -563,7 +661,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Magaaladu waa mashquul.",
   synonyms: ["degmo"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A large town or urban area where many people live and work.",
+  explanationSo: "Degmo weyn ama aag magaalo ah oo dadku badan ay ku nool yihiin oo ku shaqeeyaan."
 },
 {
   id: 52,
@@ -574,7 +674,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Dalkeygu waa qurux badan.",
   synonyms: ["wadan"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A nation or territory identified as a distinct political entity with its own government.",
+  explanationSo: "Wadan ama dhul loo aqoonsan yahay sida hay'ad siyaasadeed gooni ah oo dowlad u leh."
 },
 {
   id: 53,
@@ -585,7 +687,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Xooluhu waa hanti.",
   synonyms: ["duunyo nool"],
-  isTech: false
+  isTech: false,
+  explanationEn: "Domesticated animals kept on a farm or by a family, especially cattle, sheep, and goats.",
+  explanationSo: "Xayawaanka guri-la-dhaqay ee xero ama qoys haysto, gaar ahaan lo', ido, iyo ri'."
 },
 {
   id: 54,
@@ -596,7 +700,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Qof walba waa muhiim.",
   synonyms: ["ruux"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A human being regarded as an individual.",
+  explanationSo: "Aadane la arko sidii shakhsi gooni ah."
 },
 {
   id: 55,
@@ -607,7 +713,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Jacaylku waa qurux.",
   synonyms: ["kal-gacal"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A deep feeling of affection and care towards another person.",
+  explanationSo: "Dareen qoto dheer oo jecel iyo daryeel leh oo u jira qof kale."
 },
 {
   id: 56,
@@ -618,7 +726,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Saaxiibkay waa daacad.",
   synonyms: ["rafiiq"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A person whom one knows well and has a bond of mutual affection with.",
+  explanationSo: "Qof la yaqaan oo xiriir jaceyl iyo is-xurmo ah lala leeyahay."
 },
 {
   id: 57,
@@ -629,7 +739,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Cadceeddu way iftiintaa.",
   synonyms: ["qorrax"],
-  isTech: false
+  isTech: false,
+  explanationEn: "The star at the centre of the solar system that provides light and heat to Earth.",
+  explanationSo: "Xiddigta ku taal bartamaha nidaamka qorraxda oo iftiinka iyo kulaylka dhulka siisa."
 },
 {
   id: 58,
@@ -640,7 +752,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Dayaxu waa qurux badan.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The natural satellite of Earth that orbits the planet and reflects sunlight.",
+  explanationSo: "Dayaxa dabiiciga ah ee Dunida wareegaa oo iftiinka qorraxda xidaa."
 },
 {
   id: 59,
@@ -651,7 +765,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Roob ayaa da'aya.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "Water that falls from clouds in the sky as small liquid drops.",
+  explanationSo: "Biyo ka soo da'a daruuraha cirka sida dhibicyo yaryar oo dareereed ah."
 },
 {
   id: 60,
@@ -662,7 +778,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Dabku waa kulul.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The rapid combustion of material producing heat, light, and flame.",
+  explanationSo: "Gubasho xawli ah oo walxo u geysata kulaylka, iftiinka, iyo dab-weynaha."
 },
 {
   id: 61,
@@ -673,7 +791,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Hawsha waa la qabtay.",
   synonyms: ["shaqo"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A piece of work or a task that requires effort to complete.",
+  explanationSo: "Wax shaqo ah ama hawl u baahan dadaal si loo dhammaystiro."
 },
 {
   id: 62,
@@ -684,7 +804,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Waxaan raadinayaa shaqo.",
   synonyms: ["hawl"],
-  isTech: false
+  isTech: false,
+  explanationEn: "Activity involving mental or physical effort done to achieve a purpose or earn income.",
+  explanationSo: "Hawl maskax ama jir ah oo la qabanayo si loo gaaro ujeedo ama dakhli."
 },
 {
   id: 63,
@@ -695,7 +817,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Waqtigu waa qaali.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The indefinite continued progress of existence and events; time as measured in hours, days, or years.",
+  explanationSo: "Soccodka joogtada ah ee jiritaanka iyo dhacdooyinka; wakhtiga xisaabta saacadaha, maalinta, ama sanadka."
 },
 // ===== SOMALI → ENGLISH PACK (Batch 2) =====
 
@@ -708,7 +832,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Aabbahay waa shaqeeyaa.",
   synonyms: ["abbaha"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A male parent; the father of a child.",
+  explanationSo: "Waa aabbaha lab ah ee cunugga; mid ka mid ah waalidiinta."
 },
 {
   id: 45,
@@ -719,7 +845,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Hooyaday waa naxariis badan.",
   synonyms: ["ummo"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A female parent; the mother of a child.",
+  explanationSo: "Waa hooyada dheddig ah ee cunugga; mid ka mid ah waalidiinta."
 },
 {
   id: 46,
@@ -730,7 +858,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Wiilku waa ciyaarayaa.",
   synonyms: ["inan"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A male child; a young boy or a son.",
+  explanationSo: "Waa ilmo lab ah; wiil yar ama inan."
 },
 {
   id: 47,
@@ -741,7 +871,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Gabartu waa waxbaranaysaa.",
   synonyms: ["inanad"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A female child; a young girl or a daughter.",
+  explanationSo: "Waa ilmo dheddig ah; gabar yar ama inanad."
 },
 {
   id: 48,
@@ -752,7 +884,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Cuntadu waa diyaar.",
   synonyms: ["raashin"],
-  isTech: false
+  isTech: false,
+  explanationEn: "Any nutritious substance that people eat to maintain life and growth.",
+  explanationSo: "Wax kasta oo nafaqo leh oo dadku cunaan si ay u noolaadaan oo ay u koraanina."
 },
 {
   id: 49,
@@ -763,7 +897,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Cabitaanka waa qabow.",
   synonyms: ["shanbaar"],
-  isTech: false
+  isTech: false,
+  explanationEn: "Any liquid that a person drinks, such as water, juice, or tea.",
+  explanationSo: "Dareer kasta oo qof cabbo, sida biyo, casiir, ama shaah."
 },
 {
   id: 50,
@@ -774,7 +910,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Waxaan aaday suuqa.",
   synonyms: ["ganacsi"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A place where goods are bought and sold; a marketplace or commercial centre.",
+  explanationSo: "Goob ay badeecado lagu iibsado lana iibiyo; suuq ama xarun ganacsi."
 },
 {
   id: 51,
@@ -785,7 +923,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Magaaladu waa mashquul.",
   synonyms: ["degmo"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A large town or urban area where many people live and work.",
+  explanationSo: "Degmo weyn ama aag magaalo ah oo dadku badan ay ku nool yihiin oo ku shaqeeyaan."
 },
 {
   id: 52,
@@ -796,7 +936,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Dalkeygu waa qurux badan.",
   synonyms: ["wadan"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A nation or territory identified as a distinct political entity with its own government.",
+  explanationSo: "Wadan ama dhul loo aqoonsan yahay sida hay'ad siyaasadeed gooni ah oo dowlad u leh."
 },
 {
   id: 53,
@@ -807,7 +949,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Xooluhu waa hanti.",
   synonyms: ["duunyo nool"],
-  isTech: false
+  isTech: false,
+  explanationEn: "Domesticated animals kept on a farm or by a family, especially cattle, sheep, and goats.",
+  explanationSo: "Xayawaanka guri-la-dhaqay ee xero ama qoys haysto, gaar ahaan lo', ido, iyo ri'."
 },
 {
   id: 54,
@@ -818,7 +962,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Qof walba waa muhiim.",
   synonyms: ["ruux"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A human being regarded as an individual.",
+  explanationSo: "Aadane la arko sidii shakhsi gooni ah."
 },
 {
   id: 55,
@@ -829,7 +975,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Jacaylku waa qurux.",
   synonyms: ["kal-gacal"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A deep feeling of affection and care towards another person.",
+  explanationSo: "Dareen qoto dheer oo jecel iyo daryeel leh oo u jira qof kale."
 },
 {
   id: 56,
@@ -840,7 +988,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Saaxiibkay waa daacad.",
   synonyms: ["rafiiq"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A person whom one knows well and has a bond of mutual affection with.",
+  explanationSo: "Qof la yaqaan oo xiriir jaceyl iyo is-xurmo ah lala leeyahay."
 },
 {
   id: 57,
@@ -851,7 +1001,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Cadceeddu way iftiintaa.",
   synonyms: ["qorrax"],
-  isTech: false
+  isTech: false,
+  explanationEn: "The star at the centre of the solar system that provides light and heat to Earth.",
+  explanationSo: "Xiddigta ku taal bartamaha nidaamka qorraxda oo iftiinka iyo kulaylka dhulka siisa."
 },
 {
   id: 58,
@@ -862,7 +1014,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Dayaxu waa qurux badan.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The natural satellite of Earth that orbits the planet and reflects sunlight.",
+  explanationSo: "Dayaxa dabiiciga ah ee Dunida wareegaa oo iftiinka qorraxda xidaa."
 },
 {
   id: 59,
@@ -873,7 +1027,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Roob ayaa da'aya.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "Water that falls from clouds in the sky as small liquid drops.",
+  explanationSo: "Biyo ka soo da'a daruuraha cirka sida dhibicyo yaryar oo dareereed ah."
 },
 {
   id: 60,
@@ -884,7 +1040,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Dabku waa kulul.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The rapid combustion of material producing heat, light, and flame.",
+  explanationSo: "Gubasho xawli ah oo walxo u geysata kulaylka, iftiinka, iyo dab-weynaha."
 },
 {
   id: 61,
@@ -895,7 +1053,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Hawsha waa la qabtay.",
   synonyms: ["shaqo"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A piece of work or a task that requires effort to complete.",
+  explanationSo: "Wax shaqo ah ama hawl u baahan dadaal si loo dhammaystiro."
 },
 {
   id: 62,
@@ -906,7 +1066,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Waxaan raadinayaa shaqo.",
   synonyms: ["hawl"],
-  isTech: false
+  isTech: false,
+  explanationEn: "Activity involving mental or physical effort done to achieve a purpose or earn income.",
+  explanationSo: "Hawl maskax ama jir ah oo la qabanayo si loo gaaro ujeedo ama dakhli."
 },
 {
   id: 63,
@@ -917,7 +1079,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Waqtigu waa qaali.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The indefinite continued progress of existence and events; time as measured in hours, days, or years.",
+  explanationSo: "Soccodka joogtada ah ee jiritaanka iyo dhacdooyinka; wakhtiga xisaabta saacadaha, maalinta, ama sanadka."
 }, 
 // ===== ENGLISH → SOMALI PACK (Batch 1) =====
 
@@ -930,7 +1094,9 @@ const dictionary = [
   modernMeaning: null,
   example: "She has the ability to lead.",
   synonyms: ["skill", "capacity"],
-  isTech: false
+  isTech: false,
+  explanationEn: "The power or skill to do something.",
+  explanationSo: "Awoodda ama xirfadda qof u leh in uu wax qabto."
 },
 {
   id: 65,
@@ -941,7 +1107,9 @@ const dictionary = [
   modernMeaning: null,
   example: "You have access to the system.",
   synonyms: ["entry", "permission"],
-  isTech: false
+  isTech: false,
+  explanationEn: "The right or ability to enter, use, or obtain something.",
+  explanationSo: "Xuquuqda ama awoodda lagu galo, lagu isticmaalo, ama wax la helo."
 },
 {
   id: 66,
@@ -952,7 +1120,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Create a new account.",
   synonyms: ["profile"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A record of financial transactions; or a personal profile on a digital platform.",
+  explanationSo: "Diiwaanka macaamilaadka dhaqaalaha; ama profile shakhsi ah oo madal dijitaal ah."
 },
 {
   id: 67,
@@ -963,7 +1133,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Graduation is a big achievement.",
   synonyms: ["success", "accomplishment"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A thing successfully accomplished, especially through effort or skill.",
+  explanationSo: "Wax si guul leh loo qabto, gaar ahaan iyada oo loo marayo dadaal ama xirfad."
 },
 {
   id: 68,
@@ -974,7 +1146,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Take action immediately.",
   synonyms: ["act", "move"],
-  isTech: false
+  isTech: false,
+  explanationEn: "The process of doing something to achieve an aim.",
+  explanationSo: "Habka la qabanayo si loo gaaro hadaf."
 },
 {
   id: 69,
@@ -985,7 +1159,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Outdoor activity is healthy.",
   synonyms: ["task", "event"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A thing that a person or group does or has done.",
+  explanationSo: "Wax qof ama koox samayso ama samaysay."
 },
 {
   id: 70,
@@ -996,7 +1172,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Addition is basic math.",
   synonyms: ["sum"],
-  isTech: false
+  isTech: false,
+  explanationEn: "The process of adding numbers together; also the act of including something extra.",
+  explanationSo: "Habka lagu kordhinayo tirooyinka is-ku-dhafan; sidoo kale ficilka ku-darista wax dheeraad ah."
 },
 {
   id: 71,
@@ -1007,7 +1185,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Write your address here.",
   synonyms: ["location"],
-  isTech: false
+  isTech: false,
+  explanationEn: "The details of the place where someone lives or an organisation is situated.",
+  explanationSo: "Faahfaahinta goobta qof ku noolyahay ama hay'ad ku taallo."
 },
 {
   id: 72,
@@ -1018,7 +1198,9 @@ const dictionary = [
   modernMeaning: null,
   example: "He gave me good advice.",
   synonyms: ["guidance"],
-  isTech: false
+  isTech: false,
+  explanationEn: "Guidance or recommendations offered with regard to a course of action.",
+  explanationSo: "Hagitaan ama talo la bixiyo oo la xiriira tallaabada la qaadanayo."
 },
 {
   id: 73,
@@ -1029,7 +1211,9 @@ const dictionary = [
   modernMeaning: null,
   example: "They signed an agreement.",
   synonyms: ["contract", "deal"],
-  isTech: false
+  isTech: false,
+  explanationEn: "Harmony of opinion or a legally binding arrangement between two or more parties.",
+  explanationSo: "Is-waafaqsanaanta ra'yiga ama qandaraas sharciyeysan oo u dhexeeya laba ama ka badan oo dhinacyo ah."
 },
 {
   id: 74,
@@ -1040,7 +1224,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Fresh air is important.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The invisible mixture of gases surrounding the Earth, which all living things breathe.",
+  explanationSo: "Isku-dhafka hawada aan la arki karin ee adduunka ku hareeraysan, oo noolaha oo dhan neef qaataan."
 },
 {
   id: 75,
@@ -1051,7 +1237,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Data analysis is essential.",
   synonyms: ["examination"],
-  isTech: false
+  isTech: false,
+  explanationEn: "The detailed examination of something to understand its structure or meaning.",
+  explanationSo: "Baaritaanka faahfaahsan ee wax si loo fahmo dhismihiisa ama macnahiisa."
 },
 {
   id: 76,
@@ -1062,7 +1250,9 @@ const dictionary = [
   modernMeaning: null,
   example: "What is the answer?",
   synonyms: ["response"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A response to a question or problem.",
+  explanationSo: "Jawaabta su'aal ama dhibaato."
 },
 {
   id: 77,
@@ -1073,7 +1263,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Submit your job application.",
   synonyms: ["request", "form"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A formal request; or a software program designed to perform specific tasks.",
+  explanationSo: "Codsi rasmi ah; ama barnaamij software ah oo loogu talagalay hawlo gaar ah."
 },
 {
   id: 78,
@@ -1084,7 +1276,9 @@ const dictionary = [
   modernMeaning: null,
   example: "This area is quiet.",
   synonyms: ["region", "zone"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A region or part of a place, or the extent of a surface.",
+  explanationSo: "Gobol ama qayb meel ah, ama ballaadha dusha."
 },
 {
   id: 79,
@@ -1095,7 +1289,9 @@ const dictionary = [
   modernMeaning: null,
   example: "They had an argument.",
   synonyms: ["debate"],
-  isTech: false
+  isTech: false,
+  explanationEn: "An exchange of opposing views; or a set of reasons used to support a conclusion.",
+  explanationSo: "Wadahadal aragtiyaha ka soo horjeeda; ama jilbaha loo isticmaalo si loo taageero gabagabada."
 },
 {
   id: 80,
@@ -1106,7 +1302,9 @@ const dictionary = [
   modernMeaning: null,
   example: "The army protects the country.",
   synonyms: ["military"],
-  isTech: false
+  isTech: false,
+  explanationEn: "An organised military force equipped for fighting on land.",
+  explanationSo: "Ciidan nidaamsan oo hubaysan oo dhulka ku dagaalamaya."
 },
 {
   id: 81,
@@ -1117,7 +1315,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Art expresses emotion.",
   synonyms: ["creativity"],
-  isTech: false
+  isTech: false,
+  explanationEn: "Creative works expressing human imagination and skill, such as painting or sculpture.",
+  explanationSo: "Shaqooyinka hal-abuurka ah ee muujinaya maskaxda iyo xirfadda aadanaha, sida sawirka ama saameynta."
 },
 {
   id: 82,
@@ -1128,7 +1328,9 @@ const dictionary = [
   modernMeaning: null,
   example: "The city faced an attack.",
   synonyms: ["assault"],
-  isTech: false
+  isTech: false,
+  explanationEn: "An aggressive and violent act against a person or place.",
+  explanationSo: "Ficil xoog ah oo cadaawad leh oo loo geystaa qof ama goob."
 },
 {
   id: 83,
@@ -1139,7 +1341,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Pay attention in class.",
   synonyms: ["focus"],
-  isTech: false
+  isTech: false,
+  explanationEn: "The act of focusing the mind on something.",
+  explanationSo: "Ficilka maskaxda wax ku diiraddeynta."
 }, 
 // ===== MODERN SOMALI TECH PACK (Batch 1) =====
 
@@ -1152,7 +1356,9 @@ const dictionary = [
   modernMeaning: "Data Gathering System",
   example: "Shirkaddu waxay sameysay xog-ururin cusub.",
   synonyms: ["ururin xog"],
-  isTech: true
+  isTech: true,
+  explanationEn: "The systematic gathering of information for analysis or storage.",
+  explanationSo: "Uruurinta nidaamsan ee macluumaadka si loo falanqeeyo ama loo kaydiyay."
 },
 {
   id: 85,
@@ -1163,7 +1369,9 @@ const dictionary = [
   modernMeaning: "Analytics Engine",
   example: "Xog-falanqayn ayaa muhiim u ah ganacsiga.",
   synonyms: ["falanqayn xog"],
-  isTech: true
+  isTech: true,
+  explanationEn: "The detailed examination of data to discover patterns and draw conclusions.",
+  explanationSo: "Baaritaanka faahfaahsan ee xogta si loo helo qaababka oo gabagabo laga soo saaro."
 },
 {
   id: 86,
@@ -1174,7 +1382,9 @@ const dictionary = [
   modernMeaning: "Data Control",
   example: "Xog-maamul wanaagsan ayaa kordhiya amniga.",
   synonyms: [],
-  isTech: true
+  isTech: true,
+  explanationEn: "The process of organising, maintaining, and securing data effectively.",
+  explanationSo: "Habka lagu nidaaminayo, la daryeelayo, oo la ilaaliya xogta si waxtar leh."
 },
 {
   id: 87,
@@ -1185,7 +1395,9 @@ const dictionary = [
   modernMeaning: "Secure Data Layer",
   example: "Sir-xog ayaa ilaalisa xogta isticmaalaha.",
   synonyms: ["siraynta xogta"],
-  isTech: true
+  isTech: true,
+  explanationEn: "The conversion of data into an unreadable format to protect it from unauthorised access.",
+  explanationSo: "Rogidda xogta qaab aan la aqrin karin si looga ilaaliyo gelitaanka aan la oggolayn."
 },
 {
   id: 88,
@@ -1196,7 +1408,9 @@ const dictionary = [
   modernMeaning: "Digital ID",
   example: "Aqoonsi-dijitaal ayaa loo baahan yahay.",
   synonyms: [],
-  isTech: true
+  isTech: true,
+  explanationEn: "A digital representation of a person's identity used online or in electronic systems.",
+  explanationSo: "Muujinta dijitaalka ee aqoonsiga qofka ee onlaynka ama nidaamyada elektaroonig lagu isticmaalo."
 },
 {
   id: 89,
@@ -1207,7 +1421,9 @@ const dictionary = [
   modernMeaning: "E-currency",
   example: "Lacag-dijitaal ayaa ku faaftay Afrika.",
   synonyms: [],
-  isTech: true
+  isTech: true,
+  explanationEn: "Money that exists only in electronic form and is used for online transactions.",
+  explanationSo: "Lacagta kaliya ee qaab elektaroonig ah ku jirta oo loogu isticmaalo macaamiladaha onlaynka."
 },
 {
   id: 90,
@@ -1218,7 +1434,9 @@ const dictionary = [
   modernMeaning: "E-commerce",
   example: "Ganacsi-onlayn waa mustaqbalka.",
   synonyms: [],
-  isTech: true
+  isTech: true,
+  explanationEn: "Commercial transactions or business activities conducted over the internet.",
+  explanationSo: "Macaamiladaha ganacsiga ama hawlaha ganacsiga ee loo maray internet."
 },
 {
   id: 91,
@@ -1229,7 +1447,9 @@ const dictionary = [
   modernMeaning: "Mobile App",
   example: "Waxaan dhisnay barnaamij-mobil cusub.",
   synonyms: [],
-  isTech: true
+  isTech: true,
+  explanationEn: "A software application designed to run on a mobile device such as a smartphone.",
+  explanationSo: "Barnaamijka software-ka loo sameeyay si uu ku shaqeeyo qalab gacanta sida taleefanka casriga ah."
 },
 {
   id: 92,
@@ -1240,7 +1460,9 @@ const dictionary = [
   modernMeaning: "Software Development",
   example: "Kood-qoris waa xirfad muhiim ah.",
   synonyms: ["barnaamijsi"],
-  isTech: true
+  isTech: true,
+  explanationEn: "The activity of writing instructions in a programming language to create software.",
+  explanationSo: "Hawsha qorista tilmaamaha luqadda barnaamijyada si loo abuuro software."
 },
 {
   id: 93,
@@ -1251,7 +1473,9 @@ const dictionary = [
   modernMeaning: "Cloud System",
   example: "Xisaab-daruuro ayaa fududeysa kaydinta.",
   synonyms: [],
-  isTech: true
+  isTech: true,
+  explanationEn: "Using remote servers hosted on the internet to store, manage, and process data.",
+  explanationSo: "Isticmaalka server-yada fog ee internet ku marsan si loo kaydiyaw, lo maamulo, oo xog loo hawlgeliyo."
 },
 {
   id: 94,
@@ -1262,7 +1486,9 @@ const dictionary = [
   modernMeaning: "Digital Security",
   example: "Amni-dijitaal waa muhiim.",
   synonyms: [],
-  isTech: true
+  isTech: true,
+  explanationEn: "Protecting digital information, devices, and networks from cyber threats.",
+  explanationSo: "Ilaalinta macluumaadka dijitaalka, qalabka, iyo shabakadaha halbowlaha cyber-ka."
 },
 {
   id: 95,
@@ -1273,7 +1499,9 @@ const dictionary = [
   modernMeaning: "Network Link",
   example: "Xiriir-shabakad ayaa go'ay.",
   synonyms: [],
-  isTech: true
+  isTech: true,
+  explanationEn: "The link or pathway enabling devices to communicate within a network.",
+  explanationSo: "Xididdada ama jidka u oggolaanaya qalabka in ay xiriiraan shabakad gudahood."
 },
 {
   id: 96,
@@ -1284,7 +1512,9 @@ const dictionary = [
   modernMeaning: "Smart Device",
   example: "Qalab-caqli ayaa fududeeya nolosha.",
   synonyms: [],
-  isTech: true
+  isTech: true,
+  explanationEn: "An electronic device that uses computing technology to perform smart functions.",
+  explanationSo: "Qalab elektaroonig ah oo isticmaala teknoolojiyada kombiyuutarka si uu hawlo caqli-gal ah u qabto."
 },
 {
   id: 97,
@@ -1295,7 +1525,9 @@ const dictionary = [
   modernMeaning: "Automation Bot",
   example: "Robot-hawl ayaa qabtay shaqada.",
   synonyms: [],
-  isTech: true
+  isTech: true,
+  explanationEn: "Automated machinery or software that performs repetitive tasks without human input.",
+  explanationSo: "Mashiinnada ama software-ka tooska ah ee qaabila hawlaha soo-noqnoqda aan gelitaanka aadanaha lahayn."
 },
 {
   id: 98,
@@ -1306,7 +1538,9 @@ const dictionary = [
   modernMeaning: "Storage System",
   example: "Xog-kayd ayaa buuxsamay.",
   synonyms: [],
-  isTech: true
+  isTech: true,
+  explanationEn: "A system or device used to store digital data for later use.",
+  explanationSo: "Nidaam ama qalab loo isticmaalo kaydinta xogta dijitaalka si markii danbe loo isticmaalo."
 },
 {
   id: 99,
@@ -1317,7 +1551,9 @@ const dictionary = [
   modernMeaning: "Digital Media",
   example: "Muuqaal-dijitaal ayaa si dhakhso ah u faafa.",
   synonyms: [],
-  isTech: true
+  isTech: true,
+  explanationEn: "Audio-visual content in a digital format shared online or through digital devices.",
+  explanationSo: "Xog muqaal-dhegood ah oo qaab dijitaal ah oo la wadaago onlaynka ama iyada oo loo marayo qalabka dijitaalka."
 },
 {
   id: 100,
@@ -1328,7 +1564,9 @@ const dictionary = [
   modernMeaning: "E-voting",
   example: "Cod-bixinta-onlayn waa mustaqbalka doorashooyinka.",
   synonyms: [],
-  isTech: true
+  isTech: true,
+  explanationEn: "A system that allows voters to cast their votes electronically via the internet.",
+  explanationSo: "Nidaam u oggolaanaya codbixiyayaasha in ay cod onlaynka iyada oo loo marayo internet bixiyaan."
 },
 {
   id: 101,
@@ -1339,7 +1577,9 @@ const dictionary = [
   modernMeaning: "Passkey",
   example: "Ha la wadaagin sir-fure.",
   synonyms: [],
-  isTech: true
+  isTech: true,
+  explanationEn: "A secret combination of characters used to gain access to a system or account.",
+  explanationSo: "Isku-dar sir ah oo lagu galo nidaam ama akoonti."
 },
 {
   id: 102,
@@ -1350,7 +1590,9 @@ const dictionary = [
   modernMeaning: "E-message",
   example: "Fariin-dijitaal ayaa la diray.",
   synonyms: [],
-  isTech: true
+  isTech: true,
+  explanationEn: "A message sent or received through electronic means such as email or instant messaging.",
+  explanationSo: "Fariin la diray ama la helay iyada oo loo marayo hab elektaroonig sida email ama farriin degdeg ah."
 },
 {
   id: 103,
@@ -1361,7 +1603,9 @@ const dictionary = [
   modernMeaning: "Social Network",
   example: "Madal-bulsho ayaa isku xirta dadka.",
   synonyms: [],
-  isTech: true
+  isTech: true,
+  explanationEn: "An online platform where people create profiles and share content with others.",
+  explanationSo: "Madal onlayn ah oo dadku ku sameeystaan profile oo ay nuxurka kale ula wadaagaan."
 },
 // ===== MEDICAL WORDS PACK (Batch 1) =====
 
@@ -1374,7 +1618,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Caafimaadku waa nimco.",
   synonyms: ["fayoobi"],
-  isTech: false
+  isTech: false,
+  explanationEn: "The state of being free from illness or injury; physical and mental well-being.",
+  explanationSo: "Xaalada ka madax banaan jirrada ama dhaawaca; caafimaadka jirka iyo maskaxda."
 },
 {
   id: 105,
@@ -1385,7 +1631,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Cudurka waa la daawayn karaa.",
   synonyms: ["xanuun"],
-  isTech: false
+  isTech: false,
+  explanationEn: "An illness that affects the body or mind with specific symptoms.",
+  explanationSo: "Jirrad jirka ama maskaxda saameysata oo calaamado gaar ah leh."
 },
 {
   id: 106,
@@ -1396,7 +1644,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Waxaan dareemayaa xanuun madax.",
   synonyms: ["cudur"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A feeling of physical discomfort or suffering caused by injury or illness.",
+  explanationSo: "Dareen xanuun jireed ah oo sabab u ah dhaawac ama jirrad."
 },
 {
   id: 107,
@@ -1407,7 +1657,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Daawada waqtigeeda qaado.",
   synonyms: ["dawo"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A substance used to treat or prevent disease and relieve pain.",
+  explanationSo: "Walax loo isticmaalo si loo daaweeyo ama looga hortago cudur iyo xanuun."
 },
 {
   id: 108,
@@ -1418,7 +1670,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Dhakhtarku wuu ku baari doonaa.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "A qualified medical professional trained to diagnose and treat illness.",
+  explanationSo: "Xirfadle caafimaad oo tababaran ogaanshaha iyo daaweynta cudurrada."
 },
 {
   id: 109,
@@ -1429,7 +1683,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Kalkaaliyaha ayaa daryeela bukaanka.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "A trained healthcare professional who provides care and support to patients.",
+  explanationSo: "Xirfadle caafimaad oo tababaran oo daryeelka iyo taageerada bukaanka bixiya."
 },
 {
   id: 110,
@@ -1440,7 +1696,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Waxaan aaday isbitaalka.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "A place where sick or injured people receive medical treatment and care.",
+  explanationSo: "Goob ay qof bukaan ah ama dhaawacmay ku helo daaweyn iyo daryeel caafimaad."
 },
 {
   id: 111,
@@ -1451,7 +1709,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Bukaanku wuxuu sugayaa dhakhtarka.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "A person receiving medical treatment; someone who is ill or injured.",
+  explanationSo: "Qof daaweyn caafimaad qabanaya; mid bukaan ah ama dhaawacmay."
 },
 {
   id: 112,
@@ -1462,7 +1722,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Qalliinka waa lagu guuleystay.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "A medical operation in which a doctor cuts into the body to treat a condition.",
+  explanationSo: "Hawlgal caafimaad oo dhakhtar jirka ku galo si uu xaalad u daaweeyo."
 },
 {
   id: 113,
@@ -1473,7 +1735,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Dhiig badan ayaa lumay.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The red fluid that circulates through the body, carrying oxygen and nutrients.",
+  explanationSo: "Dareeraha casaan ah ee jirka ku socdaa, oo qaada oksijiinta iyo nafaqada."
 },
 {
   id: 114,
@@ -1484,7 +1748,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Wadnuhu waa xubinta ugu muhiimsan.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The muscular organ in the chest that pumps blood through the body.",
+  explanationSo: "Xubinta muruqyada leh ee laabta ku jirta ee dhiigga jirka ku riixda."
 },
 {
   id: 115,
@@ -1495,7 +1761,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Maskaxdu waxay xakameysaa jirka.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The organ inside the skull that controls thought, memory, and body functions.",
+  explanationSo: "Xubin madaxa ku jirta oo xukumta fikirka, xusuusta, iyo hawlaha jirka."
 },
 {
   id: 116,
@@ -1506,7 +1774,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Sambabku wuxuu qaataa hawada.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "Either of the two organs in the chest used for breathing and exchanging oxygen.",
+  explanationSo: "Mid ka mid ah laba xubnood oo laabta ku jira oo loo isticmaalo neefta iyo is-beddelka oksijiinta."
 },
 {
   id: 117,
@@ -1517,7 +1787,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Beerku waa muhiim jirka.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The large organ in the abdomen that processes nutrients and filters blood.",
+  explanationSo: "Xubin weyn oo caloosha ku jirta oo nafaqada hawlgelisa oo dhiigga sifeeysa."
 },
 {
   id: 118,
@@ -1528,7 +1800,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Kilyaha ayaa sifeeya dhiigga.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "Either of two bean-shaped organs that filter waste from the blood and produce urine.",
+  explanationSo: "Mid ka mid ah laba xubnood oo qaanjada u eg oo wasakhda dhiigga ka sifeeysa oo kaadi sameysa."
 },
 {
   id: 119,
@@ -1539,7 +1813,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Laf ayaa jabtay.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "Any of the hard pieces that form the skeleton of the body.",
+  explanationSo: "Wax kasta oo adag oo ka sameeya lafaha jirka."
 },
 {
   id: 120,
@@ -1550,7 +1826,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Maqaarku waa difaac.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The outer layer of the body that covers and protects internal organs.",
+  explanationSo: "Lakabka dibadda ee jirka oo daboola oo ilaaliya xubnahaas gudaha."
 },
 {
   id: 121,
@@ -1561,7 +1839,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Indhaha waa la baaray.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The organs of sight, used for seeing.",
+  explanationSo: "Xubnahaas aragga, loo isticmaalo arista."
 },
 {
   id: 122,
@@ -1572,7 +1852,9 @@ const dictionary = [
   modernMeaning: null,
   example: "San ayaa xirmay.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The organ on the face used for smelling and breathing.",
+  explanationSo: "Xubinta wejiiga ku taal oo loo isticmaalo urta iyo neefta."
 },
 {
   id: 123,
@@ -1583,7 +1865,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Dheg ayaa xanuunaysa.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The organ used for hearing sounds.",
+  explanationSo: "Xubin loo isticmaalo maqlidda codadka."
 },
 // ===== MEDICAL ENGLISH → SOMALI PACK (Batch 1) =====
 
@@ -1596,7 +1880,9 @@ const dictionary = [
   modernMeaning: null,
   example: "The infection spread quickly.",
   synonyms: ["contamination"],
-  isTech: false
+  isTech: false,
+  explanationEn: "The invasion and multiplication of harmful microorganisms in the body causing disease.",
+  explanationSo: "Galitaanka iyo kobcidda miraha la-dhicis ah ee jirka keena cudur."
 },
 {
   id: 125,
@@ -1607,7 +1893,9 @@ const dictionary = [
   modernMeaning: null,
   example: "The inflammation caused pain.",
   synonyms: ["swelling"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A localised physical condition where part of the body becomes red, swollen, and painful.",
+  explanationSo: "Xaalad jireed oo maxalli ah oo qaybta jirka ka casaan, bararsan, oo xanuunaysa."
 },
 {
   id: 126,
@@ -1618,7 +1906,9 @@ const dictionary = [
   modernMeaning: null,
   example: "He has a high fever.",
   synonyms: ["high temperature"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A body temperature that is higher than normal, usually indicating an infection.",
+  explanationSo: "Heerkulka jirka ka sareeysa caadiga, badanaa tilmaama caabuq."
 },
 {
   id: 127,
@@ -1629,7 +1919,9 @@ const dictionary = [
   modernMeaning: null,
   example: "She suffers from headache.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "A continuous pain felt in the head.",
+  explanationSo: "Xanuun joogto ah oo madaxa lagu dareemo."
 },
 {
   id: 128,
@@ -1640,7 +1932,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Diabetes requires careful monitoring.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "A metabolic disease in which the body cannot properly regulate blood sugar levels.",
+  explanationSo: "Cudur metabolism ah oo jirku ku xukumi karin heerka sonkorowga dhiigga."
 },
 {
   id: 129,
@@ -1651,7 +1945,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Hypertension affects the heart.",
   synonyms: ["high blood pressure"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A medical condition where the force of blood against artery walls is persistently high.",
+  explanationSo: "Xaalad caafimaad oo xoogga dhiigga jiirka dhiigga ka joogto ah oo sarreeya."
 },
 {
   id: 130,
@@ -1662,7 +1958,9 @@ const dictionary = [
   modernMeaning: null,
   example: "The fracture needs treatment.",
   synonyms: ["broken bone"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A crack or break in a bone.",
+  explanationSo: "Jabka ama dillaaca lafta."
 },
 {
   id: 131,
@@ -1673,7 +1971,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Cancer treatment is improving.",
   synonyms: ["malignancy"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A disease caused by uncontrolled growth of abnormal cells in the body.",
+  explanationSo: "Cudur ku sabab ah koridda xukun-la'aanta ee unugyada aan caadiga ahayn ee jirka."
 },
 {
   id: 132,
@@ -1684,7 +1984,9 @@ const dictionary = [
   modernMeaning: null,
   example: "The virus spreads fast.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "A microscopic infectious agent that replicates inside living cells and causes disease.",
+  explanationSo: "Laan-dheer caabuq ah oo aad u yar ee unugyada nool gudahood ku baxa oo keena cudur."
 },
 {
   id: 133,
@@ -1695,7 +1997,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Bacteria can cause disease.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "Microscopic single-celled organisms, some of which can cause disease in humans.",
+  explanationSo: "Nool yaryar oo hal-unug ah, qaar ka mid ahi cudur aadanaha ku keeni karaan."
 },
 {
   id: 134,
@@ -1706,7 +2010,9 @@ const dictionary = [
   modernMeaning: null,
   example: "He has a peanut allergy.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "An abnormal immune response to a substance that is harmless to most people.",
+  explanationSo: "Jawaab difaac aan caadi ahayn ee walxaha ay ku jirto inta badan dadka aafooda ah."
 },
 {
   id: 135,
@@ -1717,7 +2023,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Asthma affects breathing.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "A chronic condition affecting the airways, making breathing difficult.",
+  explanationSo: "Xaalad joogto ah oo neefta saameysata, neefta adag keenta."
 },
 {
   id: 136,
@@ -1728,7 +2036,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Anemia causes weakness.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "A condition where there is a deficiency of red blood cells or haemoglobin.",
+  explanationSo: "Xaalad ay ku jirto yarida unugyada dhiigga cas ama haemoglobinka."
 },
 {
   id: 137,
@@ -1739,7 +2049,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Pregnancy requires care.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The period during which a woman carries a developing baby in her womb.",
+  explanationSo: "Muddada ay haweenay uursato oo ay jirkeeda ku sitaa ilmaha kobcaya."
 },
 {
   id: 138,
@@ -1750,7 +2062,9 @@ const dictionary = [
   modernMeaning: null,
   example: "The vaccine prevents disease.",
   synonyms: ["immunization"],
-  isTech: false
+  isTech: false,
+  explanationEn: "A biological preparation that provides immunity against a specific disease.",
+  explanationSo: "Daawo nooleed oo siinaysa difaaca cudur gaar ah."
 },
 {
   id: 139,
@@ -1761,7 +2075,9 @@ const dictionary = [
   modernMeaning: null,
   example: "The diagnosis was accurate.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The identification of the nature of an illness through examination.",
+  explanationSo: "Aqoonsiga nooca jirradda iyada oo loo marayo baaritaan."
 },
 {
   id: 140,
@@ -1772,7 +2088,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Treatment started immediately.",
   synonyms: ["therapy"],
-  isTech: false
+  isTech: false,
+  explanationEn: "Medical care given to a patient for an illness or injury.",
+  explanationSo: "Daryeel caafimaad oo la siinayo bukaan cudur ama dhaawac u leh."
 },
 {
   id: 141,
@@ -1783,7 +2101,9 @@ const dictionary = [
   modernMeaning: null,
   example: "The surgery was successful.",
   synonyms: ["operation"],
-  isTech: false
+  isTech: false,
+  explanationEn: "Medical treatment involving cutting into the body to repair or remove tissue.",
+  explanationSo: "Daaweyn caafimaad oo ku lug leh goynta jirka si loo saamiyo ama looga saaro unug."
 },
 {
   id: 142,
@@ -1794,7 +2114,9 @@ const dictionary = [
   modernMeaning: null,
   example: "This is a medical emergency.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "A serious, unexpected situation requiring immediate action.",
+  explanationSo: "Xaalad adag oo aan la filanayn oo u baahan tallaabo degdeg ah."
 },
 {
   id: 143,
@@ -1805,7 +2127,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Call the ambulance quickly.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "A vehicle equipped to carry sick or injured people to hospital.",
+  explanationSo: "Gaari ugu habboon qaadista bukaan ama dhaawacsan oo isbitaalka geeysa."
 },
 // ===== PROFESSIONAL MEDICAL PACK (Batch 2) =====
 
@@ -1818,7 +2142,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Cardiology focuses on heart diseases.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The branch of medicine that deals with diseases and disorders of the heart.",
+  explanationSo: "Laanka daawada ee ku takhasusay cudurrada iyo xaaladaha wadnaha."
 },
 {
   id: 145,
@@ -1829,7 +2155,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Neurology studies the nervous system.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The branch of medicine concerned with the study and treatment of the nervous system.",
+  explanationSo: "Laanka daawada ee ku shaqeeya cilmiga iyo daaweynta nidaamka neerfaha."
 },
 {
   id: 146,
@@ -1840,7 +2168,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Dermatology treats skin conditions.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The branch of medicine dealing with the diagnosis and treatment of skin conditions.",
+  explanationSo: "Laanka daawada ku takhasusay ogaanshaha iyo daaweynta xaaladaha maqaarka."
 },
 {
   id: 147,
@@ -1851,7 +2181,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Orthopedics deals with bone injuries.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The branch of medicine that corrects deformities and treats disorders of bones and muscles.",
+  explanationSo: "Laanka daawada ee sax-sameeya cilladaha iyo daaweeya xaaladaha lafaha iyo muruqyada."
 },
 {
   id: 148,
@@ -1862,7 +2194,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Pediatrics treats children.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The branch of medicine dealing with the health and medical care of children.",
+  explanationSo: "Laanka daawada ku takhasusay caafimaadka iyo daaweynta carruurta."
 },
 {
   id: 149,
@@ -1873,7 +2207,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Gynecology focuses on women’s health.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The branch of medicine dealing with the functions and diseases of women's reproductive system.",
+  explanationSo: "Laanka daawada ku takhasusay hawlaha iyo cudurrada nidaamka taranka haweenka."
 },
 {
   id: 150,
@@ -1884,7 +2220,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Psychiatry treats mental disorders.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The branch of medicine that deals with mental illness and behavioral disorders.",
+  explanationSo: "Laanka daawada ku takhasusay jirrada maskaxda iyo qaloocinimada dhaqanka."
 },
 {
   id: 151,
@@ -1895,7 +2233,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Radiology uses imaging technology.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The science of using imaging technology to diagnose and treat diseases.",
+  explanationSo: "Cilmiga isticmaalaya teknoolojiyada sawir-qaadista si loo ogaado oo loo daaweeyo cudurrada."
 },
 {
   id: 152,
@@ -1906,7 +2246,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Anesthesia prevents pain during surgery.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The use of medication to block sensation and pain during medical procedures.",
+  explanationSo: "Isticmaalka daawada si loo xanibo dareemida iyo xanuunka muddada hawlgalada caafimaad."
 },
 {
   id: 153,
@@ -1917,7 +2259,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Pathology studies disease causes.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The science of the causes and effects of diseases, especially as examined in a laboratory.",
+  explanationSo: "Cilmiga sababaha iyo saameynta cudurrada, gaar ahaan sida baaritaanka shaybaarka lagu ogaado."
 },
 {
   id: 154,
@@ -1928,7 +2272,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Epidemiology tracks disease outbreaks.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The study of how diseases spread and can be controlled in populations.",
+  explanationSo: "Cilmiga sida cudurrada dadka ugu faafa lana xukumi karo ee bulshada."
 },
 {
   id: 155,
@@ -1939,7 +2285,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Oncology treats cancer patients.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The branch of medicine that specialises in the study and treatment of cancer.",
+  explanationSo: "Laanka daawada ku takhasusay cilmiga iyo daaweynta kansarka."
 },
 {
   id: 156,
@@ -1950,7 +2298,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Immunology studies immune responses.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The study of the immune system and its role in protecting the body from disease.",
+  explanationSo: "Cilmiga nidaamka difaaca jirka iyo doorka uu ka qaata ilaalinta jirka cudurrada ka."
 },
 {
   id: 157,
@@ -1961,7 +2311,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Hematology examines blood disorders.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The study of blood, blood-forming organs, and blood diseases.",
+  explanationSo: "Cilmiga dhiigga, xubnahaas sameeya dhiigga, iyo cudurrada dhiigga."
 },
 {
   id: 158,
@@ -1972,7 +2324,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Nephrology treats kidney diseases.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The medical specialty concerned with the diagnosis and treatment of kidney diseases.",
+  explanationSo: "Takhasusta caafimaadka ee ku wajahan ogaanshaha iyo daaweynta cudurrada kilyaha."
 },
 {
   id: 159,
@@ -1983,7 +2337,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Pulmonology deals with lung disorders.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The medical speciality dealing with diseases of the respiratory tract and lungs.",
+  explanationSo: "Takhasusta caafimaadka ku takhasusay cudurrada jidka neefta iyo sambabada."
 },
 {
   id: 160,
@@ -1994,7 +2350,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Gastroenterology treats digestive diseases.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The branch of medicine dealing with the stomach and intestines.",
+  explanationSo: "Laanka daawada ku takhasusay caloosha iyo mindhicirka."
 },
 {
   id: 161,
@@ -2005,7 +2363,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Urology focuses on urinary system.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The branch of medicine concerned with the urinary system and male reproductive organs.",
+  explanationSo: "Laanka daawada ku takhasusay nidaamka kaadi-mareenka iyo xubnahaas taranka lab."
 },
 {
   id: 162,
@@ -2016,7 +2376,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Obstetrics manages pregnancy and childbirth.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The branch of medicine that deals with pregnancy, childbirth, and the postpartum period.",
+  explanationSo: "Laanka daawada ku takhasusay uurka, dhalmada, iyo xilliga kadib dhalashada."
 },
 
 {
@@ -2028,7 +2390,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Rehabilitation helps recovery.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The process of helping someone recover and regain health or normal life after illness or injury.",
+  explanationSo: "Habka lagu caawiyo qof in uu soo kabtaa oo uu ku soo laabto caafimaad ama nolosha caadiga ah kadib jirrad ama dhaawac."
 },
 {
   id: 164,
@@ -2039,7 +2403,9 @@ const dictionary = [
   modernMeaning: null,
   example: "The student became a dropout.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "A person who has left school or a programme before completing it.",
+  explanationSo: "Qof iskoolka ama barnaamijka ka baxay kahor intuusan dhammayn."
 },
 {
   id: 165,
@@ -2050,7 +2416,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Ardeygi imtixaanki ayu dhacey, dhulka ayaan ku dhacey.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "Someone who leaves school or a program before completing it.",
+  explanationSo: "Qof iskoolka ama barnaamij ka baxay kahor intuusan dhammayn."
 },
 {
   id: 166,
@@ -2061,7 +2429,9 @@ const dictionary = [
   modernMeaning: null,
   example: "Waan aamusay markii aan maqlo wararka xun.",
   synonyms: [],
-  isTech: false
+  isTech: false,
+  explanationEn: "The complete absence of sound or noise; a state of quiet.",
+  explanationSo: "Maqnaanshaha oo dhan ee cod ama xawaare; xaalad aamusnaan ah."
 },
 
 ];

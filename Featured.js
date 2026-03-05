@@ -20,14 +20,5 @@ var featuredTechWords = (function() {
   return shuffleArray(techWords).slice(0, 6);
 })();
 
-// ── WORD OF THE DAY (deterministic, 24h rotation) ─────────
-// script.js also computes this — featured.js version kept for
-// any page that loads featured.js but not script.js.
-var wordOfTheDay = (function() {
-  if (typeof dictionary === 'undefined') return null;
-  var eligible = dictionary.filter(function(e) { return e.traditionalMeaning && e.word; });
-  if (!eligible.length) return null;
-  var today  = new Date();
-  var dayNum = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
-  return eligible[dayNum % eligible.length];
-})();
+// NOTE: Word of the Day is computed exclusively in script.js
+// to avoid duplicate/conflicting logic.
