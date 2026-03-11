@@ -1,4 +1,4 @@
-// ──────────────────────────────────────────────────────────
+export default // ──────────────────────────────────────────────────────────
 //  Higaad — Medical Words Data
 //  medicalData.js — Bilingual Somali-English medical terms
 // ──────────────────────────────────────────────────────────
@@ -25,7 +25,7 @@ const medicalDictionary = [
     somaliWord: "wadne",
     traditionalMeaning: "heart — the organ that pumps blood",
     modernMeaning: null,
-    example: "Wadnahu waa gabar aad u muhiim ah.",
+    example: "Wadnahu waa xubin aad u muhiim ah.",
     category: "anatomy",
     synonyms: [],
     isMedical: true
@@ -589,6 +589,262 @@ const medicalDictionary = [
     synonyms: [],
     isMedical: true
   },
+  // ===== PROFESSIONAL MEDICAL PACK (Batch 2) =====
+
+{
+  id: 144,
+  word: "cardiology",
+  language: "english",
+  type: "noun",
+  traditionalMeaning: "cilmiga wadnaha",
+  modernMeaning: null,
+  example: "Cardiology focuses on heart diseases.",
+  synonyms: [],
+  isTech: false
+},
+{
+  id: 145,
+  word: "neurology",
+  language: "english",
+  type: "noun",
+  traditionalMeaning: "cilmiga neerfaha",
+  modernMeaning: null,
+  example: "Neurology studies the nervous system.",
+  synonyms: [],
+  isTech: false
+},
+{
+  id: 146,
+  word: "dermatology",
+  language: "english",
+  type: "noun",
+  traditionalMeaning: "cilmiga maqaarka",
+  modernMeaning: null,
+  example: "Dermatology treats skin conditions.",
+  synonyms: [],
+  isTech: false
+},
+{
+  id: 147,
+  word: "orthopedics",
+  language: "english",
+  type: "noun",
+  traditionalMeaning: "cilmiga lafaha",
+  modernMeaning: null,
+  example: "Orthopedics deals with bone injuries.",
+  synonyms: [],
+  isTech: false
+},
+{
+  id: 148,
+  word: "pediatrics",
+  language: "english",
+  type: "noun",
+  traditionalMeaning: "cilmiga carruurta",
+  modernMeaning: null,
+  example: "Pediatrics treats children.",
+  synonyms: [],
+  isTech: false
+},
+{
+  id: 149,
+  word: "gynecology",
+  language: "english",
+  type: "noun",
+  traditionalMeaning: "cilmiga haweenka",
+  modernMeaning: null,
+  example: "Gynecology focuses on women’s health.",
+  synonyms: [],
+  isTech: false
+},
+{
+  id: 150,
+  word: "psychiatry",
+  language: "english",
+  type: "noun",
+  traditionalMeaning: "cilmiga maskaxda iyo dhimirka",
+  modernMeaning: null,
+  example: "Psychiatry treats mental disorders.",
+  synonyms: [],
+  isTech: false
+},
+{
+  id: 151,
+  word: "radiology",
+  language: "english",
+  type: "noun",
+  traditionalMeaning: "cilmiga raajada",
+  modernMeaning: null,
+  example: "Radiology uses imaging technology.",
+  synonyms: [],
+  isTech: false
+},
+{
+  id: 152,
+  word: "anesthesia",
+  language: "english",
+  type: "noun",
+  traditionalMeaning: "suuxdin caafimaad",
+  modernMeaning: null,
+  example: "Anesthesia prevents pain during surgery.",
+  synonyms: [],
+  isTech: false
+},
+{
+  id: 153,
+  word: "pathology",
+  language: "english",
+  type: "noun",
+  traditionalMeaning: "cilmiga cudurrada",
+  modernMeaning: null,
+  example: "Pathology studies disease causes.",
+  synonyms: [],
+  isTech: false
+},
+{
+  id: 154,
+  word: "epidemiology",
+  language: "english",
+  type: "noun",
+  traditionalMeaning: "cilmiga faafidda cudurrada",
+  modernMeaning: null,
+  example: "Epidemiology tracks disease outbreaks.",
+  synonyms: [],
+  isTech: false
+},
+{
+  id: 155,
+  word: "oncology",
+  language: "english",
+  type: "noun",
+  traditionalMeaning: "cilmiga kansarka",
+  modernMeaning: null,
+  example: "Oncology treats cancer patients.",
+  synonyms: [],
+  isTech: false
+},
+{
+  id: 156,
+  word: "immunology",
+  language: "english",
+  type: "noun",
+  traditionalMeaning: "cilmiga difaaca jirka",
+  modernMeaning: null,
+  example: "Immunology studies immune responses.",
+  synonyms: [],
+  isTech: false
+},
+{
+  id: 157,
+  word: "hematology",
+  language: "english",
+  type: "noun",
+  traditionalMeaning: "cilmiga dhiigga",
+  modernMeaning: null,
+  example: "Hematology examines blood disorders.",
+  synonyms: [],
+  isTech: false
+},
+{
+  id: 158,
+  word: "nephrology",
+  language: "english",
+  type: "noun",
+  traditionalMeaning: "cilmiga kilyaha",
+  modernMeaning: null,
+  example: "Nephrology treats kidney diseases.",
+  synonyms: [],
+  isTech: false
+},
+{
+  id: 159,
+  word: "pulmonology",
+  language: "english",
+  type: "noun",
+  traditionalMeaning: "cilmiga sambabada",
+  modernMeaning: null,
+  example: "Pulmonology deals with lung disorders.",
+  synonyms: [],
+  isTech: false
+},
+{
+  id: 160,
+  word: "gastroenterology",
+  language: "english",
+  type: "noun",
+  traditionalMeaning: "cilmiga caloosha iyo mindhicirka",
+  modernMeaning: null,
+  example: "Gastroenterology treats digestive diseases.",
+  synonyms: [],
+  isTech: false
+},
+{
+  id: 161,
+  word: "urology",
+  language: "english",
+  type: "noun",
+  traditionalMeaning: "cilmiga kaadi-mareenka",
+  modernMeaning: null,
+  example: "Urology focuses on urinary system.",
+  synonyms: [],
+  isTech: false
+},
+{
+  id: 162,
+  word: "obstetrics",
+  language: "english",
+  type: "noun",
+  traditionalMeaning: "cilmiga dhalmada",
+  modernMeaning: null,
+  example: "Obstetrics manages pregnancy and childbirth.",
+  synonyms: [],
+  isTech: false
+},
+{
+  id: 163,
+  word: "rehabilitation",
+  language: "english",
+  type: "noun",
+  traditionalMeaning: "soo kabasho",
+  modernMeaning: null,
+  example: "Rehabilitation helps recovery.",
+  synonyms: [],
+  isTech: false
+},
+{
+  id: 164,
+  word: "Dr.abdifitah jama",
+  language: "english",
+  type: "Person",
+  traditionalMeaning: "Dr.abdifitah jama — a medical professional known for expertise in healthcare and patient care in Somaliland.",
+  modernMeaning: null,
+  example: "Dr.abdifitah jama is a medical professional.",
+  synonyms: [],
+  isTech: false
+},
+{
+  id: 165,
+  word: "Dr. Mohamed Abdi Hergeye",
+  language: "english",
+  type: "Person",
+  traditionalMeaning: "dr. Mohamed Abdi Hergeye — a medical professional recognized for contributions to healthcare and medical education in Somaliland.",
+  modernMeaning: null,
+  example: "dr. Mohamed Abdi Hergeye is a medical professional.",
+  synonyms: [],
+  isTech: false
+},
+{
+  id: 166,
+  word: "Dr. Fathia Mohamed Nour",
+  language: "english",
+  type: "Person",
+  traditionalMeaning: "Family Medicine specialist based in Borama (Amoud University College of Health Sciences). Dr. Fathia is known for her dedication to improving healthcare access and quality in Somaliland, particularly in rural areas.",
+  modernMeaning: null,
+  example: "dr. Fathia Mohamed Nour is a medical professional.",
+  synonyms: [],
+  isTech: false
+},
+
   {
     id: 1062,
     word: "ulcer",
@@ -1284,6 +1540,167 @@ const medicalDictionary = [
     modernMeaning: null,
     example: "Xiidho-bax waxaa lagu daaweeyaa qalliin.",
     category: "disease",
+    synonyms: [],
+    isMedical: true
+  },
+    {
+    id: 1114,
+    word: "gastritis",
+    language: "english",
+    type: "noun",
+    somaliWord: "caabuq-calooleed",
+    traditionalMeaning: "Caabuq-calooleed — inflammation of the stomach lining",
+    modernMeaning: "Caabuq-calooleed",
+    example: "Gastritis can cause burning stomach pain.",
+    category: "disease",
+    synonyms: ["stomach inflammation"],
+    isMedical: true
+  },
+  {
+    id: 1115,
+    word: "caabuq-calooleed",
+    language: "somali",
+    type: "noun",
+    somaliWord: "caabuq-calooleed",
+    traditionalMeaning: "gastritis — barar ku dhaca xuubka caloosha",
+    modernMeaning: null,
+    example: "Caabuq-calooleedku wuxuu sababi karaa lalabo.",
+    category: "disease",
+    synonyms: [],
+    isMedical: true
+  },
+
+  {
+    id: 1116,
+    word: "concussion",
+    language: "english",
+    type: "noun",
+    somaliWord: "jug-maskaxeed",
+    traditionalMeaning: "Jug-maskaxeed — mild traumatic brain injury caused by a blow to the head",
+    modernMeaning: "Jug-maskaxeed",
+    example: "The athlete suffered a concussion.",
+    category: "injury",
+    synonyms: ["brain trauma"],
+    isMedical: true
+  },
+  {
+    id: 1117,
+    word: "jug-maskaxeed",
+    language: "somali",
+    type: "noun",
+    somaliWord: "jug-maskaxeed",
+    traditionalMeaning: "concussion — jug ku dhacda maskaxda",
+    modernMeaning: null,
+    example: "Jug-maskaxeed wuxuu keeni karaa wareer.",
+    category: "injury",
+    synonyms: [],
+    isMedical: true
+  },
+
+  {
+    id: 1118,
+    word: "cyst",
+    language: "english",
+    type: "noun",
+    somaliWord: "kiish-biyood",
+    traditionalMeaning: "Kiish-biyood — closed sac filled with fluid or semi-solid material",
+    modernMeaning: "Kiish-biyood",
+    example: "The cyst was removed surgically.",
+    category: "disease",
+    synonyms: ["fluid sac"],
+    isMedical: true
+  },
+  {
+    id: 1119,
+    word: "kiish-biyood",
+    language: "somali",
+    type: "noun",
+    somaliWord: "kiish-biyood",
+    traditionalMeaning: "cyst — kiish yar oo dareere ku jira",
+    modernMeaning: null,
+    example: "Kiish-biyood ayaa laga helay maqaarka.",
+    category: "disease",
+    synonyms: [],
+    isMedical: true
+  },
+
+  {
+    id: 1120,
+    word: "hypertension crisis",
+    language: "english",
+    type: "noun",
+    somaliWord: "dhiig-kar-daran",
+    traditionalMeaning: "Dhiig-kar-daran — severe elevation of blood pressure requiring urgent care",
+    modernMeaning: "Dhiig-kar-daran",
+    example: "Hypertension crisis can damage organs.",
+    category: "emergency",
+    synonyms: ["hypertensive emergency"],
+    isMedical: true
+  },
+  {
+    id: 1121,
+    word: "dhiig-kar-daran",
+    language: "somali",
+    type: "noun",
+    somaliWord: "dhiig-kar-daran",
+    traditionalMeaning: "hypertension crisis — cadaadis dhiig oo aad u sareeya",
+    modernMeaning: null,
+    example: "Dhiig-kar-daran waa xaalad degdeg ah.",
+    category: "emergency",
+    synonyms: [],
+    isMedical: true
+  },
+
+  {
+    id: 1122,
+    word: "anemia severe",
+    language: "english",
+    type: "noun",
+    somaliWord: "dhiig-yaraan-daran",
+    traditionalMeaning: "Dhiig-yaraan-daran — critically low red blood cell levels",
+    modernMeaning: "Dhiig-yaraan-daran",
+    example: "Severe anemia may require blood transfusion.",
+    category: "disease",
+    synonyms: ["critical anemia"],
+    isMedical: true
+  },
+  {
+    id: 1123,
+    word: "dhiig-yaraan-daran",
+    language: "somali",
+    type: "noun",
+    somaliWord: "dhiig-yaraan-daran",
+    traditionalMeaning: "severe anemia — dhiig aad u yaraada",
+    modernMeaning: null,
+    example: "Dhiig-yaraan-daran waxay sababi kartaa suuxdin.",
+    category: "disease",
+    synonyms: [],
+    isMedical: true
+  },
+
+  {
+    id: 1124,
+    word: "vertigo",
+    language: "english",
+    type: "noun",
+    somaliWord: "wareer-wareeg",
+    traditionalMeaning: "Wareer-wareeg — sensation of spinning dizziness",
+    modernMeaning: "Wareer-wareeg",
+    example: "Vertigo makes the room feel like it is spinning.",
+    category: "symptom",
+    synonyms: ["spinning dizziness"],
+    isMedical: true
+  },
+  {
+    id: 1125,
+    word: "wareer-wareeg",
+    language: "somali",
+    type: "noun",
+    somaliWord: "wareer-wareeg",
+    traditionalMeaning: "vertigo — wareer qofku dareemo isagoo wareegaya",
+    modernMeaning: null,
+    example: "Wareer-wareeg ayaa iga haya marka aan istaago.",
+    category: "symptom",
     synonyms: [],
     isMedical: true
   },
